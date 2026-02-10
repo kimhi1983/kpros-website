@@ -1,0 +1,9 @@
+tunnel: 314c5b8a-e255-4e31-a6d5-7fba5c4d88f9
+credentials-file: e:\kimhi1983\홈페이지 작업\kpros-website\314c5b8a-e255-4e31-a6d5-7fba5c4d88f9.json
+
+ingress:
+  - hostname: kproscorp.com
+    service: http://localhost:8080
+  - hostname: www.kproscorp.com
+    service: http://localhost:8080
+  - service: http_status:404
