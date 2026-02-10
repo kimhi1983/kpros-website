@@ -1,0 +1,104 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "KPROS Ingredient Data",
+    "description": "Schema for KPROS cosmetic ingredients (Production & Imported)",
+    "type": "object",
+    "properties": {
+        "production_lines": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "inci_name": {
+                        "type": "string"
+                    },
+                    "description": {
+                        "type": "string"
+                    },
+                    "features": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "applications": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "technical_data": {
+                        "type": "object",
+                        "properties": {
+                            "appearance": {
+                                "type": "string"
+                            },
+                            "solubility": {
+                                "type": "string"
+                            },
+                            "recommended_dosage": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "documents": {
+                        "type": "object",
+                        "properties": {
+                            "tds": {
+                                "type": "string"
+                            },
+                            "msds": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "required": [
+                    "id",
+                    "name",
+                    "inci_name"
+                ]
+            }
+        },
+        "imported_lines": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "supplier": {
+                        "type": "string"
+                    },
+                    "origin": {
+                        "type": "string"
+                    },
+                    "exclusive": {
+                        "type": "boolean"
+                    },
+                    "description": {
+                        "type": "string"
+                    },
+                    "category": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "id",
+                    "name",
+                    "supplier"
+                ]
+            }
+        }
+    }
+}

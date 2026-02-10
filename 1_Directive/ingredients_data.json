@@ -1,0 +1,40 @@
+{
+    "production_lines": [
+        {
+            "id": "prod_001",
+            "name": "Nano Banana Extract",
+            "inci_name": "Musa Sapientum (Banana) Fruit Extract",
+            "description": "High-performance extract produced using nano-technology for superior skin absorption.",
+            "features": [
+                "Deep Hydration",
+                "Anti-aging",
+                "Rich in Potassium"
+            ],
+            "applications": [
+                "Serums",
+                "Creams",
+                "Masks"
+            ],
+            "technical_data": {
+                "appearance": "Light yellow liquid",
+                "solubility": "Water soluble",
+                "recommended_dosage": "1-5%"
+            },
+            "documents": {
+                "tds": "downloads/nano_banana_tds.pdf",
+                "msds": "downloads/nano_banana_msds.pdf"
+            }
+        }
+    ],
+    "imported_lines": [
+        {
+            "id": "imp_001",
+            "name": "Argan Oil Premium",
+            "supplier": "Morocco Gold Co.",
+            "origin": "Morocco",
+            "exclusive": true,
+            "description": "100% Organic Cold-pressed Argan Oil.",
+            "category": "Natural Oils"
+        }
+    ]
+}
