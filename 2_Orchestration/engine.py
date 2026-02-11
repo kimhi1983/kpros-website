@@ -5,7 +5,7 @@ from pathlib import Path
 # Paths
 BASE_DIR = Path(__file__).resolve().parent.parent
 DIRECTIVE_DIR = BASE_DIR / "1_Directive"
-EXECUTION_DIR = BASE_DIR / "3_Execution"
+EXECUTION_DIR = BASE_DIR
 DATA_FILE = DIRECTIVE_DIR / "ingredients_data.json"
 OUTPUT_FILE = EXECUTION_DIR / "products.json"
 
