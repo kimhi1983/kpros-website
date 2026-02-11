@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KPROS CORP | Cosmetic Raw Material Frontier</title>
-    <link rel="stylesheet" href="styles.css?v=2">
+    <title>KPROS CORP | Global Cosmetic Raw Material Solutions</title>
+    <link rel="stylesheet" href="styles.css?v=3">
 </head>
 
 <body>
     <header>
         <nav>
-            <div class="logo">KPROS CORP</div>
+            <div class="logo">K-PROS</div>
             <ul>
                 <li><a href="#hero">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -23,86 +23,94 @@
     </header>
 
     <section id="hero" class="hero">
+        <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1>The Frontier of <br><span>Cosmetic Raw Materials</span></h1>
-            <p class="hero-sub">Professionals Crossing Borders of Cosmetic Raw Materials</p>
-            <p class="description">We are not just sellers. We are experts who complete your value with field
-                technology.</p>
+            <div class="badge-top">Global Standard & Innovation</div>
+            <h1>The Frontier of <br><span class="highlight">Cosmetic Raw Materials</span></h1>
+            <p class="hero-sub">Korea Professional Members. Total Ingredient Partner.</p>
+            <p class="description">We provide one-stop solutions from sourcing to technical support,
+                specializing in Custom Extraction Bases for your brand's unique value.</p>
             <div class="cta-buttons">
-                <a href="#products" class="btn primary">View Product List</a>
-                <a href="#contact" class="btn secondary">Contact Experts</a>
+                <a href="#products" class="btn primary-modern">Explore Collection</a>
+                <a href="#contact" class="btn secondary-glass">Technical Inquiry</a>
             </div>
         </div>
-    </section>
-
-    <section id="about" class="features">
-        <div class="feature-item">
-            <h3>Tech & Science</h3>
-            <p>Guaranteed best quality based on precise analysis equipment and research power.</p>
-        </div>
-        <div class="feature-item">
-            <h3>Nature & Luxury</h3>
-            <p>Premium sourcing network delivering the purity of natural ingredients.</p>
-        </div>
-        <div class="feature-item">
-            <h3>Professionalism</h3>
-            <p>Responsibility of real workers who find answers by running on the field.</p>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
         </div>
     </section>
 
     <section id="products" class="products-section">
         <div class="section-header">
-            <h2>Our Collection</h2>
+            <h2>Premium Portfolio</h2>
             <div class="tabs">
-                <button class="tab-btn active" data-tab="production">K-Production</button>
-                <button class="tab-btn" data-tab="imported">Global Sourcing</button>
+                <button class="tab-btn active" data-target="custom">Custom Extraction</button>
+                <button class="tab-btn" data-target="production">K-PROS Specialties</button>
+                <button class="tab-btn" data-target="imported">Global Sourcing</button>
             </div>
         </div>
 
-        <div id="production" class="product-gallery active">
-            <!-- PRODUCTS_START -->
-            <!-- 이 안의 내용은 안티그래비티 엔진이 카탈로그 데이터를 바탕으로 반복 생성합니다 -->
-            <div id="production-list" class="product-grid">
-                <!-- 개별 제품 카드 디자인 (안티그래비티에 설정할 템플릿) -->
-                <div class="product-card tech-card">
-                    <div class="card-header">{{Category}}</div> <!-- 안티그래비티 변수 예시 -->
-                    <h3>{{Item_Name}}</h3>
-                    <p class="inci">INCI: {{Inci_Name}}</p>
-                    <p class="desc">{{Description}}</p>
+        <!-- 1. Custom Extraction (Technical Solution) -->
+        <div id="custom" class="tab-content active">
+            <div class="service-grid">
+                <div class="service-text">
+                    <h3>Custom Extraction Base</h3>
+                    <p>Beyond purified water. We create optimized extraction bases (Plant, Ferment, Mineral)
+                        to maximize stability and brand storytelling.</p>
+                    <ul class="check-list">
+                        <li>Skin Efficacy Boosting</li>
+                        <li>Optimized for Clean Beauty</li>
+                        <li>Customizable Viscosity & Solvent</li>
+                    </ul>
                 </div>
             </div>
-            <!-- PRODUCTS_END -->
         </div>
 
-        <div id="imported" class="product-gallery">
-            <!-- IMPORTED_START -->
-            <!-- Content will be injected by Orchestration Engine -->
-            <!-- IMPORTED_END -->
-        </div>
-    </section>
-
-    <section id="promotion" class="promotion-section">
-        <h2>Promotion Archive</h2>
-        <div class="promotion-grid">
-            <div class="promo-card">
-                <h3>Digital Brochure</h3>
-                <p>2026 Collection Interactive Catalog</p>
-            </div>
-            <div class="promo-card">
-                <h3>Brand Film</h3>
-                <p>KPROS Manufacturing Process</p>
+        <!-- 2. K-PROS Special Items (Dynamic Injection) -->
+        <div id="production" class="tab-content">
+            <div class="product-grid">
+                <!-- PRODUCTS_START -->
+                <div class="product-card tech-card">
+                    <div class="card-header">Specialty</div>
+                    <h3>PROTIVE-1 (Natural)</h3>
+                    <p class="inci">INCI: Propanediol, Chamaecyparis obtusa extract</p>
+                    <p class="desc">Natural preservation solution for clean beauty.</p>
+                </div>
+                <!-- PRODUCTS_END -->
             </div>
         </div>
-    </section>
 
-    <section id="contact" class="contact-section">
-        <h2>Direct Contact</h2>
-        <p>Contact professional experts immediately.</p>
-        <a href="mailto:info@kproscorp.com" class="btn primary">Contact Us</a>
+        <!-- 3. Global Sourcing Table (Dynamic Injection) -->
+        <div id="imported" class="tab-content">
+            <div class="table-container">
+                <table class="product-table">
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Brand</th>
+                            <th>Item</th>
+                            <th>INCI Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- IMPORTED_START -->
+                        <tr>
+                            <td>Glycerine</td>
+                            <td>Acid Chem</td>
+                            <td>Glycerine(99.5%) USP</td>
+                            <td>Glycerine</td>
+                        </tr>
+                        <!-- IMPORTED_END -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 KPROS CORP. All Rights Reserved. | Hosted at kproscorp.com</p>
+        <p>&copy; 2026 KPROS CORP. | Korea Professional Members.</p>
     </footer>
 
     <script src="script.js"></script>
