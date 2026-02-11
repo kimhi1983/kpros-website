@@ -11,8 +11,8 @@ const Tech: React.FC = () => {
   ];
 
   return (
-    <section id="tech" className="py-24 bg-white relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+    <section id="tech" className="py-16 md:py-24 bg-white relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
 
         {/* Text Content */}
         <div className="order-2 md:order-1">
@@ -22,7 +22,7 @@ const Tech: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl md:text-4xl font-light text-slate-800 mb-6">
+            <h2 className="text-2xl md:text-4xl font-light text-slate-800 mb-6">
               Custom Botanical <span className="font-semibold">Solutions</span>
             </h2>
             <p className="text-slate-600 leading-relaxed mb-8 font-light">

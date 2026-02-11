@@ -26,7 +26,7 @@ const Products: React.FC = () => {
     : products.filter(p => p.category === activeCategory);
 
   return (
-    <section id="products" className="py-24 bg-[#F5F5F3] min-h-screen">
+    <section id="products" className="py-16 md:py-24 bg-[#F5F5F3] min-h-screen">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Header */}
@@ -44,8 +44,8 @@ const Products: React.FC = () => {
               key={cat}
               onClick={() => setActiveCategory(cat)}
               className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 border ${activeCategory === cat
-                  ? 'bg-slate-800 text-white border-slate-800 shadow-md transform scale-105'
-                  : 'bg-white text-slate-500 border-slate-200 hover:border-slate-400 hover:text-slate-700'
+                ? 'bg-slate-800 text-white border-slate-800 shadow-md transform scale-105'
+                : 'bg-white text-slate-500 border-slate-200 hover:border-slate-400 hover:text-slate-700'
                 }`}
             >
               {cat}
