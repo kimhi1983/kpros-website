@@ -1,0 +1,18 @@
+[
+  {
+    "id": "prod_001",
+    "category": "K-PROS Specialties",
+    "item": "Nano Banana Extract",
+    "description": "High-performance extract produced using nano-technology for superior skin absorption.",
+    "inciName": "Musa Sapientum (Banana) Fruit Extract",
+    "brand": "KPROS Custom"
+  },
+  {
+    "id": "imp_001",
+    "category": "Natural Oils",
+    "item": "Argan Oil Premium",
+    "description": "100% Organic Cold-pressed Argan Oil.",
+    "inciName": "N/A",
+    "brand": "Morocco Gold Co."
+  }
+]

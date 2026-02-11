@@ -1,119 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KPROS CORP | Digital Purity</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #F5F5F3; /* Micro-gray / Pale Beige */
+        color: #334155;
+        overflow-x: hidden;
+      }
+      /* Custom scrollbar for webkit */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #F5F5F3;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #CBD5E1;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #94A3B8;
+      }
+    </style>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KPROS CORP | Global Cosmetic Raw Material Solutions</title>
-    <link rel="stylesheet" href="styles.css?v=3">
+<link rel="stylesheet" href="/index.css">
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "framer-motion": "https://esm.sh/framer-motion@^12.34.0",
+    "three": "https://esm.sh/three@^0.182.0",
+    "@react-three/drei": "https://esm.sh/@react-three/drei@^10.7.7",
+    "@react-three/fiber": "https://esm.sh/@react-three/fiber@^9.5.0"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/assets/index-leBwuppn.js"></script>
 </head>
-
-<body>
-    <header>
-        <nav>
-            <div class="logo">K-PROS</div>
-            <ul>
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#promotion">Promotion</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section id="hero" class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <div class="badge-top">Global Standard & Innovation</div>
-            <h1>The Frontier of <br><span class="highlight">Cosmetic Raw Materials</span></h1>
-            <p class="hero-sub">Korea Professional Members. Total Ingredient Partner.</p>
-            <p class="description">We provide one-stop solutions from sourcing to technical support,
-                specializing in Custom Extraction Bases for your brand's unique value.</p>
-            <div class="cta-buttons">
-                <a href="#products" class="btn primary-modern">Explore Collection</a>
-                <a href="#contact" class="btn secondary-glass">Technical Inquiry</a>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <div class="mouse">
-                <div class="wheel"></div>
-            </div>
-        </div>
-    </section>
-
-    <section id="products" class="products-section">
-        <div class="section-header">
-            <h2>Premium Portfolio</h2>
-            <div class="tabs">
-                <button class="tab-btn active" data-target="custom">Custom Extraction</button>
-                <button class="tab-btn" data-target="production">K-PROS Specialties</button>
-                <button class="tab-btn" data-target="imported">Global Sourcing</button>
-            </div>
-        </div>
-
-        <!-- 1. Custom Extraction (Technical Solution) -->
-        <div id="custom" class="tab-content active">
-            <div class="service-grid">
-                <div class="service-text">
-                    <h3>Custom Extraction Base</h3>
-                    <p>Beyond purified water. We create optimized extraction bases (Plant, Ferment, Mineral)
-                        to maximize stability and brand storytelling.</p>
-                    <ul class="check-list">
-                        <li>Skin Efficacy Boosting</li>
-                        <li>Optimized for Clean Beauty</li>
-                        <li>Customizable Viscosity & Solvent</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- 2. K-PROS Special Items (Dynamic Injection) -->
-        <div id="production" class="tab-content">
-            <div class="product-grid">
-                <!-- PRODUCTS_START -->
-                <div class="product-card tech-card">
-                    <div class="card-header">Specialty</div>
-                    <h3>PROTIVE-1 (Natural)</h3>
-                    <p class="inci">INCI: Propanediol, Chamaecyparis obtusa extract</p>
-                    <p class="desc">Natural preservation solution for clean beauty.</p>
-                </div>
-                <!-- PRODUCTS_END -->
-            </div>
-        </div>
-
-        <!-- 3. Global Sourcing Table (Dynamic Injection) -->
-        <div id="imported" class="tab-content">
-            <div class="table-container">
-                <table class="product-table">
-                    <thead>
-                        <tr>
-                            <th>Category</th>
-                            <th>Brand</th>
-                            <th>Item</th>
-                            <th>INCI Name</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- IMPORTED_START -->
-                        <tr>
-                            <td>Glycerine</td>
-                            <td>Acid Chem</td>
-                            <td>Glycerine(99.5%) USP</td>
-                            <td>Glycerine</td>
-                        </tr>
-                        <!-- IMPORTED_END -->
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 KPROS CORP. | Korea Professional Members.</p>
-    </footer>
-
-    <script src="script.js"></script>
+  <body>
+    <div id="root"></div>
 </body>
-
 </html>
