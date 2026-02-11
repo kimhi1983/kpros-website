@@ -1,24 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Product, Category } from '../types';
-import { X, ArrowRight, Info } from 'lucide-react';
+import { ArrowRight, X, Info } from 'lucide-react';
+import { PRODUCTS, Product } from '../constants';
 
 const Products: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<string>('All');
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
-  const [products, setProducts] = useState<Product[]>([]);
+  const [products, setProducts] = useState<Product[]>(PRODUCTS);
   const [categories, setCategories] = useState<string[]>(['All']);
 
   useEffect(() => {
-    fetch('/products.json')
-      .then((res) => res.json())
-      .then((data: Product[]) => {
-        setProducts(data);
-        // Extract unique categories
-        const uniqueCats = Array.from(new Set(data.map(p => p.category))).filter(Boolean);
-        setCategories(['All', ...uniqueCats]);
-      })
-      .catch((err) => console.error('Failed to load products:', err));
+    // Extract unique categories from imported PRODUCTS
+    const uniqueCats = Array.from(new Set(PRODUCTS.map(p => p.category))).filter(Boolean);
+    setCategories(['All', ...uniqueCats]);
   }, []);
 
   const filteredProducts = activeCategory === 'All'
@@ -26,7 +20,7 @@ const Products: React.FC = () => {
     : products.filter(p => p.category === activeCategory);
 
   return (
-    <section id="products" className="py-16 md:py-24 bg-[#F5F5F3] min-h-screen">
+    <section id="products" className="py-24 bg-[#F5F5F3] min-h-screen">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Header */}

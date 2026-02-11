@@ -4,17 +4,17 @@ import { ArrowDown } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
-    <section id="hero" className="relative w-full min-h-[100dvh] flex flex-col items-center justify-center overflow-hidden bg-[#F5F5F3]">
-
+    <section id="hero" className="relative w-full h-screen flex flex-col items-center justify-center overflow-hidden bg-[#F5F5F3]">
+      
       {/* 3D Background Layer - Spline */}
       {/* Overflow hidden container to crop the extended iframe */}
       <div className="absolute inset-0 z-0 overflow-hidden">
-        <iframe
-          src='https://my.spline.design/play-XGUg1VC7sA0V6E8eOZESSuI0/'
-          frameBorder='0'
-          width='100%'
+        <iframe 
+          src='https://my.spline.design/play-XGUg1VC7sA0V6E8eOZESSuI0/' 
+          frameBorder='0' 
+          width='100%' 
           height='100%'
-          className="w-full h-[120%] md:h-[140%] -translate-y-[5%] md:-translate-y-[10%]" // Adjusted crop for mobile
+          className="w-full h-[140%] -translate-y-[10%]" // Aggressive crop: Height 140%, shift up 10% (relative to element). Bottom extends ~26% past container.
           title="Spline 3D Animation"
         ></iframe>
       </div>
@@ -39,7 +39,7 @@ const Hero: React.FC = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <motion.div
+      <motion.div 
         className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 text-slate-400 pointer-events-none"
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}

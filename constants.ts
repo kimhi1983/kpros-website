@@ -1,4 +1,5 @@
 import { Product, Category } from './types';
+export type { Product, Category };
 
 export const NAV_LINKS = [
   { name: 'Home', href: '#hero' },
@@ -36,7 +37,7 @@ export const PRODUCTS: Product[] = [
     inciName: 'Galactomyces Ferment Filtrate',
     brand: 'KPROS Custom'
   },
-  
+
   // --- Emollients & Oils (Page 6, 8, 11 - Glycerin, Fatty Acids, Oils, Polyols) ---
   {
     id: 'eo-1',
