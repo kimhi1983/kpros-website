@@ -61,27 +61,16 @@
 
         <div id="production" class="product-gallery active">
             <!-- PRODUCTS_START -->
+            <!-- 이 안의 내용은 안티그래비티 엔진이 카탈로그 데이터를 바탕으로 반복 생성합니다 -->
             <div id="production-list" class="product-grid">
-
-                <div class="product-card">
-                    <div class="product-image" style="background-image: url('assets/hero_scientist.jpg?v=1');"></div>
-                    <div style="padding: 1.5rem; text-align: center;">
-                        <button class="btn-download" style="width: 100%; margin: 0;">Detailed Material
-                            Collection</button>
-                    </div>
+                <!-- 개별 제품 카드 디자인 (안티그래비티에 설정할 템플릿) -->
+                <div class="product-card tech-card">
+                    <div class="card-header">{{Category}}</div> <!-- 안티그래비티 변수 예시 -->
+                    <h3>{{Item_Name}}</h3>
+                    <p class="inci">INCI: {{Inci_Name}}</p>
+                    <p class="desc">{{Description}}</p>
                 </div>
             </div>
-            <div id="imported-list" class="product-grid" style="display:none;">
-
-                <div class="product-card">
-                    <div class="product-image placeholder-image" data-keyword="Argan Oil Premium"></div>
-                    <h3>Argan Oil Premium</h3>
-                    <p class="supplier">Supplier: Morocco Gold Co.</p>
-                    <p class="origin">Origin: Morocco</p>
-                    <p class="desc">100% Organic Cold-pressed Argan Oil.</p>
-                </div>
-            </div>
-
             <!-- PRODUCTS_END -->
         </div>
 

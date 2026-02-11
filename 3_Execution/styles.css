@@ -286,6 +286,45 @@ nav ul li a:hover {
     background-color: #003366;
 }
 
+/* Tech Card & Template Styles */
+.product-card.tech-card {
+    border-top: 4px solid var(--accent-color);
+}
+
+.product-card .card-header {
+    background: #eaeaea;
+    color: var(--primary-color);
+    padding: 0.5rem 1.5rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.product-card.tech-card h3 {
+    padding-top: 1.2rem;
+    padding-bottom: 0.5rem;
+    min-height: 3rem;
+    /* Align titles */
+    display: flex;
+    align-items: center;
+}
+
+.product-card .inci {
+    padding-bottom: 0.5rem;
+    font-size: 0.85rem;
+    color: #777;
+    font-style: italic;
+    margin-bottom: 0;
+}
+
+.product-card .desc {
+    padding-top: 0;
+    color: #444;
+    line-height: 1.5;
+}
+
 /* Promotion Section (Preserved) */
 .promotion-section {
     padding: 5rem 10%;
