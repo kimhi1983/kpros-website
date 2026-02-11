@@ -1,5 +1,0 @@
-name = "kpros-website"
-compatibility_date = "2026-02-10"
-
-[site]
-bucket = "./3_Execution"
