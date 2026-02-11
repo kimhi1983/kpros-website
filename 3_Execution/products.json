@@ -1,18 +1,162 @@
 [
   {
-    "id": "prod_001",
+    "id": "kpros_custom_base",
     "category": "K-PROS Specialties",
-    "item": "Nano Banana Extract",
-    "description": "High-performance extract produced using nano-technology for superior skin absorption.",
-    "inciName": "Musa Sapientum (Banana) Fruit Extract",
+    "item": "Custom Extraction Base",
+    "description": "One-Stop custom manufacturing service for Plant Water, Ferment Water, and Functional Bases. Optimized for stability, efficacy, and brand storytelling.",
+    "inciName": "Custom Formulation",
     "brand": "KPROS Custom"
   },
   {
-    "id": "imp_001",
-    "category": "Natural Oils",
-    "item": "Argan Oil Premium",
-    "description": "100% Organic Cold-pressed Argan Oil.",
-    "inciName": "N/A",
-    "brand": "Morocco Gold Co."
+    "id": "kpros_protive_1",
+    "category": "K-PROS Specialties",
+    "item": "PROTIVE-1",
+    "description": "Natural preservative booster.",
+    "inciName": "Propanediol, Chamaecyparis obtusa leaf extract",
+    "brand": "KPROS Custom"
+  },
+  {
+    "id": "kpros_protive_12",
+    "category": "K-PROS Specialties",
+    "item": "PROTIVE-12",
+    "description": "High purity 1,2-Hexanediol.",
+    "inciName": "1,2-Hexanediol",
+    "brand": "KPROS Custom"
+  },
+  {
+    "id": "kpros_protive_mixdiol",
+    "category": "K-PROS Specialties",
+    "item": "PROTIVE-MixDiOL",
+    "description": "Synergistic preservative blend.",
+    "inciName": "1,2-Hexanediol, Caprylyl glycol",
+    "brand": "KPROS Custom"
+  },
+  {
+    "id": "kpros_progel_10",
+    "category": "K-PROS Specialties",
+    "item": "PROGEL-10",
+    "description": "Liquid polymer for stable emulsions.",
+    "inciName": "Hydroxy Ethyl Acrylate / Sodium Acryloyl dimethyl Taurate copolymer, Isohexadecane, Sorbeth-30 TetraOleate, Aqua",
+    "brand": "KPROS Custom"
+  },
+  {
+    "id": "imp_glycerine_usp",
+    "category": "Glycerine & Fatty Acids",
+    "item": "Glycerine(99.5%) USP",
+    "description": "High purity glycerine.",
+    "inciName": "Glycerine",
+    "brand": "Acid chem"
+  },
+  {
+    "id": "imp_palmac_98_12",
+    "category": "Glycerine & Fatty Acids",
+    "item": "Palmac 98-12",
+    "description": "Lauric acid.",
+    "inciName": "Lauric acid",
+    "brand": "Palmac"
+  },
+  {
+    "id": "imp_palmac_98_14",
+    "category": "Glycerine & Fatty Acids",
+    "item": "Palmac 98-14",
+    "description": "Myristic acid.",
+    "inciName": "Myristic acid",
+    "brand": "Palmac"
+  },
+  {
+    "id": "imp_palmsurf_ipm",
+    "category": "Esters",
+    "item": "IPM 98",
+    "description": "Isopropyl Myristate.",
+    "inciName": "Isopropyl Myristate",
+    "brand": "Palmsurf"
+  },
+  {
+    "id": "imp_kalcol_6850",
+    "category": "Fatty Alcohols",
+    "item": "Kalcol 6850",
+    "description": "Cetearyl Alcohol.",
+    "inciName": "Cetearyl Alcohol",
+    "brand": "KAO"
+  },
+  {
+    "id": "imp_monsa_scn95",
+    "category": "Surfactants",
+    "item": "SCN-95",
+    "description": "Amino acid surfactant.",
+    "inciName": "Sodium Cocoyl Glycinate",
+    "brand": "MONSA"
+  },
+  {
+    "id": "imp_monsa_slg95",
+    "category": "Surfactants",
+    "item": "SLG-95",
+    "description": "Amino acid surfactant.",
+    "inciName": "Sodium Lauroyl Glutamate",
+    "brand": "MONSA"
+  },
+  {
+    "id": "imp_lily_70",
+    "category": "Oils",
+    "item": "LILY 70",
+    "description": "White Mineral Oil.",
+    "inciName": "Mineral Oil",
+    "brand": "Kukdong"
+  },
+  {
+    "id": "imp_purolan_idd",
+    "category": "Emollients",
+    "item": "PUROLAN IDD",
+    "description": "Volatile emollient.",
+    "inciName": "Isododecane",
+    "brand": "LANXESS"
+  },
+  {
+    "id": "imp_polyviscol_k30",
+    "category": "Polymers",
+    "item": "PolyViscol K30",
+    "description": "Film former.",
+    "inciName": "PVP",
+    "brand": "NKY PHARMA"
+  },
+  {
+    "id": "imp_dissolvine_na2",
+    "category": "Chelating Agents",
+    "item": "Dissolvine NA2",
+    "description": "Chelating agent.",
+    "inciName": "Disodium EDTA",
+    "brand": "Nouryon"
+  },
+  {
+    "id": "imp_citric_acid",
+    "category": "Acids",
+    "item": "Citric Acid",
+    "description": "pH adjuster.",
+    "inciName": "Citric Acid",
+    "brand": "Weifang Ensign"
+  },
+  {
+    "id": "imp_13bg",
+    "category": "Polyols",
+    "item": "1,3 BG C",
+    "description": "Humectant.",
+    "inciName": "Butylene Glycol",
+    "brand": "DAICEL"
+  },
+  {
+    "id": "imp_niacinamide",
+    "category": "Vitamins",
+    "item": "Niacinamide",
+    "description": "Vitamin B3.",
+    "inciName": "Niacinamide",
+    "brand": "Jiangxi Haven"
+  },
+  {
+    "id": "imp_panthenol",
+    "category": "Vitamins",
+    "item": "DL-Panthenol",
+    "description": "Vitamin B5.",
+    "inciName": "Panthenol",
+    "brand": "Hangzhou Lingeba"
   }
 ]
