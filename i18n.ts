@@ -41,7 +41,7 @@ const ko: Dict = {
   lab: {
     eyebrow: 'R&D LAB', title: '자체 연구소',
     body: '화장품 원료 공급과 완제품 제작을 뒷받침하는 자체 연구소를 운영합니다. 원료 평가부터 처방, 샘플, 안정성 확인까지 한곳에서 진행합니다.',
-    imgAlt: '연구소 처방 작업대',
+    imgAlt: '연구소 실험용 유리기구',
     items: [
       { title: '원료 평가', body: '신규 원료의 물성·용해성·배합 적합성을 직접 확인하고 용도별 적용 가이드를 제공합니다.' },
       { title: '처방 개발', body: '색조·기초·선케어·바디·헤어·홈케어까지 제형별 처방을 개발하고 고객 요구에 맞춰 수정합니다.' },
@@ -124,7 +124,7 @@ const en: Dict = {
   lab: {
     eyebrow: 'R&D LAB', title: 'In-house laboratory',
     body: 'Our in-house lab supports ingredient supply and finished goods, from ingredient evaluation to formulation, sampling and stability checks.',
-    imgAlt: 'Formulation bench in the laboratory',
+    imgAlt: 'Laboratory glassware',
     items: [
       { title: 'Ingredient evaluation', body: 'Properties, solubility and compatibility of new ingredients are checked in-house, with application guidance by use.' },
       { title: 'Formulation', body: 'Formulas for color cosmetics, skincare, sun care, body, hair and home care, adjusted to each customer’s brief.' },
@@ -207,7 +207,7 @@ const zh: Dict = {
   lab: {
     eyebrow: 'R&D LAB', title: '自有研究所',
     body: '自有研究所支撑化妆品原料供应与成品生产，从原料评估到配方、打样与稳定性确认，均在内部完成。',
-    imgAlt: '研究所配方工作台',
+    imgAlt: '研究所实验玻璃器皿',
     items: [
       { title: '原料评估', body: '内部确认新原料的物性、溶解性与配伍适配性，并按用途提供应用指引。' },
       { title: '配方开发', body: '覆盖彩妆、护肤、防晒、身体、头发与家居护理等剂型，按客户需求调整。' },
