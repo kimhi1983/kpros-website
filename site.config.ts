@@ -22,10 +22,10 @@ export const SITE = {
   images: {
     // 히어로 배경 슬라이드 (7초 간격 교체)
     heroBg: [
-      'https://images.unsplash.com/photo-1757800945942-cdc006f6f5eb?w=2200&q=80&fit=crop',
+      'https://images.unsplash.com/photo-1754321159253-8c9bd02cfb4c?w=2200&q=80&fit=crop',
       'https://images.unsplash.com/photo-1761095870661-c4ae15cac605?w=2200&q=80&fit=crop',
       'https://images.unsplash.com/photo-1679394270822-fb37412bb6ee?w=2200&q=80&fit=crop',
-      'https://images.unsplash.com/photo-1718490953028-021d352b14fd?w=2200&q=80&fit=crop',
+      'https://images.unsplash.com/photo-1760862652442-e8ff7ebdd2f8?w=2200&q=80&fit=crop',
       'https://images.unsplash.com/photo-1636740599648-ae84f705fc2e?w=2200&q=80&fit=crop',
       'https://images.unsplash.com/photo-1659007747376-3811b34e458f?w=2200&q=80&fit=crop',
     ],
