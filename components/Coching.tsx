@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLang } from '../i18n';
 import { SITE } from '../site.config';
+import CochingSlider from './CochingSlider';
 
 const Coching: React.FC = () => {
   const { t } = useLang();
@@ -21,14 +22,7 @@ const Coching: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex flex-col gap-4 md:gap-6">
-          <figure className="rounded-2xl overflow-hidden border border-white/10 bg-[#0E1612] shadow-[0_30px_80px_-30px_rgba(0,0,0,0.8)]">
-            <img src="/coching-market-v2.jpg" alt={t.coching.imgAlt1} loading="lazy" width={1904} height={941} className="w-full h-auto block" />
-          </figure>
-          <figure className="rounded-2xl overflow-hidden border border-white/10 bg-[#0E1612] shadow-[0_30px_80px_-30px_rgba(0,0,0,0.8)]">
-            <img src="/coching-briefs.jpg" alt={t.coching.imgAlt2} loading="lazy" width={1904} height={941} className="w-full h-auto block" />
-          </figure>
-        </div>
+        <CochingSlider />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
           {t.coching.features.map((f, i) => (
