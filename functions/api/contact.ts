@@ -70,6 +70,6 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
     return json({ ok: true });
   } catch (e) {
     console.error('smtp error', e);
-    return json({ ok: false, error: 'smtp_failed' }, 502);
+    return json({ ok: false, error: 'smtp_failed', detail: String((e as Error)?.message || e).slice(0, 300) }, 502);
   }
 };
