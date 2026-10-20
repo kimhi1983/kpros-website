@@ -89,7 +89,7 @@ const ko: Dict = {
     features: [
       { title: '원료 마스터 검색', body: '원료명·한글명·INCI·제조사·공급사로 1만 2천 건 이상의 원료를 검색하고, 성분 DB와 완제품 검색으로 바로 이어집니다.' },
       { title: '국가별 규제 데이터베이스', body: '한국·EU·미국·일본·중국·ASEAN·러시아·대만 8개 권역의 사용 제한을 INCI 기준으로 확인합니다. 근거 출처가 있는 항목만 표시합니다.' },
-      { title: 'MyLab Studio 처방 설계', body: 'AI 처방 생성과 수기 처방 만들기를 모두 지원합니다. 성분을 고르면 규제·배합 합계·EWG 등급이 실시간으로 검증됩니다.' },
+      { title: 'MyLab Studio 처방 설계', body: '빈 처방, 제형 템플릿, 기존 처방 복제에서 시작해 성분을 직접 골라 처방을 설계합니다. 성분을 고르면 규제·배합 합계·EWG 등급이 실시간으로 검증됩니다.' },
       { title: '시세 · 시장 동향 · 공급사 연결', body: '팜오일·지방산·석유화학 원료 시세와 환율, 주간 시장 리포트를 제공하고 공급사에 샘플·자료를 요청할 수 있습니다.' },
     ],
     note: '한국어 · English · 中文 지원. 중국 사용자는 cn.coching.club에서 동일한 계정으로 이용할 수 있습니다.',
@@ -158,7 +158,7 @@ const en: Dict = {
     features: [
       { title: 'Ingredient master search', body: 'Search more than 12,000 ingredients by trade name, INCI, manufacturer or supplier, then move straight to the ingredient DB and finished-product search.' },
       { title: 'Regulatory database by market', body: 'Usage restrictions for Korea, the EU, the US, Japan, China, ASEAN, Russia and Taiwan, keyed by INCI name. Only entries with a cited source are shown.' },
-      { title: 'MyLab Studio formulation', body: 'AI-assisted generation and manual formulation. As you pick ingredients, regulatory limits, totals and EWG grades are validated in real time.' },
+      { title: 'MyLab Studio formulation', body: 'Start from a blank formula, a format template or an existing formula and build it ingredient by ingredient. Regulatory limits, totals and EWG grades are validated in real time.' },
       { title: 'Prices, market reports, supplier requests', body: 'Palm oil, fatty acid and petrochemical price tracking with FX, weekly market reports, and sample or document requests to suppliers.' },
     ],
     note: 'Korean, English and Chinese supported. Chinese users can sign in with the same account at cn.coching.club.',
@@ -227,7 +227,7 @@ const zh: Dict = {
     features: [
       { title: '原料主数据检索', body: '按原料名、INCI、生产商、供应商检索 12,000 余条原料，并可直接跳转成分数据库与成品检索。' },
       { title: '各国法规数据库', body: '按 INCI 查询韩国、欧盟、美国、日本、中国、东盟、俄罗斯、台湾 8 个市场的使用限制，仅显示有出处依据的条目。' },
-      { title: 'MyLab Studio 配方设计', body: '同时支持 AI 生成配方与手动配方。选择成分时，法规限量、配比合计与 EWG 等级实时校验。' },
+      { title: 'MyLab Studio 配方设计', body: '从空白配方、剂型模板或现有配方出发，逐个选择成分完成配方设计。法规限量、配比合计与 EWG 等级实时校验。' },
       { title: '行情 · 市场报告 · 供应商对接', body: '提供棕榈油、脂肪酸、石化原料行情与汇率、每周市场报告，并可向供应商申请样品与资料。' },
     ],
     note: '支持韩文、英文、中文。中国用户可在 cn.coching.club 使用同一账号登录。',
