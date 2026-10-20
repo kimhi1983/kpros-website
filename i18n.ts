@@ -63,7 +63,7 @@ const ko: Dict = {
     ],
   },
   hero: {
-    badge: 'COSMETIC INGREDIENTS & FINISHED GOODS · SINCE 2022',
+    badge: 'INGREDIENTS & COSMETICS · SINCE 2022',
     title: ['화장품 원료부터', '화장품 완제품까지,', '공급의 모든 단계를 함께합니다'],
     body: '케이프로스는 화장품 원료를 직접 제조·수입·유통하고, 완제품 제작생산까지 한 번에 지원하는 B2B 파트너입니다. 글로벌 공급사 네트워크로 안정적인 공급을 보장합니다.',
     cta1: '화장품 원료 카탈로그 보기', cta2: '화장품 완제품 제작 상담',     imgAlt1: '실험용 플라스크 속 식물 원료', imgAlt2: '화이트 드로퍼 보틀 완제품', imgAlt3: '스포이드에서 떨어지는 오일 원료',
@@ -84,7 +84,7 @@ const ko: Dict = {
     categories: { 'Custom Base': '맞춤 베이스', 'Active Ingredients': '기능성 원료', 'Emollients & Oils': '에몰리언트·오일·보습제', 'Surfactants': '계면활성제', 'Preservatives': '방부제', 'UV Filters': '자외선 차단제', 'Specialty Poly': '폴리머·점증제', 'Pigments & Powders': '색소·파우더', 'Beads & Capsules': '비드·캡슐', 'Functional Additives': '기능성 첨가제' }, packing: '포장단위',
   },
   finished: {
-    eyebrow: 'FINISHED GOODS', title: '화장품 완제품 제작생산',
+    eyebrow: 'COSMETICS', title: '화장품 완제품 제작생산',
     body: '색조부터 기초·선케어·바디·헤어·홈케어까지, 화장품 원료 공급사가 직접 처방하고 생산합니다. 원료 원가·수급 리스크를 기획 단계에서 반영합니다.',
     cta: '제작 상담 신청',
     steps: [
@@ -256,7 +256,7 @@ const zh: Dict = {
     categories: { 'Custom Base': '定制基础原料', 'Active Ingredients': '活性成分', 'Emollients & Oils': '润肤剂·油脂·保湿剂', 'Surfactants': '表面活性剂', 'Preservatives': '防腐剂', 'UV Filters': '防晒剂', 'Specialty Poly': '聚合物·增稠剂', 'Pigments & Powders': '色素·粉体', 'Beads & Capsules': '微珠·胶囊', 'Functional Additives': '功能添加剂' }, packing: '包装规格',
   },
   finished: {
-    eyebrow: 'FINISHED GOODS', title: '化妆品成品生产',
+    eyebrow: 'COSMETICS', title: '化妆品成品生产',
     body: '从彩妆到护肤、防晒、身体、头发与家居护理，由化妆品原料供应商直接配方与生产。',
     cta: '申请生产咨询',
     steps: [
