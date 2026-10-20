@@ -119,11 +119,11 @@ const ko: Dict = {
 };
 
 const en: Dict = {
-  nav: { business: 'Business', products: 'Cosmetic Ingredients', finished: 'Cosmetic Finished Goods', lab: 'R&D Center', infra: 'Regulatory', coching: 'COCHING', contact: 'Contact', cta: 'Get a quote' },
-  strip: { label: 'Cosmetic ingredient categories' },
+  nav: { business: 'Business', products: 'Ingredients', finished: 'Cosmetics', lab: 'R&D Center', infra: 'Regulatory', coching: 'COCHING', contact: 'Contact', cta: 'Get a quote' },
+  strip: { label: 'Ingredient categories' },
   lab: {
     eyebrow: 'R&D CENTER', title: 'R&D Center',
-    body: 'Our R&D Center supports ingredient supply and finished goods, from ingredient evaluation to formulation, sampling and stability checks.',
+    body: 'Our R&D Center supports ingredient supply and finished cosmetics, from ingredient evaluation to formulation, sampling and stability checks.',
     imgAlt: 'Glassware with botanical ingredients',
     items: [
       { title: 'Ingredient evaluation', body: 'Properties, solubility and compatibility of new ingredients are checked in-house, with application guidance by use.' },
@@ -146,37 +146,37 @@ const en: Dict = {
     ],
   },
   hero: {
-    badge: 'COSMETIC INGREDIENTS & FINISHED GOODS · SINCE 2022',
-    title: ['From cosmetic ingredients', 'to cosmetic finished goods,', 'one partner for every stage'],
-    body: 'KPROS manufactures, imports and distributes cosmetic ingredients and produces finished goods under one roof. A global supplier network keeps your supply stable.',
-    cta1: 'Browse cosmetic ingredients', cta2: 'Cosmetic finished goods inquiry',     imgAlt1: 'Botanical ingredient in a lab flask', imgAlt2: 'White dropper bottle finished product', imgAlt3: 'Oil ingredient dripping from a pipette',
+    badge: 'INGREDIENTS & COSMETICS · SINCE 2022',
+    title: ['From ingredients', 'to finished cosmetics,', 'one partner for every stage'],
+    body: 'KPROS manufactures, imports and distributes cosmetic ingredients and produces finished cosmetics under one roof. A global supplier network keeps your supply stable.',
+    cta1: 'Browse ingredients', cta2: 'Cosmetics inquiry',     imgAlt1: 'Botanical ingredient in a lab flask', imgAlt2: 'White dropper bottle finished product', imgAlt3: 'Oil ingredient dripping from a pipette',
   },
   business: {
     eyebrow: 'BUSINESS', title: 'Three pillars, one supply system',
-    body: 'Manufacturing, importing and finished goods under one roof, from ingredient selection to launch with no intermediaries.',
+    body: 'Ingredient manufacturing, import and finished cosmetics under one roof, from ingredient selection to launch with no intermediaries.',
     items: [
-      { title: 'Cosmetic ingredient manufacturing', body: 'We produce custom plant waters and ferment waters to your formula — aloe, lavender, chamomile, rose and more, from small lots to bulk.', bullets: ['Custom Plant Water', 'Ferment Water (Galactomyces etc.)', 'Low-irritation, moisturising ingredient development'] },
-      { title: 'Cosmetic ingredient import & distribution', body: 'We import and distribute ingredients from Acid Chem, Nouryon, LANXESS, KAO, DAICEL and more. Regulatory documents and samples are supported alongside.', bullets: ['Glycerine, fatty acids, emollients', 'Surfactants, preservatives, functional additives', 'Regulatory documents (MSDS, COA, NMPA)'] },
-      { title: 'Cosmetic finished goods production', body: 'The cosmetic ingredient supplier that knows the ingredients best handles formulation through production. Ingredient costs are designed in at the planning stage.', bullets: ['Formulation · sampling · stability testing', 'Color cosmetics, skincare, sun care, body, hair and home care formats', 'Registration and export documentation'] },
+      { title: 'Ingredient manufacturing', body: 'We produce custom plant waters and ferment waters to your formula — aloe, lavender, chamomile, rose and more, from small lots to bulk.', bullets: ['Custom Plant Water', 'Ferment Water (Galactomyces etc.)', 'Low-irritation, moisturising ingredient development'] },
+      { title: 'Ingredient import & distribution', body: 'We import and distribute ingredients from Acid Chem, Nouryon, LANXESS, KAO, DAICEL and more. Regulatory documents and samples are supported alongside.', bullets: ['Glycerine, fatty acids, emollients', 'Surfactants, preservatives, functional additives', 'Regulatory documents (MSDS, COA, NMPA)'] },
+      { title: 'Cosmetics manufacturing', body: 'The ingredient supplier that knows the ingredients best handles formulation through production. Ingredient costs are designed in at the planning stage.', bullets: ['Formulation · sampling · stability testing', 'Color cosmetics, skincare, sun care, body, hair and home care formats', 'Registration and export documentation'] },
     ],
   },
   products: {
-    eyebrow: 'INGREDIENTS', title: 'Cosmetic ingredient catalogue',
+    eyebrow: 'INGREDIENTS', title: 'Ingredient catalogue',
     body: 'Search by trade name, INCI or brand, or browse by category.',
     search: 'Search by name, INCI or manufacturer', all: 'All', viewAll: 'View all items', showLess: 'Show less', empty: 'No results.',
     categories: { 'Custom Base': 'Custom Base', 'Active Ingredients': 'Actives', 'Emollients & Oils': 'Emollients & Oils', 'Surfactants': 'Surfactants', 'Preservatives': 'Preservatives', 'UV Filters': 'UV Filters', 'Specialty Poly': 'Polymers', 'Pigments & Powders': 'Pigments & Powders', 'Beads & Capsules': 'Beads', 'Functional Additives': 'Additives' }, packing: 'Packing',
   },
   finished: {
-    eyebrow: 'FINISHED GOODS', title: 'Cosmetic finished goods production',
-    body: 'From color cosmetics to skincare, sun care, body, hair and home care, formulated and produced by the cosmetic ingredient supplier.',
+    eyebrow: 'COSMETICS', title: 'Finished cosmetics manufacturing',
+    body: 'From color cosmetics to skincare, sun care, body, hair and home care, formulated and produced by the ingredient supplier.',
     cta: 'Request a consultation',
     steps: [
       { title: 'Planning · ingredient design', body: 'Ingredient mix proposed to concept and target cost' },
       { title: 'Formulation · samples', body: 'Samples after formulation, iterated with you' },
       { title: 'Testing · registration', body: 'Stability and safety tests, domestic and export filings' },
-      { title: 'Production · shipping', body: 'Bulk and finished goods, export paperwork included' },
+      { title: 'Production · shipping', body: 'Bulk and finished cosmetics, export paperwork included' },
     ],
-    imgAlt: 'Filling line for finished goods',
+    imgAlt: 'Filling line for finished cosmetics',
   },
   partners: { eyebrow: 'BRANDS', title: 'Brands we carry' },
   coching: {
@@ -194,8 +194,8 @@ const en: Dict = {
   },
   contact: {
     eyebrow: 'CONTACT', title: 'Quotes, samples and production',
-    body: 'One channel for cosmetic ingredient quotes, sample requests and cosmetic finished goods consultations. We reply within one business day.',
-    company: 'Company', name: 'Contact name', email: 'Email', type: 'Inquiry type', types: ['Cosmetic ingredient quote', 'Sample request', 'Cosmetic finished goods consultation', 'Other'], message: 'Message', send: 'Send inquiry',
+    body: 'One channel for ingredient quotes, sample requests and cosmetics manufacturing consultations. We reply within one business day.',
+    company: 'Company', name: 'Contact name', email: 'Email', type: 'Inquiry type', types: ['Ingredient quote', 'Sample request', 'Cosmetics manufacturing consultation', 'Other'], message: 'Message', send: 'Send inquiry',
     noEmail: 'Inquiry email is not configured yet (site.config.ts).',
   },
   footer: { privacy: 'Privacy policy', rights: 'All rights reserved.' },
