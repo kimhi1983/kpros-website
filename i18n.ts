@@ -10,7 +10,7 @@ export const LANGS: { code: Lang; label: string; html: string }[] = [
 
 type Dict = {
   nav: { business: string; products: string; finished: string; infra: string; contact: string; cta: string };
-  hero: { badge: string; title: string[]; body: string; cta1: string; cta2: string; statLabel: string; imgAlt1: string; imgAlt2: string };
+  hero: { badge: string; title: string[]; body: string; cta1: string; cta2: string; imgAlt1: string; imgAlt2: string; imgAlt3: string };
   stats: { founded: string; items: string; partners: string; rspo: string };
   business: {
     eyebrow: string; title: string; body: string;
@@ -37,16 +37,15 @@ const ko: Dict = {
     badge: 'COSMETIC INGREDIENTS & FINISHED GOODS · SINCE 2022',
     title: ['원료부터 완제품까지,', '화장품 공급의 모든 단계를 함께합니다'],
     body: '케이프로스는 화장품 원료를 직접 제조·수입·유통하고, 완제품 제작생산까지 한 번에 지원하는 B2B 파트너입니다. 글로벌 공급사 네트워크와 자체 창고 운영으로 안정적인 공급을 보장합니다.',
-    cta1: '원료 카탈로그 보기', cta2: '완제품 제작 상담', statLabel: '원료 제조 · 수입 · 완제품',
-    imgAlt1: '실험용 플라스크 속 식물 원료', imgAlt2: '화이트 드로퍼 보틀 완제품',
+    cta1: '원료 카탈로그 보기', cta2: '완제품 제작 상담',     imgAlt1: '실험용 플라스크 속 식물 원료', imgAlt2: '화이트 드로퍼 보틀 완제품', imgAlt3: '스포이드에서 떨어지는 오일 원료',
   },
-  stats: { founded: '설립 · 경기 평택/화성', items: '취급 원료 품목', partners: '글로벌 공급 파트너 브랜드', rspo: '지속가능 팜오일 유통 라이선스' },
+  stats: { founded: '설립 · 경기 평택/화성', items: '취급 원료 품목', partners: '취급 글로벌 브랜드', rspo: '지속가능 팜오일 유통 라이선스' },
   business: {
     eyebrow: 'BUSINESS', title: '세 가지 축으로 완성하는 공급 체계',
     body: '제조·수입·완제품이 한 회사 안에서 연결되어, 원료 선정부터 제품 출시까지 중간 단계 없이 진행됩니다.',
     items: [
       { title: '원료 제조', body: '고객 처방에 맞춘 식물 추출수·발효수를 직접 생산합니다. 알로에, 라벤더, 캐모마일, 장미 등 원하는 원물로 소량부터 대량까지.', bullets: ['Custom Plant Water', 'Ferment Water (Galactomyces 등)', '저자극·보습 특화 원료 개발'] },
-      { title: '원료 수입·유통', body: 'Acid Chem, Nouryon, LANXESS, KAO, DAICEL 등 글로벌 제조사의 원료를 국내 공식 공급합니다. 위험물 창고를 포함한 자체 물류로 리드타임을 줄입니다.', bullets: ['글리세린·지방산·에몰리언트', '계면활성제·방부제·기능성 첨가제', '규제 서류(MSDS·COA·NMPA) 지원'] },
+      { title: '원료 수입·유통', body: 'Acid Chem, Nouryon, LANXESS, KAO, DAICEL 등 글로벌 제조사의 원료를 수입·유통합니다. 위험물 창고를 포함한 자체 물류로 리드타임을 줄입니다.', bullets: ['글리세린·지방산·에몰리언트', '계면활성제·방부제·기능성 첨가제', '규제 서류(MSDS·COA·NMPA) 지원'] },
       { title: '완제품 제작생산', body: '원료를 가장 잘 아는 공급사가 처방부터 생산까지 맡습니다. 기획 단계에서 원료 원가를 함께 설계해 합리적인 제품을 만듭니다.', bullets: ['처방 개발 · 샘플 · 안정성 테스트', '스킨케어 · 바디 · 헤어 제형', '인허가·수출 서류 대응'] },
     ],
   },
@@ -68,7 +67,7 @@ const ko: Dict = {
     ],
     imgAlt: '완제품 충전 라인',
   },
-  partners: { eyebrow: 'PARTNERS', title: '공급 파트너', more: '외 다수' },
+  partners: { eyebrow: 'BRANDS', title: '취급 브랜드', more: '외 다수' },
   infra: {
     eyebrow: 'INFRASTRUCTURE', title: '자체 창고 2개소 직접 운영',
     body: '위험물 창고와 일반 창고를 직접 운영해 안전한 보관과 빠른 출하를 보장합니다.',
@@ -90,16 +89,15 @@ const en: Dict = {
     badge: 'COSMETIC INGREDIENTS & FINISHED GOODS · SINCE 2022',
     title: ['From raw ingredients to finished products,', 'one partner for every stage of cosmetic supply'],
     body: 'KPROS manufactures, imports and distributes cosmetic ingredients and produces finished goods under one roof. A global supplier network and owned warehousing keep your supply stable.',
-    cta1: 'Browse ingredients', cta2: 'Talk about finished goods', statLabel: 'Manufacturing · Import · Finished goods',
-    imgAlt1: 'Botanical ingredient in a lab flask', imgAlt2: 'White dropper bottle finished product',
+    cta1: 'Browse ingredients', cta2: 'Talk about finished goods',     imgAlt1: 'Botanical ingredient in a lab flask', imgAlt2: 'White dropper bottle finished product', imgAlt3: 'Oil ingredient dripping from a pipette',
   },
-  stats: { founded: 'Founded · Pyeongtaek / Hwaseong, Korea', items: 'ingredients in catalogue', partners: 'global supplier brands', rspo: 'sustainable palm oil distributor licence' },
+  stats: { founded: 'Founded · Pyeongtaek / Hwaseong, Korea', items: 'ingredients in catalogue', partners: 'global brands carried', rspo: 'sustainable palm oil distributor licence' },
   business: {
     eyebrow: 'BUSINESS', title: 'Three pillars, one supply system',
     body: 'Manufacturing, importing and finished goods are connected inside one company, so projects move from ingredient selection to launch without intermediaries.',
     items: [
       { title: 'Ingredient manufacturing', body: 'We produce custom plant waters and ferment waters to your formula — aloe, lavender, chamomile, rose and more, from small lots to bulk.', bullets: ['Custom Plant Water', 'Ferment Water (Galactomyces etc.)', 'Low-irritation, moisturising ingredient development'] },
-      { title: 'Import & distribution', body: 'Official Korean supply of ingredients from Acid Chem, Nouryon, LANXESS, KAO, DAICEL and more. Owned logistics, including a hazardous-goods warehouse, shorten lead times.', bullets: ['Glycerine, fatty acids, emollients', 'Surfactants, preservatives, functional additives', 'Regulatory documents (MSDS, COA, NMPA)'] },
+      { title: 'Import & distribution', body: 'We import and distribute ingredients from Acid Chem, Nouryon, LANXESS, KAO, DAICEL and more. Owned logistics, including a hazardous-goods warehouse, shorten lead times.', bullets: ['Glycerine, fatty acids, emollients', 'Surfactants, preservatives, functional additives', 'Regulatory documents (MSDS, COA, NMPA)'] },
       { title: 'Finished goods production', body: 'The supplier that knows the ingredients best handles formulation through production. Ingredient costs are designed in at the planning stage.', bullets: ['Formulation · sampling · stability testing', 'Skincare · body · hair formats', 'Registration and export documentation'] },
     ],
   },
@@ -121,7 +119,7 @@ const en: Dict = {
     ],
     imgAlt: 'Filling line for finished goods',
   },
-  partners: { eyebrow: 'PARTNERS', title: 'Supply partners', more: 'and more' },
+  partners: { eyebrow: 'BRANDS', title: 'Brands we carry', more: 'and more' },
   infra: {
     eyebrow: 'INFRASTRUCTURE', title: 'Two owned warehouses',
     body: 'We run a hazardous-goods warehouse and a general warehouse ourselves for safe storage and fast dispatch.',
@@ -143,16 +141,15 @@ const zh: Dict = {
     badge: '化妆品原料与成品 · 创立于 2022',
     title: ['从原料到成品，', '覆盖化妆品供应的每一个环节'],
     body: 'KPROS 自主生产、进口并分销化妆品原料，并提供成品生产服务。依托全球供应商网络与自有仓储，保障稳定供应。',
-    cta1: '查看原料目录', cta2: '成品生产咨询', statLabel: '原料生产 · 进口 · 成品',
-    imgAlt1: '实验烧瓶中的植物原料', imgAlt2: '白色滴管瓶成品',
+    cta1: '查看原料目录', cta2: '成品生产咨询',     imgAlt1: '实验烧瓶中的植物原料', imgAlt2: '白色滴管瓶成品', imgAlt3: '滴管中滴落的油类原料',
   },
-  stats: { founded: '成立 · 韩国京畿道平泽/华城', items: '原料品项', partners: '全球供应合作品牌', rspo: '可持续棕榈油分销许可' },
+  stats: { founded: '成立 · 韩国京畿道平泽/华城', items: '原料品项', partners: '经营全球品牌', rspo: '可持续棕榈油分销许可' },
   business: {
     eyebrow: 'BUSINESS', title: '三大支柱构建完整供应体系',
     body: '生产、进口与成品在同一家公司内打通，从原料选型到产品上市无需中间环节。',
     items: [
       { title: '原料生产', body: '按客户配方定制生产植物提取水与发酵水。芦荟、薰衣草、洋甘菊、玫瑰等原料，小批量至大批量均可。', bullets: ['Custom Plant Water', 'Ferment Water（Galactomyces 等）', '低刺激·保湿功能原料开发'] },
-      { title: '原料进口与分销', body: '官方供应 Acid Chem、Nouryon、LANXESS、KAO、DAICEL 等全球厂商原料。自有物流（含危险品仓库）缩短交付周期。', bullets: ['甘油·脂肪酸·润肤剂', '表面活性剂·防腐剂·功能添加剂', '法规文件支持（MSDS·COA·NMPA）'] },
+      { title: '原料进口与分销', body: '进口并分销 Acid Chem、Nouryon、LANXESS、KAO、DAICEL 等全球厂商原料。自有物流（含危险品仓库）缩短交付周期。', bullets: ['甘油·脂肪酸·润肤剂', '表面活性剂·防腐剂·功能添加剂', '法规文件支持（MSDS·COA·NMPA）'] },
       { title: '成品生产', body: '最了解原料的供应商负责从配方到生产。在企划阶段即规划原料成本，打造性价比合理的产品。', bullets: ['配方开发 · 打样 · 稳定性测试', '护肤 · 身体 · 头发剂型', '注册备案与出口文件'] },
     ],
   },
@@ -174,7 +171,7 @@ const zh: Dict = {
     ],
     imgAlt: '成品灌装线',
   },
-  partners: { eyebrow: 'PARTNERS', title: '供应合作伙伴', more: '等' },
+  partners: { eyebrow: 'BRANDS', title: '经营品牌', more: '等' },
   infra: {
     eyebrow: 'INFRASTRUCTURE', title: '两处自有仓库',
     body: '自主运营危险品仓库与普通仓库，保障安全存储与快速出货。',

@@ -1,5 +1,4 @@
 import React from 'react';
-import { ArrowUpRight } from 'lucide-react';
 import { useLang } from '../i18n';
 import { SITE } from '../site.config';
 
@@ -14,8 +13,8 @@ const Coching: React.FC = () => {
           <p className="text-[15px] md:text-[16px] leading-[1.6] text-[#BFC7C1]">{t.coching.body}</p>
         </div>
         <div className="lg:col-span-4 flex lg:justify-end">
-          <a href={SITE.links.coching} target="_blank" rel="noopener" className="inline-flex items-center gap-1.5 h-[52px] px-6 rounded-full bg-white text-ink text-[16px] font-semibold hover:bg-ivory transition">
-            {t.coching.cta} <ArrowUpRight size={18} aria-hidden="true" />
+          <a href={SITE.links.coching} target="_blank" rel="noopener" className="inline-flex items-center h-[52px] px-6 rounded-full bg-white text-ink text-[16px] font-semibold hover:bg-ivory transition">
+            {t.coching.cta}
           </a>
         </div>
       </div>

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Mail, MapPin, Phone } from 'lucide-react';
 import { useLang } from '../i18n';
 import { SITE } from '../site.config';
 
@@ -30,9 +29,9 @@ const Contact: React.FC = () => {
           <h2 className="h2">{t.contact.title}</h2>
           <p className="text-[15px] md:text-[17px] leading-[1.65] text-muted">{t.contact.body}</p>
           <ul className="flex flex-col gap-2.5 text-[15px] mt-2">
-            {SITE.phone && <li className="flex items-center gap-2.5"><Phone size={18} className="text-forest" aria-hidden="true" /><a href={`tel:${SITE.phone}`}>{SITE.phone}</a></li>}
-            {SITE.email && <li className="flex items-center gap-2.5"><Mail size={18} className="text-forest" aria-hidden="true" /><a href={`mailto:${SITE.email}`}>{SITE.email}</a></li>}
-            {SITE.address && <li className="flex items-center gap-2.5"><MapPin size={18} className="text-forest" aria-hidden="true" />{SITE.address}</li>}
+            {SITE.phone && <li className="flex gap-3"><span className="w-14 shrink-0 text-soft">Tel</span><a href={`tel:${SITE.phone}`}>{SITE.phone}</a></li>}
+            {SITE.email && <li className="flex gap-3"><span className="w-14 shrink-0 text-soft">Email</span><a href={`mailto:${SITE.email}`}>{SITE.email}</a></li>}
+            {SITE.address && <li className="flex gap-3"><span className="w-14 shrink-0 text-soft">Address</span><span>{SITE.address}</span></li>}
           </ul>
         </div>
 

@@ -1,8 +1,5 @@
 import React from 'react';
-import { Droplets, Globe2, FlaskConical } from 'lucide-react';
 import { useLang } from '../i18n';
-
-const icons = [Droplets, Globe2, FlaskConical];
 
 const Business: React.FC = () => {
   const { t } = useLang();
@@ -15,14 +12,10 @@ const Business: React.FC = () => {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
         {t.business.items.map((item, i) => {
-          const Icon = icons[i];
           const dark = i === 2;
           return (
             <article key={item.title} className={`flex flex-col gap-4 p-7 md:p-9 rounded-3xl ${dark ? 'bg-ink text-white' : 'bg-white border border-line'}`}>
-              <div className="flex items-center justify-between">
-                <span className={`font-inter text-[13px] font-bold ${dark ? 'text-forest-mint' : 'text-forest'}`}>0{i + 1}</span>
-                <Icon size={36} strokeWidth={1.6} className={dark ? 'text-forest-mint' : 'text-forest'} aria-hidden="true" />
-              </div>
+              <span className={`font-inter text-[13px] font-bold ${dark ? 'text-forest-mint' : 'text-forest'}`}>0{i + 1}</span>
               <h3 className="text-[22px] md:text-[24px] font-bold">{item.title}</h3>
               <p className={`text-[15px] leading-[1.65] ${dark ? 'text-[#BFC7C1]' : 'text-muted'}`}>{item.body}</p>
               <ul className="flex flex-col gap-2 text-[14px]">
