@@ -266,7 +266,7 @@ const zh: Dict = {
     eyebrow: 'COCHING CLUB', title: '从原料检索到配方设计，面向化妆品原料实务的 B2B 平台',
     body: '把原料从业者每天使用的工具集中在一起：原料检索、各国法规查询、配方设计、行情查询，均在 coching.club 一站完成。',
     cta: '前往 coching.club', ctaCn: '中文版 cn.coching.club',
-    imgAlt1: 'COCHING 原料行情与市场动态页面', imgAlt2: 'COCHING 原料检索页面',
+    imgAlt1: 'COCHING 原料行情与市场动态页面', imgAlt2: 'COCHING 市场动态报告页面',
     features: [
       { title: '原料主数据检索', body: '按原料名、INCI、生产商、供应商检索 12,000 余条原料，并可直接跳转成分数据库与成品检索。' },
       { title: '各国法规数据库', body: '按 INCI 查询韩国、欧盟、美国、日本、中国、东盟、俄罗斯、台湾 8 个市场的使用限制，仅显示有出处依据的条目。' },
