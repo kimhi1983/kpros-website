@@ -30,7 +30,7 @@ type Dict = {
   };
   contact: {
     eyebrow: string; title: string; body: string; company: string; name: string; email: string; type: string;
-    types: string[]; message: string; send: string; noEmail: string;
+    types: string[]; message: string; send: string; sending: string; sent: string; error: string; errorMailto: string; noEmail: string;
   };
   footer: { privacy: string; rights: string };
 };
@@ -113,6 +113,7 @@ const ko: Dict = {
     eyebrow: 'CONTACT', title: '견적·샘플·제작 문의',
     body: '화장품 원료 견적, 샘플 요청, 화장품 완제품 제작 상담 모두 한 창구에서 받습니다. 영업일 기준 1일 내 회신합니다.',
     company: '회사명', name: '담당자', email: '이메일', type: '문의 유형', types: ['화장품 원료 견적', '샘플 요청', '화장품 완제품 제작 상담', '기타'], message: '내용', send: '문의 보내기',
+    sending: '보내는 중…', sent: '문의가 접수되었습니다. 영업일 기준 1일 내 회신드리겠습니다.', error: '전송에 실패했습니다. 잠시 후 다시 시도하거나', errorMailto: '메일로 보내기',
     noEmail: '문의 수신 이메일이 아직 설정되지 않았습니다 (site.config.ts).',
   },
   footer: { privacy: '개인정보처리방침', rights: 'All rights reserved.' },
@@ -196,6 +197,7 @@ const en: Dict = {
     eyebrow: 'CONTACT', title: 'Quotes, samples and production',
     body: 'One channel for ingredient quotes, sample requests and cosmetics manufacturing consultations. We reply within one business day.',
     company: 'Company', name: 'Contact name', email: 'Email', type: 'Inquiry type', types: ['Ingredient quote', 'Sample request', 'Cosmetics manufacturing consultation', 'Other'], message: 'Message', send: 'Send inquiry',
+    sending: 'Sending…', sent: 'Your inquiry has been received. We will reply within one business day.', error: 'Sending failed. Please try again later or', errorMailto: 'send by email',
     noEmail: 'Inquiry email is not configured yet (site.config.ts).',
   },
   footer: { privacy: 'Privacy policy', rights: 'All rights reserved.' },
@@ -279,6 +281,7 @@ const zh: Dict = {
     eyebrow: 'CONTACT', title: '询价 · 索样 · 生产咨询',
     body: '化妆品原料询价、索样、化妆品成品生产咨询统一受理，1 个工作日内回复。',
     company: '公司名称', name: '联系人', email: '邮箱', type: '咨询类型', types: ['化妆品原料询价', '索样', '化妆品成品生产咨询', '其他'], message: '内容', send: '发送咨询',
+    sending: '发送中…', sent: '已收到您的咨询，我们将在1个工作日内回复。', error: '发送失败，请稍后重试或', errorMailto: '通过邮件发送',
     noEmail: '尚未配置咨询接收邮箱（site.config.ts）。',
   },
   footer: { privacy: '隐私政策', rights: 'All rights reserved.' },

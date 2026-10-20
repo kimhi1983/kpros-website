@@ -7,19 +7,38 @@ const field = 'h-[46px] px-3.5 rounded-[10px] border border-[#C9C4B8] bg-white t
 const Contact: React.FC = () => {
   const { t, lang } = useLang();
   const address = lang === 'en' ? SITE.addressEn : lang === 'zh' ? SITE.addressZh : SITE.address;
-  const [form, setForm] = useState({ company: '', name: '', email: '', type: t.contact.types[0], message: '' });
+  const [form, setForm] = useState({ company: '', name: '', email: '', type: t.contact.types[0], message: '', website: '' });
+  const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
+  const [opened] = useState(() => Date.now());
   const set = (k: keyof typeof form) => (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) =>
     setForm((f) => ({ ...f, [k]: e.target.value }));
 
-  const onSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!SITE.email) {
-      alert(t.contact.noEmail);
-      return;
-    }
+  const mailtoFallback = () => {
     const subject = `[${form.type}] ${form.company} - ${form.name}`;
     const body = `${t.contact.company}: ${form.company}\n${t.contact.name}: ${form.name}\n${t.contact.email}: ${form.email}\n${t.contact.type}: ${form.type}\n\n${form.message}`;
     window.location.href = `mailto:${SITE.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  };
+
+  const onSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (status === 'sending') return;
+    setStatus('sending');
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ ...form, t: opened }),
+      });
+      const data = await res.json().catch(() => ({ ok: false }));
+      if (res.ok && data.ok) {
+        setStatus('sent');
+        setForm((f) => ({ ...f, company: '', name: '', email: '', message: '' }));
+        return;
+      }
+      throw new Error(data.error || 'failed');
+    } catch {
+      setStatus('error');
+    }
   };
 
   const hasInfo = SITE.phone || SITE.email || SITE.address;
@@ -53,7 +72,17 @@ const Contact: React.FC = () => {
             </select>
           </label>
           <label className="flex flex-col gap-1.5 text-[13px] font-semibold"><span>{t.contact.message}</span><textarea required rows={5} className={`${field} !h-auto py-3 resize-y`} value={form.message} onChange={set('message')} /></label>
-          <button type="submit" className="btn-primary mt-1 self-start !px-10">{t.contact.send}</button>
+          <input type="text" name="website" tabIndex={-1} autoComplete="off" value={form.website} onChange={set('website')} className="hidden" aria-hidden />
+          <div className="flex flex-col sm:flex-row sm:items-center gap-3 mt-1">
+            <button type="submit" disabled={status === 'sending'} className="btn-primary self-start !px-10 disabled:opacity-60">{status === 'sending' ? t.contact.sending : t.contact.send}</button>
+            {status === 'sent' && <span className="text-[14px] text-forest font-semibold">{t.contact.sent}</span>}
+            {status === 'error' && (
+              <span className="text-[14px] text-[#B4341E]">
+                {t.contact.error}{' '}
+                <button type="button" onClick={mailtoFallback} className="underline font-semibold">{t.contact.errorMailto}</button>
+              </span>
+            )}
+          </div>
         </form>
       </div>
     </section>
