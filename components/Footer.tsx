@@ -6,7 +6,9 @@ const Footer: React.FC = () => {
   const { t, lang } = useLang();
   const company = lang === 'ko' ? SITE.companyKo : lang === 'zh' ? SITE.companyZh : SITE.companyEn;
   const address = lang === 'en' ? SITE.addressEn : lang === 'zh' ? SITE.addressZh : SITE.address;
-  const meta = [company, SITE.bizNo, address].filter(Boolean).join(' · ');
+  const ceo = lang === 'ko' ? `대표 ${SITE.ceo}` : lang === 'zh' ? `代表 ${SITE.ceo}` : `CEO ${SITE.ceoEn}`;
+  const biz = lang === 'ko' ? `사업자등록번호 ${SITE.bizNo}` : lang === 'zh' ? `营业执照号 ${SITE.bizNo}` : `Business Reg. No. ${SITE.bizNo}`;
+  const meta = [company, ceo, biz].join(' · ');
   const contact = [SITE.phone && `Tel ${SITE.phone}`, SITE.fax && `Fax ${SITE.fax}`, SITE.email].filter(Boolean).join(' · ');
   return (
     <footer className="bg-ink text-[#BFC7C1]">
@@ -14,6 +16,7 @@ const Footer: React.FC = () => {
         <div className="flex flex-col gap-1.5">
           <span className="font-inter font-bold text-[18px] tracking-[0.18em] text-white">KPROS</span>
           <span>{meta}</span>
+          <span>{address}</span>
           <span>{contact}</span>
           <span>© {new Date().getFullYear()} KPROS CORP. {t.footer.rights}</span>
         </div>

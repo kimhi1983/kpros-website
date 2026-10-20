@@ -9,7 +9,9 @@ export const SITE = {
   address: '경기도 광명시 일직로 43 GIDC A2602호',
   addressEn: 'A2602, GIDC, 43 Iljik-ro, Gwangmyeong-si, Gyeonggi-do, Korea',
   addressZh: '韩国京畿道光明市一直路 43 GIDC A2602号',
-  bizNo: '',            // 사업자등록번호
+  bizNo: '316-81-29819',
+  ceo: '오원석',
+  ceoEn: 'Oh Won-seok',
   foundedYear: 2022,
   partnerCount: '30+',
   links: {
