@@ -25,7 +25,7 @@ type Dict = {
   support: { eyebrow: string; title: string; body: string; items: { title: string; body: string }[] };
   lab: { eyebrow: string; title: string; body: string; imgAlt: string; items: { title: string; body: string }[]; cta: string };
   coching: {
-    eyebrow: string; title: string; body: string; cta: string; ctaCn: string; imgAlt1: string; imgAlt2: string; prev: string; next: string; slides: Record<'market' | 'briefs' | 'search' | 'ingredients' | 'products' | 'hlb', string>;
+    eyebrow: string; title: string; body: string; cta: string; ctaCn: string; imgAlt1: string; imgAlt2: string; prev: string; next: string; slides: Record<'market' | 'briefs' | 'search' | 'ingredients' | 'products' | 'hlb' | 'formula' | 'crews' | 'orders' | 'materials', string>;
     features: { title: string; body: string }[]; note: string;
   };
   contact: {
@@ -102,7 +102,7 @@ const ko: Dict = {
     cta: 'coching.club 바로가기', ctaCn: '中文版 cn.coching.club',
     imgAlt1: 'COCHING 원료 시세·시장 동향 화면', imgAlt2: 'COCHING 시장 동향 리포트 화면',
     prev: '이전', next: '다음',
-    slides: { market: '원료 시세', briefs: '시장 동향 리포트', search: '원료 검색', ingredients: '성분 DB', products: '완제품 검색', hlb: 'HLB 계산기' },
+    slides: { market: '원료 시세', briefs: '시장 동향 리포트', search: '원료 검색', ingredients: '성분 DB', products: '완제품 검색', hlb: 'HLB 계산기', formula: '처방 생성', crews: '크루 협업', orders: '생산 지시', materials: '원료 재고' },
     features: [
       { title: '원료 마스터 검색', body: '원료명·한글명·INCI·제조사·공급사로 1만 2천 건 이상의 원료를 검색하고, 성분 DB와 완제품 검색으로 바로 이어집니다.' },
       { title: '국가별 규제 데이터베이스', body: '한국·EU·미국·일본·중국·ASEAN·러시아·대만 8개 권역의 사용 제한을 INCI 기준으로 확인합니다. 근거 출처가 있는 항목만 표시합니다.' },
@@ -188,7 +188,7 @@ const en: Dict = {
     cta: 'Open coching.club', ctaCn: '中文版 cn.coching.club',
     imgAlt1: 'COCHING market price and trend dashboard', imgAlt2: 'COCHING market briefs screen',
     prev: 'Prev', next: 'Next',
-    slides: { market: 'Ingredient prices', briefs: 'Market briefs', search: 'Ingredient search', ingredients: 'Ingredient DB', products: 'Product search', hlb: 'HLB calculator' },
+    slides: { market: 'Ingredient prices', briefs: 'Market briefs', search: 'Ingredient search', ingredients: 'Ingredient DB', products: 'Product search', hlb: 'HLB calculator', formula: 'Formula builder', crews: 'Crew collaboration', orders: 'Production orders', materials: 'Material inventory' },
     features: [
       { title: 'Ingredient master search', body: 'Search more than 12,000 ingredients by trade name, INCI, manufacturer or supplier, then move straight to the ingredient DB and finished-product search.' },
       { title: 'Regulatory database by market', body: 'Usage restrictions for Korea, the EU, the US, Japan, China, ASEAN, Russia and Taiwan, keyed by INCI name. Only entries with a cited source are shown.' },
@@ -274,7 +274,7 @@ const zh: Dict = {
     cta: '前往 coching.club', ctaCn: '中文版 cn.coching.club',
     imgAlt1: 'COCHING 原料行情与市场动态页面', imgAlt2: 'COCHING 市场动态报告页面',
     prev: '上一页', next: '下一页',
-    slides: { market: '原料行情', briefs: '市场动态报告', search: '原料检索', ingredients: '成分数据库', products: '成品检索', hlb: 'HLB 计算器' },
+    slides: { market: '原料行情', briefs: '市场动态报告', search: '原料检索', ingredients: '成分数据库', products: '成品检索', hlb: 'HLB 计算器', formula: '配方创建', crews: '团队协作', orders: '生产指示', materials: '原料库存' },
     features: [
       { title: '原料主数据检索', body: '按原料名、INCI、生产商、供应商检索 12,000 余条原料，并可直接跳转成分数据库与成品检索。' },
       { title: '各国法规数据库', body: '按 INCI 查询韩国、欧盟、美国、日本、中国、东盟、俄罗斯、台湾 8 个市场的使用限制，仅显示有出处依据的条目。' },

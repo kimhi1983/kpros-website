@@ -8,6 +8,10 @@ export const COCHING_SLIDES = [
   { key: 'ingredients', src: '/coching/ingredients.jpg' },
   { key: 'products', src: '/coching/products.jpg' },
   { key: 'hlb', src: '/coching/hlb.jpg' },
+  { key: 'formula', src: '/coching/formula.jpg' },
+  { key: 'crews', src: '/coching/crews.jpg' },
+  { key: 'orders', src: '/coching/orders.jpg' },
+  { key: 'materials', src: '/coching/materials.jpg' },
 ] as const;
 
 const AUTO_MS = 6000;
