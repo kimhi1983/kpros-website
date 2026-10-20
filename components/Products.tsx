@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { Search } from 'lucide-react';
 import { CATEGORIES, PRODUCTS } from '../constants';
 import type { Category } from '../types';
@@ -11,6 +11,12 @@ const Products: React.FC = () => {
   const [category, setCategory] = useState<Category>('All');
   const [query, setQuery] = useState('');
   const [expanded, setExpanded] = useState(false);
+
+  useEffect(() => {
+    const onPick = (e: Event) => { setCategory((e as CustomEvent<Category>).detail); setExpanded(false); setQuery(''); };
+    window.addEventListener('kpros:category', onPick);
+    return () => window.removeEventListener('kpros:category', onPick);
+  }, []);
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();

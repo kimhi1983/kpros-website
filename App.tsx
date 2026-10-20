@@ -2,12 +2,12 @@ import React from 'react';
 import { LangProvider } from './i18n';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import Stats from './components/Stats';
+import CategoryStrip from './components/CategoryStrip';
 import Business from './components/Business';
 import Products from './components/Products';
 import Finished from './components/Finished';
 import Partners from './components/Partners';
-import Infra from './components/Infra';
+import Support from './components/Support';
 import Coching from './components/Coching';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -17,12 +17,12 @@ const App: React.FC = () => (
     <Navbar />
     <main>
       <Hero />
-      <Stats />
+      <CategoryStrip />
       <Business />
       <Products />
       <Finished />
       <Partners />
-      <Infra />
+      <Support />
       <Coching />
       <Contact />
     </main>
