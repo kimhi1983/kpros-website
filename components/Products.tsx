@@ -1,4 +1,11 @@
 import React, { useEffect, useMemo, useState } from 'react';
+
+const ROTATE_MS = 10000;
+const shuffle = <T,>(arr: T[]) => {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; }
+  return a;
+};
 import { Search } from 'lucide-react';
 import { CATEGORIES, PRODUCTS } from '../constants';
 import type { Category } from '../types';
@@ -11,6 +18,8 @@ const Products: React.FC = () => {
   const [category, setCategory] = useState<Category>('All');
   const [query, setQuery] = useState('');
   const [expanded, setExpanded] = useState(false);
+  const [featured, setFeatured] = useState(() => shuffle(PRODUCTS).slice(0, INITIAL));
+  const [fading, setFading] = useState(false);
 
   useEffect(() => {
     const onPick = (e: Event) => { setCategory((e as CustomEvent<Category>).detail); setExpanded(false); setQuery(''); };
@@ -27,7 +36,18 @@ const Products: React.FC = () => {
     });
   }, [category, query]);
 
-  const visible = expanded || query ? filtered : filtered.slice(0, INITIAL);
+  const rotating = !expanded && !query && category === 'All';
+
+  useEffect(() => {
+    if (!rotating) return;
+    const id = window.setInterval(() => {
+      setFading(true);
+      window.setTimeout(() => { setFeatured(shuffle(PRODUCTS).slice(0, INITIAL)); setFading(false); }, 350);
+    }, ROTATE_MS);
+    return () => window.clearInterval(id);
+  }, [rotating]);
+
+  const visible = rotating ? featured : expanded || query ? filtered : filtered.slice(0, INITIAL);
   const label = (c: Category) => (c === 'All' ? t.products.all : t.products.categories[c]);
 
   return (
@@ -72,7 +92,7 @@ const Products: React.FC = () => {
         {visible.length === 0 ? (
           <p className="text-soft py-10 text-center">{t.products.empty}</p>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 transition-opacity duration-300 ${fading ? 'opacity-0' : 'opacity-100'}`}>
             {visible.map((p) => (
               <article key={p.id} className="flex flex-col gap-2 p-6 rounded-2xl border border-line bg-ivory">
                 <span className="text-[12px] font-semibold text-forest">
