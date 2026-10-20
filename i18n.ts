@@ -59,7 +59,7 @@ const ko: Dict = {
     items: [
       { title: '화장품 원료 제조', body: '고객 처방에 맞춘 식물 추출수·발효수를 직접 생산합니다. 알로에, 라벤더, 캐모마일, 장미 등 원하는 원물로 소량부터 대량까지.', bullets: ['Custom Plant Water', 'Ferment Water (Galactomyces 등)', '저자극·보습 특화 원료 개발'] },
       { title: '화장품 원료 수입·유통', body: 'Acid Chem, Nouryon, LANXESS, KAO, DAICEL 등 글로벌 제조사의 원료를 수입·유통합니다. 규제 서류와 샘플을 함께 지원합니다.', bullets: ['글리세린·지방산·에몰리언트', '계면활성제·방부제·기능성 첨가제', '규제 서류(MSDS·COA·NMPA) 지원'] },
-      { title: '화장품 완제품 제작생산', body: '화장품 원료를 가장 잘 아는 공급사가 처방부터 생산까지 맡습니다. 기획 단계에서 원료 원가를 함께 설계해 합리적인 제품을 만듭니다.', bullets: ['처방 개발 · 샘플 · 안정성 테스트', '스킨케어 · 바디 · 헤어 제형', '인허가·수출 서류 대응'] },
+      { title: '화장품 완제품 제작생산', body: '화장품 원료를 가장 잘 아는 공급사가 처방부터 생산까지 맡습니다. 기획 단계에서 원료 원가를 함께 설계해 합리적인 제품을 만듭니다.', bullets: ['처방 개발 · 샘플 · 안정성 테스트', '색조 · 기초 · 선케어 · 바디 · 헤어 · 홈케어까지 다양한 제형', '인허가·수출 서류 대응'] },
     ],
   },
   products: {
@@ -70,7 +70,7 @@ const ko: Dict = {
   },
   finished: {
     eyebrow: 'FINISHED GOODS', title: '화장품 완제품 제작생산',
-    body: '화장품 원료 공급사가 직접 처방하고 생산합니다. 원료 원가·수급 리스크를 기획 단계에서 반영해 출시 후에도 안정적으로 공급되는 제품을 만듭니다.',
+    body: '색조부터 기초·선케어·바디·헤어·홈케어까지, 화장품 원료 공급사가 직접 처방하고 생산합니다. 원료 원가·수급 리스크를 기획 단계에서 반영합니다.',
     cta: '제작 상담 신청',
     steps: [
       { title: '기획 · 원료 설계', body: '컨셉과 목표 원가에 맞춰 원료 구성 제안' },
@@ -128,7 +128,7 @@ const en: Dict = {
     items: [
       { title: 'Cosmetic ingredient manufacturing', body: 'We produce custom plant waters and ferment waters to your formula — aloe, lavender, chamomile, rose and more, from small lots to bulk.', bullets: ['Custom Plant Water', 'Ferment Water (Galactomyces etc.)', 'Low-irritation, moisturising ingredient development'] },
       { title: 'Cosmetic ingredient import & distribution', body: 'We import and distribute ingredients from Acid Chem, Nouryon, LANXESS, KAO, DAICEL and more. Regulatory documents and samples are supported alongside.', bullets: ['Glycerine, fatty acids, emollients', 'Surfactants, preservatives, functional additives', 'Regulatory documents (MSDS, COA, NMPA)'] },
-      { title: 'Cosmetic finished goods production', body: 'The cosmetic ingredient supplier that knows the ingredients best handles formulation through production. Ingredient costs are designed in at the planning stage.', bullets: ['Formulation · sampling · stability testing', 'Skincare · body · hair formats', 'Registration and export documentation'] },
+      { title: 'Cosmetic finished goods production', body: 'The cosmetic ingredient supplier that knows the ingredients best handles formulation through production. Ingredient costs are designed in at the planning stage.', bullets: ['Formulation · sampling · stability testing', 'Color cosmetics, skincare, sun care, body, hair and home care formats', 'Registration and export documentation'] },
     ],
   },
   products: {
@@ -139,7 +139,7 @@ const en: Dict = {
   },
   finished: {
     eyebrow: 'FINISHED GOODS', title: 'Cosmetic finished goods production',
-    body: 'Formulated and produced by the cosmetic ingredient supplier. Cost and sourcing risk are planned in, so supply stays stable after launch.',
+    body: 'From color cosmetics to skincare, sun care, body, hair and home care, formulated and produced by the cosmetic ingredient supplier.',
     cta: 'Request a consultation',
     steps: [
       { title: 'Planning · ingredient design', body: 'Ingredient mix proposed to concept and target cost' },
@@ -197,7 +197,7 @@ const zh: Dict = {
     items: [
       { title: '化妆品原料生产', body: '按客户配方定制生产植物提取水与发酵水。芦荟、薰衣草、洋甘菊、玫瑰等原料，小批量至大批量均可。', bullets: ['Custom Plant Water', 'Ferment Water（Galactomyces 等）', '低刺激·保湿功能原料开发'] },
       { title: '化妆品原料进口与分销', body: '进口并分销 Acid Chem、Nouryon、LANXESS、KAO、DAICEL 等全球厂商原料。同时提供法规文件与样品支持。', bullets: ['甘油·脂肪酸·润肤剂', '表面活性剂·防腐剂·功能添加剂', '法规文件支持（MSDS·COA·NMPA）'] },
-      { title: '化妆品成品生产', body: '最了解化妆品原料的供应商负责从配方到生产。在企划阶段即规划原料成本，打造性价比合理的产品。', bullets: ['配方开发 · 打样 · 稳定性测试', '护肤 · 身体 · 头发剂型', '注册备案与出口文件'] },
+      { title: '化妆品成品生产', body: '最了解化妆品原料的供应商负责从配方到生产。在企划阶段即规划原料成本，打造性价比合理的产品。', bullets: ['配方开发 · 打样 · 稳定性测试', '彩妆、护肤、防晒、身体、头发到家居护理等多种剂型', '注册备案与出口文件'] },
     ],
   },
   products: {
@@ -208,7 +208,7 @@ const zh: Dict = {
   },
   finished: {
     eyebrow: 'FINISHED GOODS', title: '化妆品成品生产',
-    body: '由化妆品原料供应商直接配方与生产。在企划阶段即纳入原料成本与供应风险，确保上市后持续稳定供货。',
+    body: '从彩妆到护肤、防晒、身体、头发与家居护理，由化妆品原料供应商直接配方与生产。',
     cta: '申请生产咨询',
     steps: [
       { title: '企划 · 原料设计', body: '按概念与目标成本提出原料组合方案' },
