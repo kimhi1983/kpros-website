@@ -5,13 +5,16 @@ import { SITE } from '../site.config';
 const Footer: React.FC = () => {
   const { t, lang } = useLang();
   const company = lang === 'ko' ? SITE.companyKo : lang === 'zh' ? SITE.companyZh : SITE.companyEn;
-  const meta = [company, SITE.bizNo, SITE.address].filter(Boolean).join(' · ');
+  const address = lang === 'en' ? SITE.addressEn : lang === 'zh' ? SITE.addressZh : SITE.address;
+  const meta = [company, SITE.bizNo, address].filter(Boolean).join(' · ');
+  const contact = [SITE.phone && `Tel ${SITE.phone}`, SITE.fax && `Fax ${SITE.fax}`, SITE.email].filter(Boolean).join(' · ');
   return (
     <footer className="bg-ink text-[#BFC7C1]">
       <div className="container-page py-10 flex flex-col md:flex-row md:items-center md:justify-between gap-6 text-[13px]">
         <div className="flex flex-col gap-1.5">
           <span className="font-inter font-bold text-[18px] tracking-[0.18em] text-white">KPROS</span>
           <span>{meta}</span>
+          <span>{contact}</span>
           <span>© {new Date().getFullYear()} KPROS CORP. {t.footer.rights}</span>
         </div>
         <nav className="flex gap-6">

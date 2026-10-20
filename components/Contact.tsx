@@ -5,7 +5,8 @@ import { SITE } from '../site.config';
 const field = 'h-[46px] px-3.5 rounded-[10px] border border-[#C9C4B8] bg-white text-[15px] outline-none focus:border-forest';
 
 const Contact: React.FC = () => {
-  const { t } = useLang();
+  const { t, lang } = useLang();
+  const address = lang === 'en' ? SITE.addressEn : lang === 'zh' ? SITE.addressZh : SITE.address;
   const [form, setForm] = useState({ company: '', name: '', email: '', type: t.contact.types[0], message: '' });
   const set = (k: keyof typeof form) => (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) =>
     setForm((f) => ({ ...f, [k]: e.target.value }));
@@ -33,8 +34,9 @@ const Contact: React.FC = () => {
           {hasInfo && (
             <ul className="flex flex-wrap gap-x-8 gap-y-2 text-[15px] mt-1">
               {SITE.phone && <li className="flex gap-3"><span className="text-soft">Tel</span><a href={`tel:${SITE.phone}`}>{SITE.phone}</a></li>}
+              {SITE.fax && <li className="flex gap-3"><span className="text-soft">Fax</span><span>{SITE.fax}</span></li>}
               {SITE.email && <li className="flex gap-3"><span className="text-soft">Email</span><a href={`mailto:${SITE.email}`}>{SITE.email}</a></li>}
-              {SITE.address && <li className="flex gap-3"><span className="text-soft">Address</span><span>{SITE.address}</span></li>}
+              {address && <li className="flex gap-3"><span className="text-soft">Address</span><span>{address}</span></li>}
             </ul>
           )}
         </div>

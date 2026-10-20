@@ -3,9 +3,12 @@ export const SITE = {
   companyKo: '주식회사 케이프로스',
   companyEn: 'KPROS CORP.',
   companyZh: '株式会社 KPROS',
-  phone: '',            // 예: '+82-31-000-0000'
-  email: '',            // 예: 'sales@kproscorp.com' — 문의 폼 수신 주소로도 사용
-  address: '',          // 본사 주소
+  phone: '02-898-0120',
+  fax: '02-898-0130',
+  email: 'kpros@kpros.kr',   // 문의 폼 수신 주소로도 사용
+  address: '경기도 광명시 일직로 43 GIDC A2602호',
+  addressEn: 'A2602, GIDC, 43 Iljik-ro, Gwangmyeong-si, Gyeonggi-do, Korea',
+  addressZh: '韩国京畿道光明市一直路 43 GIDC A2602号',
   bizNo: '',            // 사업자등록번호
   foundedYear: 2022,
   partnerCount: '30+',
