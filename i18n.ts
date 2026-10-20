@@ -9,7 +9,7 @@ export const LANGS: { code: Lang; label: string; html: string }[] = [
 ];
 
 type Dict = {
-  nav: { business: string; products: string; finished: string; infra: string; contact: string; cta: string };
+  nav: { business: string; products: string; finished: string; infra: string; coching: string; contact: string; cta: string };
   hero: { badge: string; title: string[]; body: string; cta1: string; cta2: string; imgAlt1: string; imgAlt2: string; imgAlt3: string };
   strip: { label: string };
   business: {
@@ -23,7 +23,10 @@ type Dict = {
   finished: { eyebrow: string; title: string; body: string; cta: string; steps: { title: string; body: string }[]; imgAlt: string };
   partners: { eyebrow: string; title: string; more: string };
   support: { eyebrow: string; title: string; body: string; items: { title: string; body: string }[] };
-  coching: { eyebrow: string; title: string; body: string; cta: string };
+  coching: {
+    eyebrow: string; title: string; body: string; cta: string; ctaCn: string; imgAlt1: string; imgAlt2: string;
+    features: { title: string; body: string }[]; note: string;
+  };
   contact: {
     eyebrow: string; title: string; body: string; company: string; name: string; email: string; type: string;
     types: string[]; message: string; send: string; noEmail: string;
@@ -32,7 +35,7 @@ type Dict = {
 };
 
 const ko: Dict = {
-  nav: { business: '사업영역', products: '원료 카탈로그', finished: '완제품 제작', infra: '규제·품질 지원', contact: '문의', cta: '견적·샘플 문의' },
+  nav: { business: '사업영역', products: '원료 카탈로그', finished: '완제품 제작', infra: '규제·품질 지원', coching: 'COCHING CLUB', contact: '문의', cta: '견적·샘플 문의' },
   strip: { label: '취급 원료 카테고리' },
   support: {
     eyebrow: 'REGULATORY & QUALITY', title: '규제·품질 서류까지 함께 지원합니다',
@@ -78,7 +81,19 @@ const ko: Dict = {
     imgAlt: '완제품 충전 라인',
   },
   partners: { eyebrow: 'BRANDS', title: '취급 브랜드', more: '외 다수' },
-  coching: { eyebrow: 'COCHING CLUB', title: '원료 검색부터 처방 설계까지, 케이프로스가 만든 B2B 플랫폼', body: 'INCI·규제·공급사 정보를 한 곳에서 검색하고, MyLab Studio로 처방을 설계하세요.', cta: 'coching.club 바로가기' },
+  coching: {
+    eyebrow: 'COCHING CLUB', title: '원료 검색부터 처방 설계까지, 케이프로스가 직접 만든 B2B 플랫폼',
+    body: '원료를 다루는 실무자가 매일 쓰는 도구를 하나로 모았습니다. 원료 검색, 국가별 규제 확인, 처방 설계, 시세 확인까지 coching.club 한 곳에서 처리합니다.',
+    cta: 'coching.club 바로가기', ctaCn: '中文版 cn.coching.club',
+    imgAlt1: 'COCHING 원료 시세·시장 동향 화면', imgAlt2: 'COCHING 원료 검색 화면',
+    features: [
+      { title: '원료 마스터 검색', body: '원료명·한글명·INCI·제조사·공급사로 1만 2천 건 이상의 원료를 검색하고, 성분 DB와 완제품 검색으로 바로 이어집니다.' },
+      { title: '국가별 규제 데이터베이스', body: '한국·EU·미국·일본·중국·ASEAN·러시아·대만 8개 권역의 사용 제한을 INCI 기준으로 확인합니다. 근거 출처가 있는 항목만 표시합니다.' },
+      { title: 'MyLab Studio 처방 설계', body: 'AI 처방 생성과 수기 처방 만들기를 모두 지원합니다. 성분을 고르면 규제·배합 합계·EWG 등급이 실시간으로 검증됩니다.' },
+      { title: '시세 · 시장 동향 · 공급사 연결', body: '팜오일·지방산·석유화학 원료 시세와 환율, 주간 시장 리포트를 제공하고 공급사에 샘플·자료를 요청할 수 있습니다.' },
+    ],
+    note: '한국어 · English · 中文 지원. 중국 사용자는 cn.coching.club에서 동일한 계정으로 이용할 수 있습니다.',
+  },
   contact: {
     eyebrow: 'CONTACT', title: '견적·샘플·제작 문의',
     body: '원료 견적, 샘플 요청, 완제품 제작 상담 모두 한 창구에서 받습니다. 영업일 기준 1일 내 회신합니다.',
@@ -89,7 +104,7 @@ const ko: Dict = {
 };
 
 const en: Dict = {
-  nav: { business: 'Business', products: 'Ingredients', finished: 'Finished Goods', infra: 'Regulatory & Quality', contact: 'Contact', cta: 'Request a quote' },
+  nav: { business: 'Business', products: 'Ingredients', finished: 'Finished Goods', infra: 'Regulatory & Quality', coching: 'COCHING CLUB', contact: 'Contact', cta: 'Request a quote' },
   strip: { label: 'Ingredient categories' },
   support: {
     eyebrow: 'REGULATORY & QUALITY', title: 'Documentation and compliance, handled with you',
@@ -135,7 +150,19 @@ const en: Dict = {
     imgAlt: 'Filling line for finished goods',
   },
   partners: { eyebrow: 'BRANDS', title: 'Brands we carry', more: 'and more' },
-  coching: { eyebrow: 'COCHING CLUB', title: 'From ingredient search to formulation — the B2B platform built by KPROS', body: 'Search INCI, regulatory and supplier data in one place, and design formulas in MyLab Studio.', cta: 'Open coching.club' },
+  coching: {
+    eyebrow: 'COCHING CLUB', title: 'From ingredient search to formulation — the B2B platform built by KPROS',
+    body: 'The tools ingredient professionals use every day, in one place: ingredient search, market-by-market regulatory checks, formulation design and price tracking on coching.club.',
+    cta: 'Open coching.club', ctaCn: '中文版 cn.coching.club',
+    imgAlt1: 'COCHING market price and trend dashboard', imgAlt2: 'COCHING ingredient search screen',
+    features: [
+      { title: 'Ingredient master search', body: 'Search more than 12,000 ingredients by trade name, INCI, manufacturer or supplier, then move straight to the ingredient DB and finished-product search.' },
+      { title: 'Regulatory database by market', body: 'Usage restrictions for Korea, the EU, the US, Japan, China, ASEAN, Russia and Taiwan, keyed by INCI name. Only entries with a cited source are shown.' },
+      { title: 'MyLab Studio formulation', body: 'AI-assisted generation and manual formulation. As you pick ingredients, regulatory limits, totals and EWG grades are validated in real time.' },
+      { title: 'Prices, market reports, supplier requests', body: 'Palm oil, fatty acid and petrochemical price tracking with FX, weekly market reports, and sample or document requests to suppliers.' },
+    ],
+    note: 'Korean, English and Chinese supported. Chinese users can sign in with the same account at cn.coching.club.',
+  },
   contact: {
     eyebrow: 'CONTACT', title: 'Quotes, samples and production',
     body: 'One channel for ingredient quotes, sample requests and finished-goods consultations. We reply within one business day.',
@@ -146,7 +173,7 @@ const en: Dict = {
 };
 
 const zh: Dict = {
-  nav: { business: '业务领域', products: '原料目录', finished: '成品代工', infra: '法规·品质支持', contact: '联系我们', cta: '询价·索样' },
+  nav: { business: '业务领域', products: '原料目录', finished: '成品代工', infra: '法规·品质支持', coching: 'COCHING CLUB', contact: '联系我们', cta: '询价·索样' },
   strip: { label: '经营原料类别' },
   support: {
     eyebrow: 'REGULATORY & QUALITY', title: '法规与品质文件，一并支持',
@@ -192,7 +219,19 @@ const zh: Dict = {
     imgAlt: '成品灌装线',
   },
   partners: { eyebrow: 'BRANDS', title: '经营品牌', more: '等' },
-  coching: { eyebrow: 'COCHING CLUB', title: '从原料检索到配方设计，KPROS 打造的 B2B 平台', body: '一站式检索 INCI、法规与供应商信息，并用 MyLab Studio 设计配方。', cta: '前往 coching.club' },
+  coching: {
+    eyebrow: 'COCHING CLUB', title: '从原料检索到配方设计，KPROS 自主打造的 B2B 平台',
+    body: '把原料从业者每天使用的工具集中在一起：原料检索、各国法规查询、配方设计、行情查询，均在 coching.club 一站完成。',
+    cta: '前往 coching.club', ctaCn: '中文版 cn.coching.club',
+    imgAlt1: 'COCHING 原料行情与市场动态页面', imgAlt2: 'COCHING 原料检索页面',
+    features: [
+      { title: '原料主数据检索', body: '按原料名、INCI、生产商、供应商检索 12,000 余条原料，并可直接跳转成分数据库与成品检索。' },
+      { title: '各国法规数据库', body: '按 INCI 查询韩国、欧盟、美国、日本、中国、东盟、俄罗斯、台湾 8 个市场的使用限制，仅显示有出处依据的条目。' },
+      { title: 'MyLab Studio 配方设计', body: '同时支持 AI 生成配方与手动配方。选择成分时，法规限量、配比合计与 EWG 等级实时校验。' },
+      { title: '行情 · 市场报告 · 供应商对接', body: '提供棕榈油、脂肪酸、石化原料行情与汇率、每周市场报告，并可向供应商申请样品与资料。' },
+    ],
+    note: '支持韩文、英文、中文。中国用户可在 cn.coching.club 使用同一账号登录。',
+  },
   contact: {
     eyebrow: 'CONTACT', title: '询价 · 索样 · 生产咨询',
     body: '原料询价、索样、成品生产咨询统一受理，1 个工作日内回复。',

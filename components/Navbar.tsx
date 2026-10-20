@@ -20,6 +20,7 @@ const Navbar: React.FC = () => {
     { href: '#products', label: t.nav.products },
     { href: '#finished', label: t.nav.finished },
     { href: '#support', label: t.nav.infra },
+    { href: '#coching', label: t.nav.coching },
     { href: '#contact', label: t.nav.contact },
   ];
 
@@ -30,10 +31,10 @@ const Navbar: React.FC = () => {
       <div className="container-page flex items-center justify-between gap-6 h-16 md:h-20">
         <a href="#hero" className="flex items-baseline gap-2.5 text-ink">
           <span className="font-inter font-bold text-[20px] md:text-[22px] tracking-[0.18em]">KPROS</span>
-          <span className="hidden md:inline text-[12px] text-soft tracking-[0.06em]">{company}</span>
+          <span className="hidden xl:inline text-[12px] text-soft tracking-[0.06em] whitespace-nowrap">{company}</span>
         </a>
 
-        <nav className="hidden lg:flex gap-8 text-[15px] font-medium">
+        <nav className="hidden lg:flex gap-5 xl:gap-7 text-[14px] xl:text-[15px] font-medium whitespace-nowrap">
           {links.map((l) => (
             <a key={l.href} href={l.href} className="text-ink hover:text-forest transition-colors">{l.label}</a>
           ))}
@@ -53,7 +54,7 @@ const Navbar: React.FC = () => {
               </button>
             ))}
           </div>
-          <a href="#contact" className="hidden md:inline-flex btn-primary !h-11 !px-5 !text-[14px]">{t.nav.cta}</a>
+          <a href="#contact" className="hidden md:inline-flex btn-primary !h-11 !px-5 !text-[14px] whitespace-nowrap">{t.nav.cta}</a>
           <button
             type="button"
             aria-label={open ? 'Close menu' : 'Open menu'}

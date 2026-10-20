@@ -12,6 +12,7 @@ export const SITE = {
   links: {
     kpros: 'https://kpros.kr',
     coching: 'https://coching.club',
+    cochingCn: 'https://cn.coching.club',
   },
   images: {
     heroBotanical: 'https://images.unsplash.com/photo-1584725272786-8d98c7793f7f?w=1600&q=80&fit=crop',
