@@ -21,7 +21,7 @@ type Dict = {
     categories: Record<Exclude<Category, 'All'>, string>; packing: string;
   };
   finished: { eyebrow: string; title: string; body: string; cta: string; steps: { title: string; body: string }[]; imgAlt: string };
-  partners: { eyebrow: string; title: string; more: string };
+  partners: { eyebrow: string; title: string };
   support: { eyebrow: string; title: string; body: string; items: { title: string; body: string }[] };
   coching: {
     eyebrow: string; title: string; body: string; cta: string; ctaCn: string; imgAlt1: string; imgAlt2: string;
@@ -80,7 +80,7 @@ const ko: Dict = {
     ],
     imgAlt: '완제품 충전 라인',
   },
-  partners: { eyebrow: 'BRANDS', title: '취급 브랜드', more: '외 다수' },
+  partners: { eyebrow: 'BRANDS', title: '취급 브랜드' },
   coching: {
     eyebrow: 'COCHING CLUB', title: '원료 검색부터 처방 설계까지, 화장품 원료 실무를 위한 B2B 플랫폼',
     body: '화장품 원료를 다루는 실무자가 매일 쓰는 도구를 하나로 모았습니다. 원료 검색, 국가별 규제 확인, 처방 설계, 시세 확인까지 coching.club에서 처리합니다.',
@@ -149,7 +149,7 @@ const en: Dict = {
     ],
     imgAlt: 'Filling line for finished goods',
   },
-  partners: { eyebrow: 'BRANDS', title: 'Brands we carry', more: 'and more' },
+  partners: { eyebrow: 'BRANDS', title: 'Brands we carry' },
   coching: {
     eyebrow: 'COCHING CLUB', title: 'From ingredient search to formulation, the B2B platform for cosmetic ingredient work',
     body: 'Ingredient search, regulatory checks by market, formulation design and price tracking, all in one place on coching.club.',
@@ -218,7 +218,7 @@ const zh: Dict = {
     ],
     imgAlt: '成品灌装线',
   },
-  partners: { eyebrow: 'BRANDS', title: '经营品牌', more: '等' },
+  partners: { eyebrow: 'BRANDS', title: '经营品牌' },
   coching: {
     eyebrow: 'COCHING CLUB', title: '从原料检索到配方设计，面向化妆品原料实务的 B2B 平台',
     body: '把原料从业者每天使用的工具集中在一起：原料检索、各国法规查询、配方设计、行情查询，均在 coching.club 一站完成。',
