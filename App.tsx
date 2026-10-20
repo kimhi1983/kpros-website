@@ -6,6 +6,7 @@ import CategoryStrip from './components/CategoryStrip';
 import Business from './components/Business';
 import Products from './components/Products';
 import Finished from './components/Finished';
+import Lab from './components/Lab';
 import Partners from './components/Partners';
 import Support from './components/Support';
 import Coching from './components/Coching';
@@ -21,6 +22,7 @@ const App: React.FC = () => (
       <Business />
       <Products />
       <Finished />
+      <Lab />
       <Partners />
       <Support />
       <Coching />
