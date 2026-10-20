@@ -22,18 +22,18 @@ export const SITE = {
   images: {
     // 히어로 배경 슬라이드 (7초 간격 교체)
     heroBg: [
-      'https://images.unsplash.com/photo-1754321159253-8c9bd02cfb4c?w=2200&q=80&fit=crop',
       'https://images.unsplash.com/photo-1761095870661-c4ae15cac605?w=2200&q=80&fit=crop',
+      'https://images.unsplash.com/photo-1754321159253-8c9bd02cfb4c?w=2200&q=80&fit=crop',
       'https://images.unsplash.com/photo-1679394270822-fb37412bb6ee?w=2200&q=80&fit=crop',
-      'https://images.unsplash.com/photo-1760862652442-e8ff7ebdd2f8?w=2200&q=80&fit=crop',
       'https://images.unsplash.com/photo-1636740599648-ae84f705fc2e?w=2200&q=80&fit=crop',
       'https://images.unsplash.com/photo-1659007747376-3811b34e458f?w=2200&q=80&fit=crop',
+      'https://images.unsplash.com/photo-1758188753373-5b01a0fc6d9d?w=2200&q=80&fit=crop',
     ],
     // 화장품 완제품 섹션 배경 슬라이드
     finishedBg: [
-      'https://images.unsplash.com/photo-1758188753373-5b01a0fc6d9d?w=2200&q=80&fit=crop',
       'https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=2200&q=80&fit=crop',
-      'https://images.unsplash.com/photo-1739980213756-753aea153bb8?w=2200&q=80&fit=crop',
+      'https://images.unsplash.com/photo-1760862652442-e8ff7ebdd2f8?w=2200&q=80&fit=crop',
+      'https://images.unsplash.com/photo-1707539160277-e39464517645?w=2200&q=80&fit=crop',
     ],
     heroBotanical: 'https://images.unsplash.com/photo-1584725272786-8d98c7793f7f?w=1600&q=80&fit=crop',
     finishedBottle: 'https://images.unsplash.com/photo-1770048792339-d8f8d8d2dbeb?w=1200&q=80&fit=crop',
