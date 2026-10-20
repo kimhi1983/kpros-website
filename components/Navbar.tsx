@@ -31,8 +31,8 @@ const Navbar: React.FC = () => {
     <header className={`sticky top-0 z-50 bg-ivory/95 backdrop-blur border-b ${scrolled ? 'border-line' : 'border-transparent'} transition-colors`}>
       <div className="container-page flex items-center justify-between gap-4 h-16 md:h-20">
         <a href="#hero" className="flex items-center gap-2.5 text-ink shrink-0" aria-label="KPROS">
-          <img src="/logo/mark.png" alt="" className="h-8 md:h-9 w-auto" />
-          <img src="/logo/wordmark.png" alt="KPROS" className="h-[18px] md:h-5 w-auto" />
+          <img src="/logo/mark.png" alt="" className="h-[22px] md:h-6 w-auto" />
+          <img src="/logo/wordmark.png" alt="KPROS" className="h-[22px] md:h-6 w-auto" />
           <span className="hidden 2xl:inline text-[12px] text-soft tracking-[0.06em] whitespace-nowrap ml-1">{company}</span>
         </a>
 
