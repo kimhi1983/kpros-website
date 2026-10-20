@@ -17,8 +17,8 @@ const Hero: React.FC = () => {
           <motion.span variants={fade} className="self-start inline-flex px-3 py-1.5 rounded-full bg-forest-light text-forest text-[12px] md:text-[13px] font-semibold tracking-[0.04em] font-inter">
             {t.hero.badge}
           </motion.span>
-          <motion.h1 variants={fade} className="text-[34px] md:text-[52px] xl:text-[60px] font-black leading-[1.15] tracking-[-0.02em]">
-            {t.hero.title[0]}<br />{t.hero.title[1]}
+          <motion.h1 variants={fade} className="text-[32px] md:text-[44px] xl:text-[48px] font-black leading-[1.18] tracking-[-0.02em]">
+            {t.hero.title.map((line, i) => (<React.Fragment key={i}>{i > 0 && <br />}{line}</React.Fragment>))}
           </motion.h1>
           <motion.p variants={fade} className="text-[16px] md:text-[19px] leading-[1.65] text-muted">
             {t.hero.body}
