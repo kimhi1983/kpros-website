@@ -64,7 +64,7 @@ const ko: Dict = {
   },
   products: {
     eyebrow: 'INGREDIENTS', title: '화장품 원료 카탈로그',
-    body: '2026 카탈로그 기준 134개 품목, 10개 카테고리. 브랜드·INCI·포장단위를 함께 표기합니다.',
+    body: '2026 카탈로그 기준 130개 품목, 10개 카테고리. 브랜드·INCI·포장단위를 함께 표기합니다.',
     search: '품명 · INCI · 제조사 검색', all: '전체', viewAll: '품목 전체 보기', showLess: '접기', empty: '검색 결과가 없습니다.',
     categories: { 'Custom Base': '맞춤 베이스', 'Active Ingredients': '기능성 원료', 'Emollients & Oils': '에몰리언트·오일·보습제', 'Surfactants': '계면활성제', 'Preservatives': '방부제', 'UV Filters': '자외선 차단제', 'Specialty Poly': '폴리머·점증제', 'Pigments & Powders': '색소·파우더', 'Beads & Capsules': '비드·캡슐', 'Functional Additives': '기능성 첨가제' }, packing: '포장단위',
   },
@@ -133,7 +133,7 @@ const en: Dict = {
   },
   products: {
     eyebrow: 'INGREDIENTS', title: 'Cosmetic ingredient catalogue',
-    body: '134 items in 10 categories from the 2026 catalogue, with brand, INCI name and packing size.',
+    body: '130 items in 10 categories from the 2026 catalogue, with brand, INCI name and packing size.',
     search: 'Search by name, INCI or manufacturer', all: 'All', viewAll: 'View all items', showLess: 'Show less', empty: 'No results.',
     categories: { 'Custom Base': 'Custom Base', 'Active Ingredients': 'Actives', 'Emollients & Oils': 'Emollients & Oils', 'Surfactants': 'Surfactants', 'Preservatives': 'Preservatives', 'UV Filters': 'UV Filters', 'Specialty Poly': 'Polymers', 'Pigments & Powders': 'Pigments & Powders', 'Beads & Capsules': 'Beads', 'Functional Additives': 'Additives' }, packing: 'Packing',
   },
@@ -202,7 +202,7 @@ const zh: Dict = {
   },
   products: {
     eyebrow: 'INGREDIENTS', title: '化妆品原料目录',
-    body: '2026 年目录共 134 个品项、10 个类别，标注品牌、INCI 名称与包装规格。',
+    body: '2026 年目录共 130 个品项、10 个类别，标注品牌、INCI 名称与包装规格。',
     search: '按品名 · INCI · 生产商搜索', all: '全部', viewAll: '查看全部品项', showLess: '收起', empty: '没有匹配结果。',
     categories: { 'Custom Base': '定制基础原料', 'Active Ingredients': '活性成分', 'Emollients & Oils': '润肤剂·油脂·保湿剂', 'Surfactants': '表面活性剂', 'Preservatives': '防腐剂', 'UV Filters': '防晒剂', 'Specialty Poly': '聚合物·增稠剂', 'Pigments & Powders': '色素·粉体', 'Beads & Capsules': '微珠·胶囊', 'Functional Additives': '功能添加剂' }, packing: '包装规格',
   },
