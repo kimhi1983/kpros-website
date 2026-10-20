@@ -11,7 +11,7 @@ export const LANGS: { code: Lang; label: string; html: string }[] = [
 type Dict = {
   nav: { business: string; products: string; finished: string; infra: string; contact: string; cta: string };
   hero: { badge: string; title: string[]; body: string; cta1: string; cta2: string; statLabel: string; imgAlt1: string; imgAlt2: string };
-  stats: { founded: string; revenue: string; revenueLabel: string; partners: string; rspo: string };
+  stats: { founded: string; items: string; partners: string; rspo: string };
   business: {
     eyebrow: string; title: string; body: string;
     items: { title: string; body: string; bullets: string[] }[];
@@ -36,11 +36,11 @@ const ko: Dict = {
   hero: {
     badge: 'COSMETIC INGREDIENTS & FINISHED GOODS · SINCE 2022',
     title: ['원료부터 완제품까지,', '화장품 공급의 모든 단계를 함께합니다'],
-    body: '케이프로스는 화장품 원료를 직접 제조·수입·유통하고, 완제품 제작생산까지 한 번에 지원하는 B2B 파트너입니다. 글로벌 공급사 네트워크와 2,000톤 규모의 자체 창고로 안정적인 공급을 보장합니다.',
-    cta1: '원료 카탈로그 보기', cta2: '완제품 제작 상담', statLabel: '자체 창고 보관 규모',
+    body: '케이프로스는 화장품 원료를 직접 제조·수입·유통하고, 완제품 제작생산까지 한 번에 지원하는 B2B 파트너입니다. 글로벌 공급사 네트워크와 자체 창고 운영으로 안정적인 공급을 보장합니다.',
+    cta1: '원료 카탈로그 보기', cta2: '완제품 제작 상담', statLabel: '원료 제조 · 수입 · 완제품',
     imgAlt1: '실험용 플라스크 속 식물 원료', imgAlt2: '화이트 드로퍼 보틀 완제품',
   },
-  stats: { founded: '설립 · 경기 평택/화성', revenue: '억', revenueLabel: '2025년 매출 (2023년 대비 +46%)', partners: '글로벌 공급 파트너 브랜드', rspo: '지속가능 팜오일 유통 라이선스' },
+  stats: { founded: '설립 · 경기 평택/화성', items: '취급 원료 품목', partners: '글로벌 공급 파트너 브랜드', rspo: '지속가능 팜오일 유통 라이선스' },
   business: {
     eyebrow: 'BUSINESS', title: '세 가지 축으로 완성하는 공급 체계',
     body: '제조·수입·완제품이 한 회사 안에서 연결되어, 원료 선정부터 제품 출시까지 중간 단계 없이 진행됩니다.',
@@ -70,7 +70,7 @@ const ko: Dict = {
   },
   partners: { eyebrow: 'PARTNERS', title: '공급 파트너', more: '외 다수' },
   infra: {
-    eyebrow: 'INFRASTRUCTURE', title: '자체 창고 2개소, 2,000톤',
+    eyebrow: 'INFRASTRUCTURE', title: '자체 창고 2개소 직접 운영',
     body: '위험물 창고와 일반 창고를 직접 운영해 안전한 보관과 빠른 출하를 보장합니다.',
     hazardous: '위험물 창고', hazardousAddr: '경기 평택시 청북읍 161-23', general: '일반 창고', generalAddr: '경기 화성시 석포리 655-34', imgAlt: '창고 랙',
   },
@@ -89,11 +89,11 @@ const en: Dict = {
   hero: {
     badge: 'COSMETIC INGREDIENTS & FINISHED GOODS · SINCE 2022',
     title: ['From raw ingredients to finished products,', 'one partner for every stage of cosmetic supply'],
-    body: 'KPROS manufactures, imports and distributes cosmetic ingredients and produces finished goods under one roof. A global supplier network and 2,000 t of owned warehousing keep your supply stable.',
-    cta1: 'Browse ingredients', cta2: 'Talk about finished goods', statLabel: 'owned warehouse capacity',
+    body: 'KPROS manufactures, imports and distributes cosmetic ingredients and produces finished goods under one roof. A global supplier network and owned warehousing keep your supply stable.',
+    cta1: 'Browse ingredients', cta2: 'Talk about finished goods', statLabel: 'Manufacturing · Import · Finished goods',
     imgAlt1: 'Botanical ingredient in a lab flask', imgAlt2: 'White dropper bottle finished product',
   },
-  stats: { founded: 'Founded · Pyeongtaek / Hwaseong, Korea', revenue: '', revenueLabel: '2025 revenue, KRW (+46% vs. 2023)', partners: 'global supplier brands', rspo: 'sustainable palm oil distributor licence' },
+  stats: { founded: 'Founded · Pyeongtaek / Hwaseong, Korea', items: 'ingredients in catalogue', partners: 'global supplier brands', rspo: 'sustainable palm oil distributor licence' },
   business: {
     eyebrow: 'BUSINESS', title: 'Three pillars, one supply system',
     body: 'Manufacturing, importing and finished goods are connected inside one company, so projects move from ingredient selection to launch without intermediaries.',
@@ -123,7 +123,7 @@ const en: Dict = {
   },
   partners: { eyebrow: 'PARTNERS', title: 'Supply partners', more: 'and more' },
   infra: {
-    eyebrow: 'INFRASTRUCTURE', title: 'Two owned warehouses, 2,000 t',
+    eyebrow: 'INFRASTRUCTURE', title: 'Two owned warehouses',
     body: 'We run a hazardous-goods warehouse and a general warehouse ourselves for safe storage and fast dispatch.',
     hazardous: 'Hazardous-goods warehouse', hazardousAddr: '161-23 Cheongbuk-eup, Pyeongtaek, Gyeonggi', general: 'General warehouse', generalAddr: '655-34 Seokpo-ri, Hwaseong, Gyeonggi', imgAlt: 'Warehouse racking',
   },
@@ -142,11 +142,11 @@ const zh: Dict = {
   hero: {
     badge: '化妆品原料与成品 · 创立于 2022',
     title: ['从原料到成品，', '覆盖化妆品供应的每一个环节'],
-    body: 'KPROS 自主生产、进口并分销化妆品原料，并提供成品生产服务。依托全球供应商网络与 2,000 吨自有仓储，保障稳定供应。',
-    cta1: '查看原料目录', cta2: '成品生产咨询', statLabel: '自有仓储规模',
+    body: 'KPROS 自主生产、进口并分销化妆品原料，并提供成品生产服务。依托全球供应商网络与自有仓储，保障稳定供应。',
+    cta1: '查看原料目录', cta2: '成品生产咨询', statLabel: '原料生产 · 进口 · 成品',
     imgAlt1: '实验烧瓶中的植物原料', imgAlt2: '白色滴管瓶成品',
   },
-  stats: { founded: '成立 · 韩国京畿道平泽/华城', revenue: '亿韩元', revenueLabel: '2025 年营收（较 2023 年 +46%）', partners: '全球供应合作品牌', rspo: '可持续棕榈油分销许可' },
+  stats: { founded: '成立 · 韩国京畿道平泽/华城', items: '原料品项', partners: '全球供应合作品牌', rspo: '可持续棕榈油分销许可' },
   business: {
     eyebrow: 'BUSINESS', title: '三大支柱构建完整供应体系',
     body: '生产、进口与成品在同一家公司内打通，从原料选型到产品上市无需中间环节。',
@@ -176,7 +176,7 @@ const zh: Dict = {
   },
   partners: { eyebrow: 'PARTNERS', title: '供应合作伙伴', more: '等' },
   infra: {
-    eyebrow: 'INFRASTRUCTURE', title: '两处自有仓库，2,000 吨',
+    eyebrow: 'INFRASTRUCTURE', title: '两处自有仓库',
     body: '自主运营危险品仓库与普通仓库，保障安全存储与快速出货。',
     hazardous: '危险品仓库', hazardousAddr: '京畿道平泽市青北邑 161-23', general: '普通仓库', generalAddr: '京畿道华城市石浦里 655-34', imgAlt: '仓库货架',
   },

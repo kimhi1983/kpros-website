@@ -10,6 +10,12 @@ body {
   @apply bg-ivory text-ink font-sans antialiased;
   -webkit-text-size-adjust: 100%;
   overflow-x: hidden;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+html[lang="en"] body {
+  word-break: normal;
 }
 
 html[lang="zh-CN"] body {

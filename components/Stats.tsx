@@ -1,13 +1,13 @@
 import React from 'react';
 import { useLang } from '../i18n';
+import { PRODUCTS } from '../constants';
 import { SITE } from '../site.config';
 
 const Stats: React.FC = () => {
-  const { t, lang } = useLang();
-  const revenue = lang === 'en' ? '₩5.3B' : `${SITE.revenue2025Eok}${t.stats.revenue}`;
+  const { t } = useLang();
   const items = [
     { value: String(SITE.foundedYear), label: t.stats.founded },
-    { value: revenue, label: t.stats.revenueLabel },
+    { value: String(PRODUCTS.length), label: t.stats.items },
     { value: SITE.partnerCount, label: t.stats.partners },
     { value: 'RSPO', label: t.stats.rspo },
   ];

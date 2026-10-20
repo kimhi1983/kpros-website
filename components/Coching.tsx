@@ -10,7 +10,7 @@ const Coching: React.FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center p-7 md:p-12 rounded-[28px] bg-ink text-white">
         <div className="lg:col-span-8 flex flex-col gap-3">
           <span className="font-inter text-[13px] font-bold tracking-[0.14em] text-forest-mint">{t.coching.eyebrow}</span>
-          <h2 className="text-[24px] md:text-[32px] font-bold leading-[1.25]">{t.coching.title}</h2>
+          <h2 className="text-[24px] md:text-[30px] font-bold leading-[1.3] max-w-[640px]">{t.coching.title}</h2>
           <p className="text-[15px] md:text-[16px] leading-[1.6] text-[#BFC7C1]">{t.coching.body}</p>
         </div>
         <div className="lg:col-span-4 flex lg:justify-end">

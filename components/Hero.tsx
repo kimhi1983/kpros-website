@@ -36,8 +36,8 @@ const Hero: React.FC = () => {
           <img src={SITE.images.heroBotanical} alt={t.hero.imgAlt1} loading="eager" className="col-span-2 h-[200px] md:h-[260px] w-full object-cover rounded-[20px] bg-forest-light" />
           <img src={SITE.images.finishedBottle} alt={t.hero.imgAlt2} loading="lazy" className="h-[150px] md:h-[180px] w-full object-cover rounded-[20px] bg-sand" />
           <div className="h-[150px] md:h-[180px] rounded-[20px] bg-ink text-white p-5 flex flex-col justify-end">
-            <span className="font-inter text-[32px] md:text-[40px] font-bold leading-none">{SITE.warehouseTons}t</span>
-            <span className="text-[12px] md:text-[13px] text-[#BFC7C1] mt-1.5">{t.hero.statLabel}</span>
+            <span className="font-inter text-[26px] md:text-[32px] font-bold leading-none tracking-[0.12em]">KPROS</span>
+            <span className="text-[12px] md:text-[13px] text-[#BFC7C1] mt-2">{t.hero.statLabel}</span>
           </div>
         </motion.div>
       </div>

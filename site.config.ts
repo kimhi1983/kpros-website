@@ -8,8 +8,6 @@ export const SITE = {
   address: '',          // 본사 주소
   bizNo: '',            // 사업자등록번호
   foundedYear: 2022,
-  warehouseTons: '2,000',
-  revenue2025Eok: '53',  // 억원 단위
   partnerCount: '30+',
   links: {
     kpros: 'https://kpros.kr',
@@ -18,7 +16,7 @@ export const SITE = {
   images: {
     heroBotanical: 'https://images.unsplash.com/photo-1584725272786-8d98c7793f7f?w=1600&q=80&fit=crop',
     finishedBottle: 'https://images.unsplash.com/photo-1770048792339-d8f8d8d2dbeb?w=1200&q=80&fit=crop',
-    productionLine: 'https://images.unsplash.com/photo-1639392656683-55f103a3c862?w=2000&q=80&fit=crop',
+    finishedGoods: 'https://images.unsplash.com/photo-1737099995226-c314d6aa7d87?w=2000&q=80&fit=crop',
     warehouse: 'https://images.unsplash.com/photo-1553413077-190dd305871c?w=1600&q=80&fit=crop',
   },
 };

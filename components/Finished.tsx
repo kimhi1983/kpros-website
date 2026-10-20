@@ -25,7 +25,7 @@ const Finished: React.FC = () => {
           ))}
         </div>
       </div>
-      <img src={SITE.images.productionLine} alt={t.finished.imgAlt} loading="lazy" className="w-full h-[220px] md:h-[360px] object-cover rounded-3xl bg-forest-light" />
+      <img src={SITE.images.finishedGoods} alt={t.finished.imgAlt} loading="lazy" className="w-full h-[220px] md:h-[360px] object-cover rounded-3xl bg-forest-light" />
     </section>
   );
 };
