@@ -1,18 +1,21 @@
-export type Category = 
+export type Category =
   | 'All'
   | 'Custom Base'
   | 'Active Ingredients'
   | 'Emollients & Oils'
   | 'Surfactants'
   | 'Preservatives'
+  | 'UV Filters'
   | 'Specialty Poly'
+  | 'Pigments & Powders'
+  | 'Beads & Capsules'
   | 'Functional Additives';
 
 export interface Product {
   id: string;
   category: Category;
-  item: string; // The main display name
-  description: string;
-  inciName: string; // Ingredient definition
-  brand?: string; // Optional brand name if applicable
+  brand: string;
+  item: string;      // 품명
+  inciName: string;  // INCI
+  packing?: string;  // 포장단위
 }
