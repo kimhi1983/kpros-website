@@ -2,67 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: 'Inter', sans-serif;
-  background-color: #F5F5F3;
-  color: #334155;
-  overflow-x: hidden;
-  -webkit-text-size-adjust: 100%;
-  -webkit-font-smoothing: antialiased;
-
-  /* Safe area for notch devices */
-  padding-top: env(safe-area-inset-top);
-  padding-bottom: env(safe-area-inset-bottom);
-  padding-left: env(safe-area-inset-left);
-  padding-right: env(safe-area-inset-right);
+html {
+  scroll-behavior: smooth;
 }
 
-/* Mobile touch improvements */
+body {
+  @apply bg-ivory text-ink font-sans antialiased;
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+}
+
+html[lang="zh-CN"] body {
+  @apply font-zh;
+}
+
 * {
   -webkit-tap-highlight-color: transparent;
 }
 
-button,
-a {
-  touch-action: manipulation;
-}
-
-/* Custom scrollbar for webkit */
-::-webkit-scrollbar {
-  width: 6px;
-}
-
-::-webkit-scrollbar-track {
-  background: #F5F5F3;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #CBD5E1;
-  border-radius: 3px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #94A3B8;
-}
-
-/* Hide scrollbar on mobile */
-@media (max-width: 768px) {
-  ::-webkit-scrollbar {
-    display: none;
-  }
-
-  body {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-}
-
-/* Utility: hide scrollbar on horizontal scroll elements */
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
-
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-page px-5 md:px-10 xl:px-16;
+  }
+  .eyebrow {
+    @apply text-[13px] font-bold tracking-[0.14em] text-forest font-inter;
+  }
+  .h2 {
+    @apply text-[28px] md:text-[40px] font-black leading-[1.2] tracking-[-0.02em];
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center h-12 md:h-[52px] px-6 rounded-full bg-forest text-white text-[15px] md:text-base font-semibold transition hover:bg-forest-dark;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center h-12 md:h-[52px] px-6 rounded-full border-[1.5px] border-ink text-ink text-[15px] md:text-base font-semibold transition hover:bg-ink hover:text-white;
+  }
+  .card {
+    @apply rounded-3xl bg-white border border-line;
+  }
 }

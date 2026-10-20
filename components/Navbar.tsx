@@ -1,88 +1,82 @@
-import React, { useState, useEffect } from 'react';
-import { NAV_LINKS } from '../constants';
+import React, { useEffect, useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import { LANGS, useLang } from '../i18n';
+import { SITE } from '../site.config';
 
 const Navbar: React.FC = () => {
+  const { t, lang, setLang } = useLang();
+  const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  useEffect(() => {
-    if (mobileMenuOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
-    return () => { document.body.style.overflow = ''; };
-  }, [mobileMenuOpen]);
+  const links = [
+    { href: '#business', label: t.nav.business },
+    { href: '#products', label: t.nav.products },
+    { href: '#finished', label: t.nav.finished },
+    { href: '#infra', label: t.nav.infra },
+    { href: '#contact', label: t.nav.contact },
+  ];
+
+  const company = lang === 'ko' ? SITE.companyKo : lang === 'zh' ? SITE.companyZh : SITE.companyEn;
 
   return (
-    <nav 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white/80 backdrop-blur-md shadow-sm py-3 sm:py-4' : 'bg-transparent py-4 sm:py-6'
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 flex justify-between items-center">
-        <div className="flex items-center space-x-2 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth'})}>
-          <span className="text-base sm:text-lg font-semibold tracking-widest text-slate-800">KPROS</span>
-        </div>
+    <header className={`sticky top-0 z-50 bg-ivory/95 backdrop-blur border-b ${scrolled ? 'border-line' : 'border-transparent'} transition-colors`}>
+      <div className="container-page flex items-center justify-between gap-6 h-16 md:h-20">
+        <a href="#hero" className="flex items-baseline gap-2.5 text-ink">
+          <span className="font-inter font-bold text-[20px] md:text-[22px] tracking-[0.18em]">KPROS</span>
+          <span className="hidden md:inline text-[12px] text-soft tracking-[0.06em]">{company}</span>
+        </a>
 
-        <div className="hidden md:flex space-x-6 lg:space-x-8">
-          {NAV_LINKS.map((link) => (
-            <a 
-              key={link.name} 
-              href={link.href} 
-              className="text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors tracking-wide"
-            >
-              {link.name}
-            </a>
+        <nav className="hidden lg:flex gap-8 text-[15px] font-medium">
+          {links.map((l) => (
+            <a key={l.href} href={l.href} className="text-ink hover:text-forest transition-colors">{l.label}</a>
           ))}
-        </div>
+        </nav>
 
-        <div className="md:hidden">
-          <button 
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)} 
-            className="text-slate-800 p-1"
-            aria-label="Toggle menu"
+        <div className="flex items-center gap-2 md:gap-3">
+          <div role="group" aria-label="Language" className="flex h-10 md:h-11 items-center rounded-full border border-[#C9C4B8] p-1 bg-transparent">
+            {LANGS.map((l) => (
+              <button
+                key={l.code}
+                type="button"
+                onClick={() => setLang(l.code)}
+                aria-pressed={lang === l.code}
+                className={`h-full px-2.5 md:px-3 rounded-full text-[12px] md:text-[13px] font-semibold transition ${lang === l.code ? 'bg-ink text-white' : 'text-ink hover:bg-line'}`}
+              >
+                {l.label}
+              </button>
+            ))}
+          </div>
+          <a href="#contact" className="hidden md:inline-flex btn-primary !h-11 !px-5 !text-[14px]">{t.nav.cta}</a>
+          <button
+            type="button"
+            aria-label={open ? 'Close menu' : 'Open menu'}
+            aria-expanded={open}
+            onClick={() => setOpen((v) => !v)}
+            className="lg:hidden inline-flex items-center justify-center w-11 h-11 rounded-full hover:bg-line"
           >
-            {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
+            {open ? <X size={22} /> : <Menu size={22} />}
           </button>
         </div>
       </div>
 
-      {mobileMenuOpen && (
-        <>
-          <div 
-            className="md:hidden fixed inset-0 bg-black/20 z-40" 
-            onClick={() => setMobileMenuOpen(false)} 
-          />
-          <div className="md:hidden fixed top-0 right-0 w-3/4 max-w-xs h-full bg-white/98 backdrop-blur-xl z-50 p-6 pt-16 flex flex-col space-y-5 shadow-2xl">
-            <button 
-              onClick={() => setMobileMenuOpen(false)} 
-              className="absolute top-4 right-4 p-2 text-slate-500"
-              aria-label="Close menu"
-            >
-              <X size={22} />
-            </button>
-            {NAV_LINKS.map((link) => (
-              <a 
-                key={link.name} 
-                href={link.href}
-                onClick={() => setMobileMenuOpen(false)}
-                className="text-base font-medium text-slate-700 py-2 border-b border-slate-100"
-              >
-                {link.name}
-              </a>
+      {open && (
+        <nav className="lg:hidden border-t border-line bg-ivory">
+          <div className="container-page py-3 flex flex-col">
+            {links.map((l) => (
+              <a key={l.href} href={l.href} onClick={() => setOpen(false)} className="py-3.5 text-[16px] font-medium border-b border-line last:border-0">{l.label}</a>
             ))}
+            <a href="#contact" onClick={() => setOpen(false)} className="btn-primary mt-3">{t.nav.cta}</a>
           </div>
-        </>
+        </nav>
       )}
-    </nav>
+    </header>
   );
 };
 
