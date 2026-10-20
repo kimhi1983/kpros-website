@@ -100,7 +100,7 @@ const ko: Dict = {
     eyebrow: 'COCHING CLUB', title: '원료 검색부터 처방 설계까지, 화장품 원료 실무를 위한 B2B 플랫폼',
     body: '화장품 원료를 다루는 실무자가 매일 쓰는 도구를 하나로 모았습니다. 원료 검색, 국가별 규제 확인, 처방 설계, 시세 확인까지 coching.club에서 처리합니다.',
     cta: 'coching.club 바로가기', ctaCn: '中文版 cn.coching.club',
-    imgAlt1: 'COCHING 원료 시세·시장 동향 화면', imgAlt2: 'COCHING 원료 검색 화면',
+    imgAlt1: 'COCHING 원료 시세·시장 동향 화면', imgAlt2: 'COCHING 시장 동향 리포트 화면',
     features: [
       { title: '원료 마스터 검색', body: '원료명·한글명·INCI·제조사·공급사로 1만 2천 건 이상의 원료를 검색하고, 성분 DB와 완제품 검색으로 바로 이어집니다.' },
       { title: '국가별 규제 데이터베이스', body: '한국·EU·미국·일본·중국·ASEAN·러시아·대만 8개 권역의 사용 제한을 INCI 기준으로 확인합니다. 근거 출처가 있는 항목만 표시합니다.' },
@@ -183,7 +183,7 @@ const en: Dict = {
     eyebrow: 'COCHING CLUB', title: 'From ingredient search to formulation, the B2B platform for cosmetic ingredient work',
     body: 'Ingredient search, regulatory checks by market, formulation design and price tracking, all in one place on coching.club.',
     cta: 'Open coching.club', ctaCn: '中文版 cn.coching.club',
-    imgAlt1: 'COCHING market price and trend dashboard', imgAlt2: 'COCHING ingredient search screen',
+    imgAlt1: 'COCHING market price and trend dashboard', imgAlt2: 'COCHING market briefs screen',
     features: [
       { title: 'Ingredient master search', body: 'Search more than 12,000 ingredients by trade name, INCI, manufacturer or supplier, then move straight to the ingredient DB and finished-product search.' },
       { title: 'Regulatory database by market', body: 'Usage restrictions for Korea, the EU, the US, Japan, China, ASEAN, Russia and Taiwan, keyed by INCI name. Only entries with a cited source are shown.' },

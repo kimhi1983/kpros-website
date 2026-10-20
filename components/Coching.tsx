@@ -26,7 +26,7 @@ const Coching: React.FC = () => {
             <img src="/coching-market-v2.jpg" alt={t.coching.imgAlt1} loading="lazy" width={1904} height={941} className="w-full h-auto block" />
           </figure>
           <figure className="rounded-2xl overflow-hidden border border-white/10 bg-[#0E1612] shadow-[0_30px_80px_-30px_rgba(0,0,0,0.8)]">
-            <img src="/coching-search-v2.jpg" alt={t.coching.imgAlt2} loading="lazy" width={1904} height={941} className="w-full h-auto block" />
+            <img src="/coching-briefs.jpg" alt={t.coching.imgAlt2} loading="lazy" width={1904} height={941} className="w-full h-auto block" />
           </figure>
         </div>
 
