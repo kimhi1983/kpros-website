@@ -2,12 +2,12 @@ import React, { useEffect, useRef, useState } from 'react';
 import { useLang } from '../i18n';
 
 export const COCHING_SLIDES = [
-  { key: 'market', src: '/coching/market.jpg' },
-  { key: 'briefs', src: '/coching/briefs.jpg' },
-  { key: 'search', src: '/coching/search.jpg' },
-  { key: 'ingredients', src: '/coching/ingredients.jpg' },
-  { key: 'products', src: '/coching/products.jpg' },
-  { key: 'hlb', src: '/coching/hlb.jpg' },
+  { key: 'market', src: '/coching/market-2.jpg' },
+  { key: 'briefs', src: '/coching/briefs-2.jpg' },
+  { key: 'search', src: '/coching/search-2.jpg' },
+  { key: 'ingredients', src: '/coching/ingredients-2.jpg' },
+  { key: 'products', src: '/coching/products-2.jpg' },
+  { key: 'hlb', src: '/coching/hlb-2.jpg' },
   { key: 'formula', src: '/coching/formula.jpg' },
   { key: 'crews', src: '/coching/crews.jpg' },
   { key: 'orders', src: '/coching/orders.jpg' },
