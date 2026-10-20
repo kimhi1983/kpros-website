@@ -1,26 +1,33 @@
 import React from 'react';
+import { LangProvider } from './i18n';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import Tech from './components/Tech';
-import VisualStream from './components/VisualStream';
+import CategoryStrip from './components/CategoryStrip';
+import Business from './components/Business';
 import Products from './components/Products';
+import Finished from './components/Finished';
+import Partners from './components/Partners';
+import Support from './components/Support';
+import Coching from './components/Coching';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
-const App: React.FC = () => {
-  return (
-    <div className="antialiased text-slate-800 bg-[#F5F5F3]">
-      <Navbar />
-      <main>
-        <Hero />
-        <Tech />
-        <VisualStream />
-        <Products />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
-  );
-};
+const App: React.FC = () => (
+  <LangProvider>
+    <Navbar />
+    <main>
+      <Hero />
+      <CategoryStrip />
+      <Business />
+      <Products />
+      <Finished />
+      <Partners />
+      <Support />
+      <Coching />
+      <Contact />
+    </main>
+    <Footer />
+  </LangProvider>
+);
 
 export default App;

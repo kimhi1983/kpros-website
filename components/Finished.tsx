@@ -1,0 +1,29 @@
+import React from 'react';
+import { useLang } from '../i18n';
+import { SITE } from '../site.config';
+
+const Finished: React.FC = () => {
+  const { t } = useLang();
+  return (
+    <section id="finished" className="container-page py-16 md:py-24 flex flex-col gap-8 md:gap-10 scroll-mt-24">
+      <div className="flex flex-col gap-3">
+        <span className="eyebrow">{t.finished.eyebrow}</span>
+        <h2 className="h2">{t.finished.title}</h2>
+        <p className="text-[15px] md:text-[17px] leading-[1.65] text-muted">{t.finished.body}</p>
+        <a href="#contact" className="btn-primary self-start mt-2 !h-12">{t.finished.cta}</a>
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        {t.finished.steps.map((s, i) => (
+          <div key={s.title} className="flex flex-col gap-2 p-5 md:p-6 rounded-2xl bg-white border border-line">
+            <span className="font-inter font-bold text-forest">0{i + 1}</span>
+            <strong className="text-[16px] md:text-[17px]">{s.title}</strong>
+            <span className="text-[14px] leading-[1.5] text-muted">{s.body}</span>
+          </div>
+        ))}
+      </div>
+      <img src={SITE.images.finishedGoods} alt={t.finished.imgAlt} loading="lazy" className="w-full h-[220px] md:h-[360px] object-cover rounded-3xl bg-forest-light" />
+    </section>
+  );
+};
+
+export default Finished;

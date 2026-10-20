@@ -3,7 +3,6 @@ export type { Product, Category };
 
 export const NAV_LINKS = [
   { name: 'Home', href: '#hero' },
-  { name: 'Our Tech', href: '#tech' },
   { name: 'Products', href: '#products' },
   { name: 'Contact', href: '#contact' },
 ];
@@ -15,454 +14,143 @@ export const CATEGORIES: Category[] = [
   'Emollients & Oils',
   'Surfactants',
   'Preservatives',
+  'UV Filters',
   'Specialty Poly',
-  'Functional Additives'
+  'Pigments & Powders',
+  'Beads & Capsules',
+  'Functional Additives',
 ];
 
+// 2026 카탈로그 기준 (브랜드 · 품명 · INCI · 포장단위)
 export const PRODUCTS: Product[] = [
-  // --- Custom Base (Pages 3-5) ---
-  {
-    id: 'cb-1',
-    category: 'Custom Base',
-    item: 'Custom Plant Water',
-    description: 'Tailored plant water extraction service (Aloe, Lavender, Chamomile, Rose, etc.)',
-    inciName: 'Centella Asiatica Leaf Water (and) Butylene Glycol',
-    brand: 'KPROS Custom'
-  },
-  {
-    id: 'cb-2',
-    category: 'Custom Base',
-    item: 'Ferment Water',
-    description: 'Fermented extracts for low irritation, moisturizing, and enhanced efficacy.',
-    inciName: 'Galactomyces Ferment Filtrate',
-    brand: 'KPROS Custom'
-  },
-
-  // --- Emollients & Oils (Page 6, 8, 11 - Glycerin, Fatty Acids, Oils, Polyols) ---
-  {
-    id: 'eo-1',
-    category: 'Emollients & Oils',
-    item: 'Glycerine(99.5%) USP',
-    description: 'High purity pharmaceutical grade glycerin humectant.',
-    inciName: 'Glycerine',
-    brand: 'Acid chem'
-  },
-  {
-    id: 'eo-2',
-    category: 'Emollients & Oils',
-    item: 'Glycerine(99.5%) MB',
-    description: 'Mass balance sustainable glycerin.',
-    inciName: 'Glycerine',
-    brand: 'Acid chem'
-  },
-  {
-    id: 'eo-3',
-    category: 'Emollients & Oils',
-    item: 'Palmac 98-12',
-    description: 'High purity Lauric Acid.',
-    inciName: 'Lauric acid',
-    brand: 'Acid chem'
-  },
-  {
-    id: 'eo-4',
-    category: 'Emollients & Oils',
-    item: 'Palmac 98-14',
-    description: 'High purity Myristic Acid.',
-    inciName: 'Myristic acid',
-    brand: 'Acid chem'
-  },
-  {
-    id: 'eo-5',
-    category: 'Emollients & Oils',
-    item: 'Palmac 98-16',
-    description: 'High purity Palmitic Acid.',
-    inciName: 'Palmitic acid',
-    brand: 'Acid chem'
-  },
-  {
-    id: 'eo-6',
-    category: 'Emollients & Oils',
-    item: 'Palmac 98-18',
-    description: 'High purity Stearic Acid.',
-    inciName: 'Stearic acid',
-    brand: 'Acid chem'
-  },
-  {
-    id: 'eo-7',
-    category: 'Emollients & Oils',
-    item: 'Palmac 70-18',
-    description: 'Fatty acid blend.',
-    inciName: 'Palmitic acid/Stearic acid',
-    brand: 'Acid chem'
-  },
-  {
-    id: 'eo-8',
-    category: 'Emollients & Oils',
-    item: 'Palmsurf IPM 98',
-    description: 'Isopropyl Myristate emollient.',
-    inciName: 'Isopropyl Myristate',
-    brand: 'Acid chem'
-  },
-  {
-    id: 'eo-9',
-    category: 'Emollients & Oils',
-    item: 'kalcol 6850',
-    description: 'Cetearyl Alcohol fatty alcohol.',
-    inciName: 'CETEARYL ALCOHOL',
-    brand: 'KAO'
-  },
-  {
-    id: 'eo-10',
-    category: 'Emollients & Oils',
-    item: 'ECOROL 1498',
-    description: 'Myristyl alcohol.',
-    inciName: 'Myristyl alcohol',
-    brand: 'Ecogreen'
-  },
-  {
-    id: 'eo-11',
-    category: 'Emollients & Oils',
-    item: 'LILY 70',
-    description: 'White Mineral Oil.',
-    inciName: 'White Mineral Oil',
-    brand: 'Kukdong'
-  },
-  {
-    id: 'eo-12',
-    category: 'Emollients & Oils',
-    item: 'FOMI 70',
-    description: 'White Mineral Oil.',
-    inciName: 'White Mineral Oil',
-    brand: 'MICHANG'
-  },
-  {
-    id: 'eo-13',
-    category: 'Emollients & Oils',
-    item: 'HM-CEH MB',
-    description: 'Cetyl Ethylhexanoate.',
-    inciName: 'Cetyl Ethylhexanoate',
-    brand: 'HEMLO'
-  },
-  {
-    id: 'eo-14',
-    category: 'Emollients & Oils',
-    item: 'PUROLAN® IDD',
-    description: 'Isododecane volatile emollient.',
-    inciName: 'Isododecane',
-    brand: 'LANXESS'
-  },
-  {
-    id: 'eo-15',
-    category: 'Emollients & Oils',
-    item: 'PUROLAN® IHD',
-    description: 'Isohexadecane emollient.',
-    inciName: 'Isohexadecane',
-    brand: 'LANXESS'
-  },
-  {
-    id: 'eo-16',
-    category: 'Emollients & Oils',
-    item: 'HYPG-3III',
-    description: 'Polyglycerin-3 humectant.',
-    inciName: 'POLYGLYCERIN-3',
-    brand: 'HUAYI BIO'
-  },
-  {
-    id: 'eo-17',
-    category: 'Emollients & Oils',
-    item: 'PG-F',
-    description: 'Propylene Glycol.',
-    inciName: 'Propylene Glycol',
-    brand: 'SK picglobal'
-  },
-  {
-    id: 'eo-18',
-    category: 'Emollients & Oils',
-    item: '1,3 BG C',
-    description: 'Butylene Glycol.',
-    inciName: '1,3- BUTYLENE GLYCOL',
-    brand: 'DAICEL'
-  },
-  {
-    id: 'eo-19',
-    category: 'Emollients & Oils',
-    item: 'MONOPOL HYDRO EG',
-    description: 'Glycereth-26.',
-    inciName: 'Glycereth-26',
-    brand: 'Dongnam Chemical'
-  },
-  {
-    id: 'eo-20',
-    category: 'Emollients & Oils',
-    item: 'HM-DIM',
-    description: 'Diisostearyl malate.',
-    inciName: 'Diisostearyl malate',
-    brand: 'HEMLO'
-  },
-
-  // --- Surfactants (Page 7) ---
-  {
-    id: 'surf-1',
-    category: 'Surfactants',
-    item: 'MONSA® SCN-95',
-    description: 'Mild amino acid surfactant.',
-    inciName: 'Sodium Cocoyl Glycinate',
-    brand: 'MONSA'
-  },
-  {
-    id: 'surf-2',
-    category: 'Surfactants',
-    item: 'MONSA® SLG-95',
-    description: 'Mild amino acid surfactant.',
-    inciName: 'Sodium Lauroyl Glutamate',
-    brand: 'MONSA'
-  },
-  {
-    id: 'surf-3',
-    category: 'Surfactants',
-    item: 'MONSA® SCG-95',
-    description: 'Mild amino acid surfactant.',
-    inciName: 'Sodium Cocoyl Glutamate',
-    brand: 'MONSA'
-  },
-  {
-    id: 'surf-4',
-    category: 'Surfactants',
-    item: 'MONSA® CMIPA',
-    description: 'Foam booster and stabilizer.',
-    inciName: 'Cocamide MIPA',
-    brand: 'MONSA'
-  },
-
-  // --- Preservatives (Page 7) ---
-  {
-    id: 'pres-1',
-    category: 'Preservatives',
-    item: 'PROTIVE-1 (Natural)',
-    description: 'Natural preservative system.',
-    inciName: 'Propanediol, Chamaecyparis obtusa leaf extract',
-    brand: 'K-PROS'
-  },
-  {
-    id: 'pres-2',
-    category: 'Preservatives',
-    item: 'PROTIVE-12',
-    description: '1,2-Hexanediol.',
-    inciName: '1,2-Hexanediol',
-    brand: 'K-PROS'
-  },
-  {
-    id: 'pres-3',
-    category: 'Preservatives',
-    item: 'PROTIVE-MixDiOL',
-    description: 'Preservative blend.',
-    inciName: '1,2-Hexanediol, Caprylyl glycol',
-    brand: 'K-PROS'
-  },
-
-  // --- Specialty Poly (Page 9, 10, 11) ---
-  {
-    id: 'poly-1',
-    category: 'Specialty Poly',
-    item: 'PolyViscol K30',
-    description: 'PVP Polymer.',
-    inciName: 'Polyvinylpyrrolidone',
-    brand: 'NKY PHARMA'
-  },
-  {
-    id: 'poly-2',
-    category: 'Specialty Poly',
-    item: 'PolyViscol K90',
-    description: 'High molecular weight PVP.',
-    inciName: 'Polyvinylpyrrolidone',
-    brand: 'NKY PHARMA'
-  },
-  {
-    id: 'poly-3',
-    category: 'Specialty Poly',
-    item: 'PolyViscol VA64',
-    description: 'VP/VA Copolymer.',
-    inciName: 'VP/VA Copolymer',
-    brand: 'NKY PHARMA'
-  },
-  {
-    id: 'poly-4',
-    category: 'Specialty Poly',
-    item: 'PROGEL-10',
-    description: 'Emulsifying thickener complex.',
-    inciName: 'Hydroxy Ethyl Acrylate / Sodium Acryloyl dimethyl Taurate copolymer...',
-    brand: 'K-PROS'
-  },
-  {
-    id: 'poly-5',
-    category: 'Specialty Poly',
-    item: 'SW62',
-    description: 'Synthetic Wax.',
-    inciName: 'Synthetic Wax',
-    brand: 'K-PROS'
-  },
-  {
-    id: 'poly-6',
-    category: 'Specialty Poly',
-    item: 'Silma Fresh 10',
-    description: 'Film former.',
-    inciName: 'Trimethylsilyloxy Silicate',
-    brand: 'K-PROS'
-  },
-  {
-    id: 'poly-7',
-    category: 'Specialty Poly',
-    item: 'ARON NT-Z',
-    description: 'Texturizing powder.',
-    inciName: 'Sodium acrylates crosspolymer-2',
-    brand: 'TOAGOSEI'
-  },
-  {
-    id: 'poly-8',
-    category: 'Specialty Poly',
-    item: 'PVA 0810',
-    description: 'Polyvinyl Alcohol.',
-    inciName: 'POLYVINYLALCOHOL',
-    brand: 'HEMLO'
-  },
-
-  // --- Active Ingredients (Page 10, 11) ---
-  {
-    id: 'act-1',
-    category: 'Active Ingredients',
-    item: 'BeriCos® TA',
-    description: 'Whitening agent.',
-    inciName: 'Tranexamic Acid',
-    brand: 'BeriCos'
-  },
-  {
-    id: 'act-2',
-    category: 'Active Ingredients',
-    item: 'Trehalose',
-    description: 'Moisturizing sugar.',
-    inciName: 'Trehalose',
-    brand: 'Qingdao Zhonghaidu'
-  },
-  {
-    id: 'act-3',
-    category: 'Active Ingredients',
-    item: 'Adenosine',
-    description: 'Anti-wrinkle agent.',
-    inciName: 'Adenosine',
-    brand: 'MEIHUA'
-  },
-  {
-    id: 'act-4',
-    category: 'Active Ingredients',
-    item: 'Hydrolyzed Hyaluronic Acid',
-    description: 'Low molecular weight HA.',
-    inciName: 'Hydrolyzed hyaluronic Acid',
-    brand: 'AMHWA BIOPHARM'
-  },
-  {
-    id: 'act-5',
-    category: 'Active Ingredients',
-    item: 'Allantoin',
-    description: 'Soothing agent.',
-    inciName: 'Allantoin',
-    brand: 'Wuhu Huahai'
-  },
-  {
-    id: 'act-6',
-    category: 'Active Ingredients',
-    item: 'Alpha-arbutin',
-    description: 'Whitening agent.',
-    inciName: 'Alpha-arbutin',
-    brand: 'Hubei Artec'
-  },
-  {
-    id: 'act-7',
-    category: 'Active Ingredients',
-    item: 'L-Arginine',
-    description: 'Amino acid.',
-    inciName: 'L-Arginine',
-    brand: 'Hebei Huayang'
-  },
-  {
-    id: 'act-8',
-    category: 'Active Ingredients',
-    item: 'Natural Menthol Crystal',
-    description: 'Cooling agent.',
-    inciName: 'Peppermint Camphor',
-    brand: 'Anhui Province Yifan'
-  },
-  {
-    id: 'act-9',
-    category: 'Active Ingredients',
-    item: 'DL-Panthenol',
-    description: 'Provitamin B5.',
-    inciName: 'Panthenol',
-    brand: 'Hangzhou Lingeba'
-  },
-  {
-    id: 'act-10',
-    category: 'Active Ingredients',
-    item: 'NIACINAMIDE',
-    description: 'Vitamin B3, Whitening.',
-    inciName: 'Niacinamide',
-    brand: 'Jiangxi Haven'
-  },
-  {
-    id: 'act-11',
-    category: 'Active Ingredients',
-    item: 'InuSilk',
-    description: 'Prebiotic Inulin.',
-    inciName: 'Inulin',
-    brand: 'HEMLO'
-  },
-  {
-    id: 'act-12',
-    category: 'Active Ingredients',
-    item: 'Biosaccharide Gum-1 Sol',
-    description: 'Soothing & Moisturizing.',
-    inciName: 'Biosaccharide Gum-1',
-    brand: 'Ecosfarm'
-  },
-  {
-    id: 'act-13',
-    category: 'Active Ingredients',
-    item: 'NT Sodium Hyaluronate 1.0',
-    description: 'Hyaluronic Acid solution.',
-    inciName: 'Sodium Hyaluronate',
-    brand: 'Ecosfarm'
-  },
-
-  // --- Functional Additives (Page 9, 10) ---
-  {
-    id: 'func-1',
-    category: 'Functional Additives',
-    item: 'Dissolvine NA2',
-    description: 'Chelating agent.',
-    inciName: 'Disodium EDTA (EDTA-2NA)',
-    brand: 'Nouryon'
-  },
-  {
-    id: 'func-2',
-    category: 'Functional Additives',
-    item: 'EDTA 4NA',
-    description: 'Chelating agent.',
-    inciName: 'Tetrasodium EDTA (EDTA-4NA)',
-    brand: 'Nouryon'
-  },
-  {
-    id: 'func-3',
-    category: 'Functional Additives',
-    item: 'Citric acid Anhydrous',
-    description: 'pH adjuster.',
-    inciName: 'Citric Acid',
-    brand: 'Weifang Ensign'
-  },
-  {
-    id: 'func-4',
-    category: 'Functional Additives',
-    item: 'Tromethamine',
-    description: 'pH adjuster / Neutralizer.',
-    inciName: 'Tromethamine',
-    brand: 'YACOO'
-  }
+  { id: 'p001', category: 'Custom Base', brand: 'KPROS', item: '맞춤 추출물 (Custom Extract)', inciName: '', packing: '1kg' },
+  { id: 'p002', category: 'Custom Base', brand: 'KPROS', item: '맞춤 추출수 (Custom Plant Water)', inciName: '', packing: '1kg' },
+  { id: 'p003', category: 'Active Ingredients', brand: 'KPROS', item: 'Milk Exosome #7', inciName: 'Water, Butylene Glycol, Milk Exosomes' },
+  { id: 'p004', category: 'Active Ingredients', brand: 'KPROS', item: 'AQUA PDRN-H', inciName: 'Water, Propanediol, Sodium DNA, 1,2-Hexanediol, C12-13 Alketh-9' },
+  { id: 'p005', category: 'Active Ingredients', brand: 'KPROS', item: 'Centella Asiatica Exosome #7', inciName: 'Water, Butylene Glycol, Centella Asiatica Leaf Vesicles' },
+  { id: 'p006', category: 'Active Ingredients', brand: 'Ecosfarm', item: 'Allba Chitosan', inciName: 'Water , 1,2-Hexanediol ,Chitosan ,Ethylhexylglycerin', packing: '20kg' },
+  { id: 'p007', category: 'Active Ingredients', brand: 'Ecosfarm', item: 'Allba Centella Chito', inciName: 'Water , 1,2-Hexanediol ,Chitosan ,Ethylhexylglycerin , Centella Asiatica Extract', packing: '20kg' },
+  { id: 'p008', category: 'Active Ingredients', brand: 'Ecosfarm', item: 'Blue Spirulina Ex.', inciName: 'Water , Propanediol , 1,2-Hexanediol , Spirulina Platensis Extract', packing: '15kg' },
+  { id: 'p009', category: 'Active Ingredients', brand: 'Ecosfarm', item: 'Biosaccharide Gum-1 Sol', inciName: 'Water , 1,2-Hexanedio ,Biosaccharide Gum ,Ethylhexylglycerin', packing: '20kg' },
+  { id: 'p010', category: 'Active Ingredients', brand: 'Ecosfarm', item: 'NT Sodium Hyaluronate 1.0(HD)', inciName: 'Water, Butylene Glycol, 1 2-Hexanediol, Sodium Hyaluronate', packing: '20kg' },
+  { id: 'p011', category: 'Active Ingredients', brand: 'BeriCos', item: 'BeriCos®TA', inciName: 'Tranexamic Acid', packing: '1kg' },
+  { id: 'p012', category: 'Active Ingredients', brand: 'Qingdao Zhonghaidu', item: 'Trehalose', inciName: 'Trehalose', packing: '25kg' },
+  { id: 'p013', category: 'Active Ingredients', brand: 'MEIHUA', item: 'Adenosine', inciName: 'Adenosine', packing: '5kg' },
+  { id: 'p014', category: 'Active Ingredients', brand: 'AMHWA BIOPHARM', item: 'Hydrolyzed Hyaluronic Acid', inciName: 'Hydrolyzed Hyaluronic Acid', packing: '1kg' },
+  { id: 'p015', category: 'Active Ingredients', brand: 'Wuhu Huahai', item: 'Allantoin', inciName: 'Allantoin', packing: '25kg' },
+  { id: 'p016', category: 'Active Ingredients', brand: 'Hubei Artec', item: 'Alpha-arbutin', inciName: 'Alpha-arbutin', packing: '1kg' },
+  { id: 'p017', category: 'Active Ingredients', brand: 'Hangzhou Xinfu', item: 'D-Panthenol', inciName: 'Panthenol', packing: '10kg · 20kg' },
+  { id: 'p018', category: 'Active Ingredients', brand: 'Hebei Huayang', item: 'L-Arginine', inciName: 'L-Arginine', packing: '25kg' },
+  { id: 'p019', category: 'Active Ingredients', brand: 'Hangzhou Lingeba', item: 'DL-Panthenol', inciName: 'Panthenol' },
+  { id: 'p020', category: 'Active Ingredients', brand: 'Hangzhou Lingeba', item: 'DL Alpha Tocopheryl-Acetate(Vitamin E, A)', inciName: 'Tocopheryl Acetate' },
+  { id: 'p021', category: 'Active Ingredients', brand: 'Hangzhou Lingeba', item: 'HK-Glutathione Reduced', inciName: 'Glutathione' },
+  { id: 'p022', category: 'Active Ingredients', brand: 'HEMLO', item: 'InuSilk', inciName: 'Inulin', packing: '20kg' },
+  { id: 'p023', category: 'Active Ingredients', brand: 'Jiangxi Haven', item: 'NIACINAMIDE', inciName: 'Niacinamide', packing: '20Kg' },
+  { id: 'p024', category: 'Active Ingredients', brand: 'HEMLO', item: 'HM-ECTOIN', inciName: 'Ectoin' },
+  { id: 'p025', category: 'Active Ingredients', brand: 'HEMLO', item: 'HM-GHK Cu', inciName: 'COPPER TRI PEPTIDE-1' },
+  { id: 'p026', category: 'Active Ingredients', brand: 'HEMLO', item: 'Hairiant NC', inciName: '' },
+  { id: 'p027', category: 'Active Ingredients', brand: 'HEMLO', item: 'HM-Glutathione', inciName: 'GLUTATHIONE' },
+  { id: 'p028', category: 'Emollients & Oils', brand: 'Acid Chem', item: 'Glycerine(99.5%) USP', inciName: 'Glycerine', packing: '250kg' },
+  { id: 'p029', category: 'Emollients & Oils', brand: 'Acid Chem', item: 'Glycerine(99.5%) MB', inciName: 'Glycerine', packing: '250kg' },
+  { id: 'p030', category: 'Emollients & Oils', brand: 'Acid Chem', item: 'Palmac 98-12', inciName: 'Lauric acid', packing: '25kg' },
+  { id: 'p031', category: 'Emollients & Oils', brand: 'Acid Chem', item: 'Palmac 98-14', inciName: 'Myristic acid', packing: '25kg' },
+  { id: 'p032', category: 'Emollients & Oils', brand: 'Acid Chem', item: 'Palmac 98-16', inciName: 'Palmitic acid', packing: '25kg' },
+  { id: 'p033', category: 'Emollients & Oils', brand: 'Acid Chem', item: 'Palmac 98-18', inciName: 'Stearic acid' },
+  { id: 'p034', category: 'Emollients & Oils', brand: 'Acid Chem', item: 'Palmac 99-08', inciName: 'Caprylic or Octanoic Acid', packing: '25kg' },
+  { id: 'p035', category: 'Emollients & Oils', brand: 'Acid Chem', item: 'Palmac 99-10', inciName: 'Capric Acid' },
+  { id: 'p036', category: 'Emollients & Oils', brand: 'Acid Chem', item: 'Palmac 70-18', inciName: 'Palmitic acid/Stearic acid', packing: '25kg' },
+  { id: 'p037', category: 'Emollients & Oils', brand: 'Acid Chem', item: 'Palmac 55-16', inciName: 'Palmitic acid/Stearic acid' },
+  { id: 'p038', category: 'Emollients & Oils', brand: 'Acid Chem', item: 'Palmac 630', inciName: 'Palmitic acid/Stearic acid', packing: '25kg' },
+  { id: 'p039', category: 'Emollients & Oils', brand: 'Acid Chem', item: 'Palmac 750', inciName: 'Oleic acid or Octadecenoic Acid', packing: '25kg' },
+  { id: 'p040', category: 'Emollients & Oils', brand: 'Acid Chem', item: 'Palmsurf IPM 98', inciName: 'Isopropyl Myristate', packing: '175kg' },
+  { id: 'p041', category: 'Emollients & Oils', brand: 'DAICEL', item: '1,3 BG C', inciName: '1,3- BUTYLENE GLYCOL', packing: '200kg' },
+  { id: 'p042', category: 'Emollients & Oils', brand: 'SK picglobal', item: 'PG-F', inciName: 'Propylene Glycol', packing: '215kg' },
+  { id: 'p043', category: 'Emollients & Oils', brand: 'SK picglobal', item: 'DPG-F', inciName: 'Dipropylene Glycol', packing: '215kg' },
+  { id: 'p044', category: 'Emollients & Oils', brand: 'SK picglobal', item: 'TPG', inciName: 'Tripropylene Glycol' },
+  { id: 'p045', category: 'Emollients & Oils', brand: 'KAO', item: 'kalcol 6850', inciName: 'CETEARYL ALCOHOL', packing: '20kg' },
+  { id: 'p046', category: 'Emollients & Oils', brand: 'KAO', item: 'kalcol 6870P', inciName: 'CETEARYL ALCOHOL', packing: '20kg' },
+  { id: 'p047', category: 'Emollients & Oils', brand: 'Ecogreen', item: 'ECOROL 1498', inciName: 'Myristyl alcohol', packing: '20kg' },
+  { id: 'p048', category: 'Emollients & Oils', brand: 'KPROS', item: 'MPO(S)', inciName: '2-Methyl-1,3-Propanediol' },
+  { id: 'p049', category: 'Emollients & Oils', brand: 'KPROS', item: 'PROREG HPT 70', inciName: 'Hydrogenated Polycyclopentadiene, Hydrogenated Polyisobutene' },
+  { id: 'p050', category: 'Emollients & Oils', brand: 'KPROS', item: 'PRO PEG6 GTCC', inciName: 'PEG-6 Caprylic/Capric Glycerides' },
+  { id: 'p051', category: 'Emollients & Oils', brand: 'LANXESS', item: 'PUROLAN® IDD', inciName: 'Isododecane', packing: '150kg · 16kg' },
+  { id: 'p052', category: 'Emollients & Oils', brand: 'LANXESS', item: 'PUROLAN® IHD', inciName: 'Isohexadecane', packing: '160kg · 17kg' },
+  { id: 'p053', category: 'Emollients & Oils', brand: 'HUAYI BIO', item: 'HYPG-3III', inciName: 'POLYGLYCERIN-3', packing: '25kg' },
+  { id: 'p054', category: 'Emollients & Oils', brand: 'Dongnam Chemical', item: 'MONOPOL HYDRO EG', inciName: 'Glycereth-26', packing: '220kg' },
+  { id: 'p055', category: 'Emollients & Oils', brand: 'Dongnam Chemical', item: 'MONOPOL PEG400', inciName: 'PEG-8', packing: '230kg' },
+  { id: 'p056', category: 'Emollients & Oils', brand: 'MICHANG', item: 'FOMI 70', inciName: 'White Mineral Oil', packing: '830kg' },
+  { id: 'p057', category: 'Emollients & Oils', brand: 'HEMLO', item: 'HM-CEH MB', inciName: 'CETYLETHYLHEXANOATE', packing: '175kg' },
+  { id: 'p058', category: 'Emollients & Oils', brand: 'HEMLO', item: 'HM-DIM', inciName: 'Diisostearyl malate', packing: '15kg' },
+  { id: 'p059', category: 'Emollients & Oils', brand: '오성화학', item: 'HICOS-CEH', inciName: 'Cetyl Ethylhexanoate', packing: '170kg' },
+  { id: 'p060', category: 'Emollients & Oils', brand: 'HEMLO', item: '6812 O636', inciName: 'Diisostearyl Malate' },
+  { id: 'p061', category: 'Emollients & Oils', brand: 'HEMLO', item: '6808 ES136', inciName: 'ISOPROPYL LAUROYL SARCOSINATE' },
+  { id: 'p062', category: 'Emollients & Oils', brand: 'HEMLO', item: 'HM-6169 C9-12 ALKANE', inciName: 'C9-12 ALKANE' },
+  { id: 'p063', category: 'Emollients & Oils', brand: 'HEMLO', item: 'HM-EHP', inciName: 'ETHYLHEXYL PALMITATE' },
+  { id: 'p064', category: 'Emollients & Oils', brand: 'HEMLO', item: 'HM-EHS', inciName: 'ETHYLHEXYL STEARATE' },
+  { id: 'p065', category: 'Surfactants', brand: 'MONSA', item: 'MONSA® SCN-95', inciName: 'Sodium Cocoyl Glycinate', packing: '15kg' },
+  { id: 'p066', category: 'Surfactants', brand: 'MONSA', item: 'MONSA® SLG-95', inciName: 'Sodium Lauroyl Glutamate', packing: '15kg' },
+  { id: 'p067', category: 'Surfactants', brand: 'MONSA', item: 'MONSA® SCG-95', inciName: 'Sodium Cocoyl Glutamate', packing: '15kg' },
+  { id: 'p068', category: 'Surfactants', brand: 'MONSA', item: 'MONSA® CMIPA', inciName: 'Cocamide MIPA' },
+  { id: 'p069', category: 'Surfactants', brand: 'MONSA', item: 'MONSA® DLS-50', inciName: 'Disodium Lauryl Sulfosuccinate' },
+  { id: 'p070', category: 'Surfactants', brand: 'MONSA', item: 'MONSA® GCK-30', inciName: 'Potassium Cocoyl Glycinate' },
+  { id: 'p071', category: 'Surfactants', brand: 'MONSA', item: 'MONSA® SLMI-75', inciName: 'Sodium Lauroyl Methyl Isethionate' },
+  { id: 'p072', category: 'Surfactants', brand: 'HEMLO', item: 'HM-SLES 70', inciName: 'Sodium Laureth Sulfate, Water' },
+  { id: 'p073', category: 'Preservatives', brand: 'KPROS', item: 'PROTIVE-1', inciName: 'Propanediol , Chamaecyparis obtusa leaf extract', packing: '20kg' },
+  { id: 'p074', category: 'Preservatives', brand: 'KPROS', item: 'PROTIVE-12', inciName: '1,2-Hexanediol', packing: '20kg' },
+  { id: 'p075', category: 'Preservatives', brand: 'KPROS', item: 'PROTIVE-MixDiOL', inciName: '1,2-Hexanediol,Caprylyl glycol', packing: '20kg' },
+  { id: 'p076', category: 'Preservatives', brand: 'KPROS', item: 'PROTIVE-EHG', inciName: 'Ethylhexylglycerin' },
+  { id: 'p077', category: 'Preservatives', brand: 'Hangzhou Lingeba', item: 'Chlorphenesin', inciName: 'Chlorphenesin', packing: '25kg' },
+  { id: 'p078', category: 'Preservatives', brand: 'Hangzhou Lingeba', item: 'Hydroxyacetophenone', inciName: 'Hydroxyacetophenone', packing: '25kg' },
+  { id: 'p079', category: 'Preservatives', brand: 'HEMLO', item: 'HM-2159 HEJIAOSU', inciName: 'LACTOBACILLUS FERMENT, RICE FERMENT FILTRATE (SAKE), TREMELLA FUCIFORMIS (MUSHROOM) EXTRACT, BUTYLENE GLYCOL, GLYCERIN, 1,2-HEXANEDIOL, HYDROXYACETOPHENONE' },
+  { id: 'p080', category: 'UV Filters', brand: 'TSCI', item: 'JUPITER HEB', inciName: 'Diethylhexyl Butamido Triazone', packing: '25kg' },
+  { id: 'p081', category: 'UV Filters', brand: 'TSCI', item: 'JUPITER MC', inciName: '4-Methylbenzylidene Camphor', packing: '25kg' },
+  { id: 'p082', category: 'UV Filters', brand: 'TSCI', item: 'JUPITER EHT', inciName: 'Ethylhexyl Triazone' },
+  { id: 'p083', category: 'UV Filters', brand: 'TSCI', item: 'JUPITER HMS', inciName: 'Homosalate' },
+  { id: 'p084', category: 'UV Filters', brand: 'TSCI', item: 'JUPITER HS', inciName: 'Phenylbenzimidazole Sulfonic Acid' },
+  { id: 'p085', category: 'UV Filters', brand: 'TSCI', item: 'JUPITER EHS', inciName: 'Ethylhexyl Salicylate' },
+  { id: 'p086', category: 'UV Filters', brand: 'Anhui Yifan Spice', item: 'Natural Menthol Crystal', inciName: 'Peppermint Camphor', packing: '25kg' },
+  { id: 'p087', category: 'UV Filters', brand: 'Hangzhou Lingeba', item: 'HK-HEB', inciName: 'Diethylhexyl Butamido Triazone' },
+  { id: 'p088', category: 'UV Filters', brand: 'HEMLO', item: 'SunScreen BS', inciName: 'Butyloctyl Salicylate' },
+  { id: 'p093', category: 'UV Filters', brand: 'HEMLO', item: 'Avobenzone', inciName: 'BUTYL METHOXYDIBENZOYLMETHANE' },
+  { id: 'p094', category: 'Specialty Poly', brand: 'NKY PHARMA', item: 'PolyViscol K30', inciName: 'Polyvinylpyrrolidone', packing: '25kg' },
+  { id: 'p095', category: 'Specialty Poly', brand: 'NKY PHARMA', item: 'PolyViscol K90', inciName: 'Polyvinylpyrrolidone', packing: '25kg' },
+  { id: 'p096', category: 'Specialty Poly', brand: 'NKY PHARMA', item: 'PolyViscol VA64', inciName: 'VP/VA Copolymer' },
+  { id: 'p097', category: 'Specialty Poly', brand: 'NKY PHARMA', item: 'KoVidone K12', inciName: 'Crospovidone' },
+  { id: 'p098', category: 'Specialty Poly', brand: 'NKY PHARMA', item: 'KoVidone K15', inciName: 'Crospovidone' },
+  { id: 'p099', category: 'Specialty Poly', brand: 'NKY PHARMA', item: 'KoVidone K17', inciName: 'Crospovidone' },
+  { id: 'p100', category: 'Specialty Poly', brand: 'KPROS', item: 'PROGEL-10', inciName: 'Hydroxy Ethyl Acrylate / Sodium Acryloyl dimethyl Taurate copolymer,Isohexadecane, Sorbeth-30 TetraOleate, Aqua', packing: '20kg' },
+  { id: 'p101', category: 'Specialty Poly', brand: 'KPROS', item: 'SW62', inciName: 'Synthetic Wax', packing: '20kg' },
+  { id: 'p102', category: 'Specialty Poly', brand: 'KPROS', item: 'SW88', inciName: 'Synthetic Wax', packing: '25kg' },
+  { id: 'p103', category: 'Specialty Poly', brand: 'KPROS', item: 'VA64 Sol', inciName: 'Water, VP/VA Copolymer' },
+  { id: 'p104', category: 'Specialty Poly', brand: 'KPROS', item: 'K30 SOL', inciName: 'Water, PVP, 1,2-Hexanediol' },
+  { id: 'p105', category: 'Specialty Poly', brand: 'KPROS', item: 'PROGEL-Z21', inciName: 'Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Water' },
+  { id: 'p106', category: 'Specialty Poly', brand: 'KPROS', item: 'Silma Fresh 10', inciName: 'Trimethylsilyloxy Silicate', packing: '15kg' },
+  { id: 'p107', category: 'Specialty Poly', brand: 'TOAGOSEI', item: 'ARON NT-Z', inciName: 'Sodium acrylates crosspolymer-2', packing: '10kg' },
+  { id: 'p108', category: 'Specialty Poly', brand: 'Dongnam Chemical', item: 'MONOPOL PE1706', inciName: 'PEG/PPG-17/6 Copolymer', packing: '200kg' },
+  { id: 'p109', category: 'Specialty Poly', brand: 'HEMLO', item: 'PVA 0810', inciName: 'POLYVINYLALCOHOL', packing: '25kg' },
+  { id: 'p110', category: 'Specialty Poly', brand: 'HEMLO', item: 'HM-EC 200', inciName: 'ETHYL CELLULOSE' },
+  { id: 'p111', category: 'Specialty Poly', brand: 'HEMLO', item: 'HM-4035', inciName: 'C20-24 ALKYL DIMETHICONE' },
+  { id: 'p112', category: 'Specialty Poly', brand: 'HEMLO', item: 'HM-4045', inciName: 'C24-28 ALKYL METHICONE' },
+  { id: 'p113', category: 'Specialty Poly', brand: 'HEMLO', item: 'HM-AVP', inciName: 'Ammonium Acryloyldimethyltaurate/VP Copolymer' },
+  { id: 'p114', category: 'Pigments & Powders', brand: 'Hangzhou Lingeba', item: 'KL-5000', inciName: 'Kaolin' },
+  { id: 'p115', category: 'Pigments & Powders', brand: 'Hangzhou Lingeba', item: 'Calcium Carbonate 600 Mesh', inciName: 'Calcium Carbonate' },
+  { id: 'p116', category: 'Pigments & Powders', brand: 'Hangzhou Lingeba', item: 'Calcium Carbonate 800 Mesh', inciName: 'Calcium Carbonate' },
+  { id: 'p117', category: 'Pigments & Powders', brand: 'Hangzhou Lingeba', item: 'Nature Fermented Oil (Red / Green / Orange / Blue)', inciName: '' },
+  { id: 'p118', category: 'Pigments & Powders', brand: 'HEMLO', item: 'HM-HMB 10', inciName: 'Calcium Aluminium Borosilicate' },
+  { id: 'p119', category: 'Pigments & Powders', brand: 'HEMLO', item: 'HM-SF 015', inciName: 'SYNTHETIC FLUORPHLOGOPITE' },
+  { id: 'p120', category: 'Pigments & Powders', brand: 'HEMLO', item: 'HM-HC10', inciName: 'Soda Lime Borosilicate Glass' },
+  { id: 'p121', category: 'Beads & Capsules', brand: 'HEMLO', item: 'Caviar Cream Bead', inciName: '3-5mm' },
+  { id: 'p122', category: 'Beads & Capsules', brand: 'HEMLO', item: 'Sea Grape Cream Bead', inciName: '3-5mm' },
+  { id: 'p123', category: 'Beads & Capsules', brand: 'HEMLO', item: 'Oil Bead', inciName: '0.5-3mm' },
+  { id: 'p124', category: 'Beads & Capsules', brand: 'HEMLO', item: 'Popping Bead', inciName: '3-5mm' },
+  { id: 'p125', category: 'Beads & Capsules', brand: 'HEMLO', item: 'ShowerBall', inciName: '3-10mm' },
+  { id: 'p126', category: 'Beads & Capsules', brand: 'HEMLO', item: 'Soft Bead', inciName: '3-5mm' },
+  { id: 'p127', category: 'Beads & Capsules', brand: 'HEMLO', item: 'Microparticle', inciName: '3-7mm' },
+  { id: 'p128', category: 'Functional Additives', brand: 'KPROS', item: 'KOAH 7100', inciName: 'Methyl Perfluorobutyl Ether, Methyl perfluoroisobutyl ether' },
+  { id: 'p129', category: 'Functional Additives', brand: 'Nouryon', item: 'Dissolvine NA2', inciName: 'Disodium EDTA (EDTA-2NA)', packing: '25kg' },
+  { id: 'p130', category: 'Functional Additives', brand: 'Nouryon', item: 'EDTA 4NA', inciName: 'Tetrasodium EDTA (EDTA-4NA)', packing: '25kg' },
+  { id: 'p131', category: 'Functional Additives', brand: 'Weifang Ensign', item: 'Citric acid Anhydrous', inciName: 'Citric Acid', packing: '25kg' },
+  { id: 'p132', category: 'Functional Additives', brand: 'YACOO', item: 'Tromethamine', inciName: 'Tromethamine', packing: '25kg' },
+  { id: 'p133', category: 'Functional Additives', brand: 'Goldleben', item: 'Neotant PA-100', inciName: 'Polyhydroxystearic Acid', packing: '20kg' },
+  { id: 'p134', category: 'Functional Additives', brand: 'Goldleben', item: 'Neotant PA-300', inciName: 'Polyhydroxystearic Acid', packing: '40kg' },
 ];
