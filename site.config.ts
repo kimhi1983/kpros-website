@@ -23,7 +23,13 @@ export const SITE = {
     heroBotanical: 'https://images.unsplash.com/photo-1584725272786-8d98c7793f7f?w=1600&q=80&fit=crop',
     finishedBottle: 'https://images.unsplash.com/photo-1770048792339-d8f8d8d2dbeb?w=1200&q=80&fit=crop',
     finishedGoods: 'https://images.unsplash.com/photo-1737099995226-c314d6aa7d87?w=2000&q=80&fit=crop',
-    lab: 'https://images.unsplash.com/photo-1753357278474-74cd2cac70ec?w=1800&q=80&fit=crop',
+    lab: [
+      'https://images.unsplash.com/photo-1753357278474-74cd2cac70ec?w=1800&q=80&fit=crop',
+      'https://images.unsplash.com/photo-1602052577122-f73b9710adba?w=1800&q=80&fit=crop',
+      'https://images.unsplash.com/photo-1748280933402-6ad92d381cd2?w=1800&q=80&fit=crop',
+      'https://images.unsplash.com/photo-1787771206780-2c527ff20306?w=1800&q=80&fit=crop',
+      'https://images.unsplash.com/photo-1748280933446-c9be297ec3be?w=1800&q=80&fit=crop',
+    ],
     oilDrop: 'https://images.unsplash.com/photo-1621958180509-74e9a29b3758?w=1000&q=80&fit=crop',
   },
 };

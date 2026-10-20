@@ -36,12 +36,12 @@ type Dict = {
 };
 
 const ko: Dict = {
-  nav: { business: '사업영역', products: '화장품 원료', finished: '화장품 완제품', lab: '연구소', infra: '규제·품질 지원', coching: 'COCHING CLUB', contact: '문의', cta: '견적·샘플 문의' },
+  nav: { business: '사업영역', products: '화장품 원료', finished: '화장품 완제품', lab: 'R&D 센터', infra: '규제·품질 지원', coching: 'COCHING CLUB', contact: '문의', cta: '견적·샘플 문의' },
   strip: { label: '취급 화장품 원료 카테고리' },
   lab: {
-    eyebrow: 'R&D LAB', title: '자체 연구소',
-    body: '화장품 원료 공급과 완제품 제작을 뒷받침하는 자체 연구소를 운영합니다. 원료 평가부터 처방, 샘플, 안정성 확인까지 한곳에서 진행합니다.',
-    imgAlt: '연구소 실험용 유리기구',
+    eyebrow: 'R&D CENTER', title: 'R&D 센터',
+    body: '화장품 원료 공급과 완제품 제작을 뒷받침하는 R&D 센터를 운영합니다. 원료 평가부터 처방, 샘플, 안정성 확인까지 한곳에서 진행합니다.',
+    imgAlt: 'R&D 센터 실험실',
     items: [
       { title: '원료 평가', body: '신규 원료의 물성·용해성·배합 적합성을 직접 확인하고 용도별 적용 가이드를 제공합니다.' },
       { title: '처방 개발', body: '색조·기초·선케어·바디·헤어·홈케어까지 제형별 처방을 개발하고 고객 요구에 맞춰 수정합니다.' },
@@ -50,7 +50,7 @@ const ko: Dict = {
       { title: '맞춤 추출물 · 추출수', body: '고객이 원하는 원물과 컨셉으로 식물 추출물과 추출수를 소량부터 제조합니다.' },
       { title: '규제 검토', body: '처방에 들어가는 성분의 국가별 사용 제한을 확인해 등록 단계의 문제를 미리 줄입니다.' },
     ],
-    cta: '연구소 상담 문의',
+    cta: 'R&D 센터 상담 문의',
   },
   support: {
     eyebrow: 'REGULATORY & QUALITY', title: '규제·품질 서류까지 함께 지원합니다',
@@ -119,12 +119,12 @@ const ko: Dict = {
 };
 
 const en: Dict = {
-  nav: { business: 'Business', products: 'Cosmetic Ingredients', finished: 'Cosmetic Finished Goods', lab: 'R&D Lab', infra: 'Regulatory & Quality', coching: 'COCHING CLUB', contact: 'Contact', cta: 'Request a quote' },
+  nav: { business: 'Business', products: 'Cosmetic Ingredients', finished: 'Cosmetic Finished Goods', lab: 'R&D Center', infra: 'Regulatory & Quality', coching: 'COCHING CLUB', contact: 'Contact', cta: 'Request a quote' },
   strip: { label: 'Cosmetic ingredient categories' },
   lab: {
-    eyebrow: 'R&D LAB', title: 'In-house laboratory',
-    body: 'Our in-house lab supports ingredient supply and finished goods, from ingredient evaluation to formulation, sampling and stability checks.',
-    imgAlt: 'Laboratory glassware',
+    eyebrow: 'R&D CENTER', title: 'R&D Center',
+    body: 'Our R&D Center supports ingredient supply and finished goods, from ingredient evaluation to formulation, sampling and stability checks.',
+    imgAlt: 'R&D Center laboratory',
     items: [
       { title: 'Ingredient evaluation', body: 'Properties, solubility and compatibility of new ingredients are checked in-house, with application guidance by use.' },
       { title: 'Formulation', body: 'Formulas for color cosmetics, skincare, sun care, body, hair and home care, adjusted to each customer’s brief.' },
@@ -133,7 +133,7 @@ const en: Dict = {
       { title: 'Custom extracts and plant waters', body: 'Botanical extracts and plant waters made to the customer’s material and concept, from small lots.' },
       { title: 'Regulatory review', body: 'Usage limits of each ingredient are checked by market to avoid issues at registration.' },
     ],
-    cta: 'Contact the lab',
+    cta: 'Contact the R&D Center',
   },
   support: {
     eyebrow: 'REGULATORY & QUALITY', title: 'Documentation and compliance, handled with you',
@@ -202,12 +202,12 @@ const en: Dict = {
 };
 
 const zh: Dict = {
-  nav: { business: '业务领域', products: '化妆品原料', finished: '化妆品成品', lab: '研究所', infra: '法规·品质支持', coching: 'COCHING CLUB', contact: '联系我们', cta: '询价·索样' },
+  nav: { business: '业务领域', products: '化妆品原料', finished: '化妆品成品', lab: '研发中心', infra: '法规·品质支持', coching: 'COCHING CLUB', contact: '联系我们', cta: '询价·索样' },
   strip: { label: '经营化妆品原料类别' },
   lab: {
-    eyebrow: 'R&D LAB', title: '自有研究所',
-    body: '自有研究所支撑化妆品原料供应与成品生产，从原料评估到配方、打样与稳定性确认，均在内部完成。',
-    imgAlt: '研究所实验玻璃器皿',
+    eyebrow: 'R&D CENTER', title: '研发中心',
+    body: '研发中心支撑化妆品原料供应与成品生产，从原料评估到配方、打样与稳定性确认，均在内部完成。',
+    imgAlt: '研发中心实验室',
     items: [
       { title: '原料评估', body: '内部确认新原料的物性、溶解性与配伍适配性，并按用途提供应用指引。' },
       { title: '配方开发', body: '覆盖彩妆、护肤、防晒、身体、头发与家居护理等剂型，按客户需求调整。' },
@@ -216,7 +216,7 @@ const zh: Dict = {
       { title: '定制提取物与提取水', body: '按客户指定原料与概念，自小批量起制造植物提取物与提取水。' },
       { title: '法规审查', body: '按市场核查配方成分的使用限制，提前减少注册阶段问题。' },
     ],
-    cta: '联系研究所',
+    cta: '联系研发中心',
   },
   support: {
     eyebrow: 'REGULATORY & QUALITY', title: '法规与品质文件，一并支持',
