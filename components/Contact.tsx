@@ -21,33 +21,37 @@ const Contact: React.FC = () => {
     window.location.href = `mailto:${SITE.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   };
 
+  const hasInfo = SITE.phone || SITE.email || SITE.address;
+
   return (
     <section id="contact" className="bg-white border-t border-line py-16 md:py-24 scroll-mt-24">
-      <div className="container-page grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6">
-        <div className="lg:col-span-5 flex flex-col gap-4">
+      <div className="container-page flex flex-col gap-8 md:gap-10">
+        <div className="flex flex-col gap-3">
           <span className="eyebrow">{t.contact.eyebrow}</span>
           <h2 className="h2">{t.contact.title}</h2>
           <p className="text-[15px] md:text-[17px] leading-[1.65] text-muted">{t.contact.body}</p>
-          <ul className="flex flex-col gap-2.5 text-[15px] mt-2">
-            {SITE.phone && <li className="flex gap-3"><span className="w-14 shrink-0 text-soft">Tel</span><a href={`tel:${SITE.phone}`}>{SITE.phone}</a></li>}
-            {SITE.email && <li className="flex gap-3"><span className="w-14 shrink-0 text-soft">Email</span><a href={`mailto:${SITE.email}`}>{SITE.email}</a></li>}
-            {SITE.address && <li className="flex gap-3"><span className="w-14 shrink-0 text-soft">Address</span><span>{SITE.address}</span></li>}
-          </ul>
+          {hasInfo && (
+            <ul className="flex flex-wrap gap-x-8 gap-y-2 text-[15px] mt-1">
+              {SITE.phone && <li className="flex gap-3"><span className="text-soft">Tel</span><a href={`tel:${SITE.phone}`}>{SITE.phone}</a></li>}
+              {SITE.email && <li className="flex gap-3"><span className="text-soft">Email</span><a href={`mailto:${SITE.email}`}>{SITE.email}</a></li>}
+              {SITE.address && <li className="flex gap-3"><span className="text-soft">Address</span><span>{SITE.address}</span></li>}
+            </ul>
+          )}
         </div>
 
-        <form onSubmit={onSubmit} className="lg:col-span-6 lg:col-start-7 flex flex-col gap-3.5 p-6 md:p-8 rounded-3xl bg-ivory border border-line">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <form onSubmit={onSubmit} className="flex flex-col gap-3.5 p-6 md:p-8 rounded-3xl bg-ivory border border-line">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
             <label className="flex flex-col gap-1.5 text-[13px] font-semibold"><span>{t.contact.company}</span><input required className={field} value={form.company} onChange={set('company')} /></label>
             <label className="flex flex-col gap-1.5 text-[13px] font-semibold"><span>{t.contact.name}</span><input required className={field} value={form.name} onChange={set('name')} /></label>
+            <label className="flex flex-col gap-1.5 text-[13px] font-semibold"><span>{t.contact.email}</span><input required type="email" className={field} value={form.email} onChange={set('email')} /></label>
           </div>
-          <label className="flex flex-col gap-1.5 text-[13px] font-semibold"><span>{t.contact.email}</span><input required type="email" className={field} value={form.email} onChange={set('email')} /></label>
           <label className="flex flex-col gap-1.5 text-[13px] font-semibold"><span>{t.contact.type}</span>
             <select className={field} value={form.type} onChange={set('type')}>
               {t.contact.types.map((o) => <option key={o}>{o}</option>)}
             </select>
           </label>
-          <label className="flex flex-col gap-1.5 text-[13px] font-semibold"><span>{t.contact.message}</span><textarea required rows={4} className={`${field} !h-auto py-3 resize-y`} value={form.message} onChange={set('message')} /></label>
-          <button type="submit" className="btn-primary mt-1">{t.contact.send}</button>
+          <label className="flex flex-col gap-1.5 text-[13px] font-semibold"><span>{t.contact.message}</span><textarea required rows={5} className={`${field} !h-auto py-3 resize-y`} value={form.message} onChange={set('message')} /></label>
+          <button type="submit" className="btn-primary mt-1 self-start !px-10">{t.contact.send}</button>
         </form>
       </div>
     </section>

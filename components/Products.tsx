@@ -33,13 +33,14 @@ const Products: React.FC = () => {
   return (
     <section id="products" className="bg-white border-y border-line py-16 md:py-24 scroll-mt-24">
       <div className="container-page flex flex-col gap-7 md:gap-9">
-        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-5">
-          <div className="flex flex-col gap-3 max-w-[640px]">
-            <span className="eyebrow">{t.products.eyebrow}</span>
-            <h2 className="h2">{t.products.title}</h2>
-            <p className="text-[15px] md:text-[17px] leading-[1.6] text-muted">{t.products.body}</p>
-          </div>
-          <label className="flex items-center gap-2.5 h-12 px-4 rounded-xl border border-[#C9C4B8] bg-ivory lg:min-w-[340px]">
+        <div className="flex flex-col gap-3">
+          <span className="eyebrow">{t.products.eyebrow}</span>
+          <h2 className="h2">{t.products.title}</h2>
+          <p className="text-[15px] md:text-[17px] leading-[1.6] text-muted">{t.products.body}</p>
+        </div>
+
+        <div className="flex flex-col lg:flex-row lg:items-center gap-4">
+          <label className="flex items-center gap-2.5 h-12 px-4 rounded-xl border border-[#C9C4B8] bg-ivory lg:w-[300px] shrink-0">
             <Search size={18} className="text-soft shrink-0" aria-hidden="true" />
             <span className="sr-only">{t.products.search}</span>
             <input
@@ -50,9 +51,7 @@ const Products: React.FC = () => {
               className="w-full bg-transparent outline-none text-[15px] placeholder:text-soft"
             />
           </label>
-        </div>
-
-        <div className="flex gap-2 overflow-x-auto scrollbar-hide -mx-5 px-5 md:mx-0 md:px-0 md:flex-wrap">
+          <div className="flex gap-2 overflow-x-auto scrollbar-hide -mx-5 px-5 md:mx-0 md:px-0 lg:flex-wrap">
           {CATEGORIES.map((c) => {
             const active = c === category;
             return (
@@ -61,12 +60,13 @@ const Products: React.FC = () => {
                 type="button"
                 onClick={() => { setCategory(c); setExpanded(false); }}
                 aria-pressed={active}
-                className={`shrink-0 h-10 px-4 rounded-full text-[14px] border transition ${active ? 'bg-ink border-ink text-white font-semibold' : 'border-[#C9C4B8] text-ink hover:bg-ivory'}`}
+                className={`shrink-0 h-10 px-3.5 rounded-full text-[14px] border transition ${active ? 'bg-ink border-ink text-white font-semibold' : 'border-[#C9C4B8] text-ink hover:bg-ivory'}`}
               >
                 {label(c)}
               </button>
             );
           })}
+          </div>
         </div>
 
         {visible.length === 0 ? (

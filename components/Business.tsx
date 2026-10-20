@@ -5,7 +5,7 @@ const Business: React.FC = () => {
   const { t } = useLang();
   return (
     <section id="business" className="container-page pb-20 md:pb-24 scroll-mt-24">
-      <div className="flex flex-col gap-3 max-w-[720px] mb-8 md:mb-10">
+      <div className="flex flex-col gap-3 mb-8 md:mb-10">
         <span className="eyebrow">{t.business.eyebrow}</span>
         <h2 className="h2">{t.business.title}</h2>
         <p className="text-[15px] md:text-[17px] leading-[1.6] text-muted">{t.business.body}</p>

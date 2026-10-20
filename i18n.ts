@@ -124,7 +124,7 @@ const en: Dict = {
   },
   business: {
     eyebrow: 'BUSINESS', title: 'Three pillars, one supply system',
-    body: 'Manufacturing, importing and finished goods are connected inside one company, so projects move from ingredient selection to launch without intermediaries.',
+    body: 'Manufacturing, importing and finished goods under one roof, from ingredient selection to launch with no intermediaries.',
     items: [
       { title: 'Ingredient manufacturing', body: 'We produce custom plant waters and ferment waters to your formula — aloe, lavender, chamomile, rose and more, from small lots to bulk.', bullets: ['Custom Plant Water', 'Ferment Water (Galactomyces etc.)', 'Low-irritation, moisturising ingredient development'] },
       { title: 'Import & distribution', body: 'We import and distribute ingredients from Acid Chem, Nouryon, LANXESS, KAO, DAICEL and more. Regulatory documents and samples are supported alongside.', bullets: ['Glycerine, fatty acids, emollients', 'Surfactants, preservatives, functional additives', 'Regulatory documents (MSDS, COA, NMPA)'] },
@@ -135,7 +135,7 @@ const en: Dict = {
     eyebrow: 'INGREDIENTS', title: 'Ingredient catalogue',
     body: '54 items in 7 categories, each with INCI name and manufacturer. Full specifications are searchable on coching.club.',
     search: 'Search by name, INCI or manufacturer', all: 'All', viewAll: 'View all items', showLess: 'Show less', empty: 'No results.',
-    categories: { 'Custom Base': 'Custom Base', 'Active Ingredients': 'Active Ingredients', 'Emollients & Oils': 'Emollients & Oils', 'Surfactants': 'Surfactants', 'Preservatives': 'Preservatives', 'Specialty Poly': 'Specialty Polymers', 'Functional Additives': 'Functional Additives' },
+    categories: { 'Custom Base': 'Custom Base', 'Active Ingredients': 'Actives', 'Emollients & Oils': 'Emollients & Oils', 'Surfactants': 'Surfactants', 'Preservatives': 'Preservatives', 'Specialty Poly': 'Polymers', 'Functional Additives': 'Additives' },
   },
   finished: {
     eyebrow: 'FINISHED GOODS', title: 'Finished goods production',
@@ -152,7 +152,7 @@ const en: Dict = {
   partners: { eyebrow: 'BRANDS', title: 'Brands we carry', more: 'and more' },
   coching: {
     eyebrow: 'COCHING CLUB', title: 'From ingredient search to formulation — the B2B platform built by KPROS',
-    body: 'The tools ingredient professionals use every day, in one place: ingredient search, market-by-market regulatory checks, formulation design and price tracking on coching.club.',
+    body: 'Ingredient search, regulatory checks by market, formulation design and price tracking, all in one place on coching.club.',
     cta: 'Open coching.club', ctaCn: '中文版 cn.coching.club',
     imgAlt1: 'COCHING market price and trend dashboard', imgAlt2: 'COCHING ingredient search screen',
     features: [

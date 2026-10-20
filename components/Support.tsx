@@ -5,7 +5,7 @@ const Support: React.FC = () => {
   const { t } = useLang();
   return (
     <section id="support" className="container-page py-16 md:py-24 scroll-mt-24">
-      <div className="flex flex-col gap-3 max-w-[720px] mb-8 md:mb-10">
+      <div className="flex flex-col gap-3 mb-8 md:mb-10">
         <span className="eyebrow">{t.support.eyebrow}</span>
         <h2 className="h2">{t.support.title}</h2>
         <p className="text-[15px] md:text-[17px] leading-[1.6] text-muted">{t.support.body}</p>

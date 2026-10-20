@@ -20,7 +20,7 @@ const Hero: React.FC = () => {
           <motion.h1 variants={fade} className="text-[34px] md:text-[52px] xl:text-[60px] font-black leading-[1.15] tracking-[-0.02em]">
             {t.hero.title[0]}<br />{t.hero.title[1]}
           </motion.h1>
-          <motion.p variants={fade} className="text-[16px] md:text-[19px] leading-[1.65] text-muted max-w-[620px]">
+          <motion.p variants={fade} className="text-[16px] md:text-[19px] leading-[1.65] text-muted">
             {t.hero.body}
           </motion.p>
           <motion.div variants={fade} className="flex flex-col sm:flex-row gap-3">
