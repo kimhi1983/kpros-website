@@ -2,3 +2,10 @@ name = "kpros-website"
 compatibility_date = "2025-06-01"
 compatibility_flags = ["nodejs_compat"]
 pages_build_output_dir = "dist"
+
+# 일반 변수는 wrangler.toml 이 있는 경우 여기서 정의해야 적용됩니다. 비밀번호(SMTP_PASS)는 대시보드 Secret.
+[vars]
+SMTP_USER = "kpros@kpros.kr"
+SMTP_HOST = "smtp.hiworks.com"
+SMTP_PORT = "465"
+CONTACT_TO = "kpros@kpros.kr"
