@@ -29,19 +29,20 @@ const Navbar: React.FC = () => {
 
   return (
     <header className={`sticky top-0 z-50 bg-ivory/95 backdrop-blur border-b ${scrolled ? 'border-line' : 'border-transparent'} transition-colors`}>
-      <div className="container-page flex items-center justify-between gap-6 h-16 md:h-20">
-        <a href="#hero" className="flex items-baseline gap-2.5 text-ink">
-          <span className="font-inter font-bold text-[20px] md:text-[22px] tracking-[0.18em]">KPROS</span>
-          <span className="hidden xl:inline text-[12px] text-soft tracking-[0.06em] whitespace-nowrap">{company}</span>
+      <div className="container-page flex items-center justify-between gap-4 h-16 md:h-20">
+        <a href="#hero" className="flex items-center gap-2.5 text-ink shrink-0" aria-label="KPROS">
+          <img src="/logo/mark.png" alt="" className="h-8 md:h-9 w-auto" />
+          <img src="/logo/wordmark.png" alt="KPROS" className="h-[18px] md:h-5 w-auto" />
+          <span className="hidden 2xl:inline text-[12px] text-soft tracking-[0.06em] whitespace-nowrap ml-1">{company}</span>
         </a>
 
-        <nav className="hidden lg:flex gap-5 xl:gap-7 text-[14px] xl:text-[15px] font-medium whitespace-nowrap">
+        <nav className="hidden lg:flex gap-4 2xl:gap-6 text-[13px] 2xl:text-[14px] font-medium whitespace-nowrap">
           {links.map((l) => (
             <a key={l.href} href={l.href} className="text-ink hover:text-forest transition-colors">{l.label}</a>
           ))}
         </nav>
 
-        <div className="flex items-center gap-2 md:gap-3">
+        <div className="flex items-center gap-2 md:gap-3 shrink-0">
           <div role="group" aria-label="Language" className="flex h-10 md:h-11 items-center rounded-full border border-[#C9C4B8] p-1 bg-transparent">
             {LANGS.map((l) => (
               <button
@@ -49,13 +50,13 @@ const Navbar: React.FC = () => {
                 type="button"
                 onClick={() => setLang(l.code)}
                 aria-pressed={lang === l.code}
-                className={`h-full px-2.5 md:px-3 rounded-full text-[12px] md:text-[13px] font-semibold transition ${lang === l.code ? 'bg-ink text-white' : 'text-ink hover:bg-line'}`}
+                className={`h-full px-2.5 rounded-full text-[12px] md:text-[13px] font-semibold whitespace-nowrap transition ${lang === l.code ? 'bg-ink text-white' : 'text-ink hover:bg-line'}`}
               >
                 {l.label}
               </button>
             ))}
           </div>
-          <a href="#contact" className="hidden md:inline-flex btn-primary !h-11 !px-5 !text-[14px] whitespace-nowrap">{t.nav.cta}</a>
+          <a href="#contact" className="hidden md:max-lg:inline-flex xl:inline-flex btn-primary !h-11 !px-5 !text-[14px] whitespace-nowrap">{t.nav.cta}</a>
           <button
             type="button"
             aria-label={open ? 'Close menu' : 'Open menu'}

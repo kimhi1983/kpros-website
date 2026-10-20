@@ -119,7 +119,7 @@ const ko: Dict = {
 };
 
 const en: Dict = {
-  nav: { business: 'Business', products: 'Cosmetic Ingredients', finished: 'Cosmetic Finished Goods', lab: 'R&D Center', infra: 'Regulatory & Quality', coching: 'COCHING CLUB', contact: 'Contact', cta: 'Request a quote' },
+  nav: { business: 'Business', products: 'Cosmetic Ingredients', finished: 'Cosmetic Finished Goods', lab: 'R&D Center', infra: 'Regulatory', coching: 'COCHING', contact: 'Contact', cta: 'Get a quote' },
   strip: { label: 'Cosmetic ingredient categories' },
   lab: {
     eyebrow: 'R&D CENTER', title: 'R&D Center',

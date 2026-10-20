@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
     <footer className="bg-ink text-[#BFC7C1]">
       <div className="container-page py-10 flex flex-col md:flex-row md:items-center md:justify-between gap-6 text-[13px]">
         <div className="flex flex-col gap-1.5">
-          <span className="font-inter font-bold text-[18px] tracking-[0.18em] text-white">KPROS</span>
+          <span className="flex items-center gap-2.5 mb-1"><img src="/logo/mark-white.png" alt="" className="h-8 w-auto" /><img src="/logo/wordmark-white.png" alt="KPROS" className="h-[18px] w-auto" /></span>
           <span>{meta}</span>
           <span>{address}</span>
           <span>{contact}</span>
