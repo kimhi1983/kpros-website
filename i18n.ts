@@ -299,6 +299,12 @@ const STORAGE_KEY = 'kpros-lang';
 
 function detectLang(): Lang {
   try {
+    const q = new URLSearchParams(window.location.search).get('lang');
+    if (q && q in DICT) return q as Lang;
+  } catch {
+    /* ignore */
+  }
+  try {
     const saved = localStorage.getItem(STORAGE_KEY) as Lang | null;
     if (saved && saved in DICT) return saved;
   } catch {
